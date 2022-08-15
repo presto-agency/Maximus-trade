@@ -2,6 +2,8 @@
   padding: 37px 0 0 0;
   background-color: $color-black;
   &__logo{
+    position: relative;
+    z-index: 3;
     width: 213px;
     height: 27px;
     a{
@@ -18,39 +20,44 @@
     justify-content: space-between;
     align-items: center;
   }
-  button + button{
-    margin: 0 32px 0 6px;
-  }
-  &__nav{
-    display: flex;
-    align-items: center;
-    ul{
+  &__wrapper{
+    &_nav{
       display: flex;
       align-items: center;
-      margin: 0 44px;
-      li{
-        &.active{
-          a{
-            color: $color-primary;
-            border-bottom: 3px solid $color-primary;
+      ul{
+        display: flex;
+        align-items: center;
+        margin: 0 44px;
+        li{
+          &.active{
+            a{
+              color: $color-primary;
+              border-bottom: 3px solid $color-primary;
+            }
           }
-        }
-        a{
-          display: block;
-          padding: 15px 25px;
-          color: $color-grey;
-          font-size: 14px;
-          line-height: 25px;
-          font-weight: 500;
-          transition: 300ms;
-        }
-        &:hover{
           a{
-            color: $color-primary;
+            display: block;
+            padding: 15px 25px;
+            color: $color-grey;
+            font-size: 14px;
+            line-height: 25px;
+            font-weight: 500;
+            transition: 300ms;
+          }
+          &:hover{
+            a{
+              color: $color-primary;
+            }
           }
         }
       }
     }
+  }
+  &__cross{
+    display: none;
+  }
+  button + button{
+    margin: 0 32px 0 6px;
   }
   p{
     position: relative;
@@ -75,6 +82,72 @@
       background-repeat: no-repeat;
       background-position: center;
       background-size: 8px 10px;
+    }
+  }
+}
+@media(max-width: 1023px){
+  .header{
+    &__cross{
+      position: relative;
+      display: block;
+      height: 12px;
+      width: 18px;
+      span{
+        position: absolute;
+        left: 0;
+        width: 18px;
+        height: 2px;
+        border-radius: 20px;
+        background-color: $color-primary;
+        transition: 300ms;
+        &:nth-child(1){
+          top: 0;
+        }
+        &:nth-child(2){
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        &:nth-child(3){
+          bottom: 0;
+        }
+      }
+    }
+    &.active{
+      .header{
+        &__cross{
+          z-index: 2;
+          span{
+            background-color: $color-grey;
+            &:nth-child(2){
+              left: 5px;
+            }
+          }
+        }
+        &__wrapper{
+          position: fixed;
+          z-index: 2;
+          top: 0;
+          left: 0;
+          background-color: $color-black;
+          width: 100vw;
+          height: 100vh;
+          padding: 0 24px;
+          &_nav{
+            overflow-y: auto;
+            padding: 125px 0;
+            max-height: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+            ul{
+              flex: 1 0 100%;
+              margin: 0 0 28px 0;
+              li{
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
