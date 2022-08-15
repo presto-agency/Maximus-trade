@@ -1,0 +1,21 @@
+.button{
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  color: $color-grey;
+  text-transform: uppercase;
+  padding: 17px 20px;
+  border: 1px solid $color-primary;
+  background-color: transparent;
+  transition: 300ms;
+  &:hover{
+    background-color: rgba($color-primary, 0.2);
+  }
+  &._grey{
+    border: 1px solid $color-grey;
+    &:hover{
+      background-color: rgba($color-grey, 0.3);
+    }
+  }
+}

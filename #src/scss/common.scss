@@ -1,17 +1,17 @@
 .wrapper{
 	overflow: hidden;
 	min-height: 100%;
+	background-color: $color-black;
 }
 
 .container{
-	max-width: 1313px;
-	padding: 0px 15px;
+	max-width: 1087px;
+	padding: 0px 24px;
 	margin: 0px auto;
     box-sizing: content-box;
-}
-
-.hide{
-    background-color: #F5F5F5;
+	&._l{
+		max-width: 1310px;
+	}
 }
 
 .root{
