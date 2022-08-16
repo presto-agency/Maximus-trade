@@ -172,9 +172,43 @@ h6 {
   border: 1px solid #B9B9B9;
 }
 
+.button._auth.super-user:before {
+  background-image: url("../img/crown.svg");
+}
+
 .header {
   padding: 37px 0 10px 0;
   background-color: #070C11;
+}
+
+.header.login .header__wrapper_nav .button {
+  position: relative;
+  white-space: nowrap;
+  padding: 17px 20px 17px 47px;
+}
+
+.header.login .header__wrapper_nav .button:before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 17px;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/user.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+}
+
+.header.login.super-user .header__wrapper_nav .button:before {
+  width: 17px;
+  height: 12px;
+  background-image: url("../img/crown.svg");
+  background-size: 17px 12px;
 }
 
 .header__logo {
@@ -248,7 +282,7 @@ h6 {
 }
 
 .header button + button {
-  margin: 0 32px 0 6px;
+  margin: 0 0 0 6px;
 }
 
 .header p {
@@ -268,6 +302,7 @@ h6 {
   width: 78px;
   height: 40px;
   border-left: 1px solid #B9B9B9;
+  margin: 0 0 0 32px;
 }
 
 .header p span {
@@ -430,6 +465,61 @@ h6 {
   .header.active .header__wrapper {
     top: 0;
   }
+
+  .header.login .header__content:after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    top: 44px;
+    right: 83px;
+    width: 16px;
+    height: 16px;
+    background-image: url("../img/user.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
+  }
+
+  .header.login .header__wrapper {
+    margin: 0;
+  }
+
+  .header.login .header__wrapper_nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+
+  .header.login .header__wrapper_nav ul {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+  }
+
+  .header.login .header__wrapper_nav p {
+    width: 78px;
+  }
+
+  .header.login .header__wrapper_nav button {
+    margin: 28px 22px 28px 0;
+  }
+
+  .header.login.super-user .header__content:after {
+    width: 17px;
+    height: 12px;
+    background-image: url("../img/crown.svg");
+    background-size: 17px 12px;
+  }
+
+  .header p {
+    margin: 0;
+  }
+
+  .header button + button {
+    margin: 0 22px 0 6px;
+  }
 }
 
 @media (max-width: 374px) {
@@ -455,5 +545,9 @@ h6 {
 
   .header p span {
     padding: 0 20px 0 0;
+  }
+
+  .header.login p span {
+    padding: 0 31px 0 0;
   }
 }

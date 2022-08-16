@@ -1,6 +1,49 @@
 .header{
   padding: 37px 0 10px 0;
   background-color: $color-black;
+  &.login{
+    .header{
+      &__wrapper{
+        &_nav{
+          .button{
+            position: relative;
+            white-space: nowrap;
+            padding: 17px 20px 17px 47px;
+            &:before{
+              content: '';
+              position: absolute;
+              z-index: 2;
+              top: 50%;
+              transform: translateY(-50%);
+              left: 17px;
+              width: 16px;
+              height: 16px;
+              background-image: url("../img/user.svg");
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: 16px 16px;
+            }
+          }
+        }
+      }
+    }
+    &.super-user{
+      .header{
+        &__wrapper{
+          &_nav{
+            .button{
+              &:before{
+                width: 17px;
+                height: 12px;
+                background-image: url("../img/crown.svg");
+                background-size: 17px 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   &__logo{
     position: relative;
     z-index: 3;
@@ -59,7 +102,7 @@
     display: none;
   }
   button + button{
-    margin: 0 32px 0 6px;
+    margin: 0 0 0 6px;
   }
   p{
     display: flex;
@@ -72,6 +115,7 @@
     width: 78px;
     height: 40px;
     border-left: 1px solid $color-grey;
+    margin: 0 0 0 32px;
     span{
       position: relative;
       cursor: pointer;
@@ -197,6 +241,59 @@
         }
       }
     }
+    &.login{
+      .header{
+        &__content{
+          &:after{
+            content: '';
+            position: absolute;
+            z-index: 2;
+            top: 44px;
+            right: 83px;
+            width: 16px;
+            height: 16px;
+            background-image: url("../img/user.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 16px 16px;
+          }
+        }
+        &__wrapper{
+          margin: 0;
+          &_nav{
+            display: flex;
+            flex-wrap: wrap;
+            ul{
+              flex: 1 0 100%;
+            }
+            p{
+              width: 78px
+            }
+            button{
+              margin: 28px 22px 28px 0;
+            }
+          }
+        }
+      }
+      &.super-user{
+        .header{
+          &__content{
+            &:after{
+              width: 17px;
+              height: 12px;
+              background-image: url("../img/crown.svg");
+              background-size: 17px 12px;
+            }
+          }
+        }
+      }
+    }
+    p{
+      margin: 0;
+    }
+    button+button{
+      margin: 0 22px 0 6px;
+    }
   }
 }
 @media (max-width: 374px) {
@@ -230,6 +327,13 @@
     p{
       span{
         padding: 0 20px 0 0;
+      }
+    }
+    &.login{
+      p{
+        span{
+          padding: 0 31px 0 0;
+        }
       }
     }
   }

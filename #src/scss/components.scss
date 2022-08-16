@@ -22,4 +22,12 @@
       }
     }
   }
+  &._auth{
+
+    &.super-user{
+      &:before{
+        background-image: url("../img/crown.svg");
+      }
+    }
+  }
 }

@@ -5,17 +5,16 @@ window.addEventListener('DOMContentLoaded', function () {
 let headerActive = () => {
     let headerMob = document.querySelector('.header');
     let burgerBtn = document.querySelector('.header__cross');
+    let body = document.querySelector('body');
     let addClass = () => {
         headerMob.classList.add('active');
-        document.querySelector('body').style.overflow = 'hidden';
+        body.style.overflow = 'hidden';
     }
     let removeClass = () => {
         headerMob.classList.remove('active');
-        document.querySelector('body').style.overflow = '';
+        body.style.overflow = '';
     }
-    headerMob?burgerBtn.onclick = () => {
-        headerMob.classList.contains('active')?removeClass():addClass();
-    }:null;
+    headerMob?burgerBtn.onclick = () => {headerMob.classList.contains('active')?removeClass():addClass()}:null;
 };
 
 
