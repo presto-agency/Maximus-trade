@@ -9,13 +9,17 @@
   border: 1px solid $color-primary;
   background-color: transparent;
   transition: 300ms;
-  &:hover{
-    background-color: rgba($color-primary, 0.2);
+  @media (min-width: 1024px) {
+    &:hover{
+      background-color: rgba($color-primary, 0.2);
+    }
   }
   &._grey{
     border: 1px solid $color-grey;
-    &:hover{
-      background-color: rgba($color-grey, 0.3);
+    @media (min-width: 1024px) {
+      &:hover{
+        background-color: rgba($color-grey, 0.3);
+      }
     }
   }
 }

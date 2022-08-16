@@ -44,9 +44,11 @@
             font-weight: 500;
             transition: 300ms;
           }
-          &:hover{
-            a{
-              color: $color-primary;
+          @media (min-width: 1024px) {
+            &:hover{
+              a{
+                color: $color-primary;
+              }
             }
           }
         }
@@ -151,11 +153,18 @@
         grid-template-columns: 1fr 1fr minmax(40px,80px);
         ul{
           grid-area: a;
+          flex-direction: column;
           margin: 0 0 28px 0;
           li{
             width: 100%;
+            &.active{
+              a{
+                border-bottom: 1px solid $color-primary;
+              }
+            }
             a{
               padding: 28px 0;
+              border-bottom: 1px solid $color-grey;
             }
           }
         }
