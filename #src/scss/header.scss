@@ -1,5 +1,5 @@
 .header{
-  padding: 37px 0 0 0;
+  padding: 37px 0 10px 0;
   background-color: $color-black;
   &__logo{
     position: relative;
@@ -60,93 +60,167 @@
     margin: 0 32px 0 6px;
   }
   p{
-    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     font-size: 12px;
     line-height: 14px;
     font-weight: 700;
     color: $color-grey;
-    padding: 13px 31px;
+    width: 78px;
+    height: 40px;
     border-left: 1px solid $color-grey;
     span{
+      position: relative;
       cursor: pointer;
-    }
-    &:before{
-      content: '';
-      position: absolute;
-      right: 7px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 8px;
-      height: 10px;
-      background-image: url("../img/tip.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: 8px 10px;
+      padding: 0 31px 0 0;
+      &:before{
+        content: '';
+        position: absolute;
+        right: 7px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 10px;
+        background-image: url("../img/tip.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 8px 10px;
+      }
     }
   }
 }
 @media(max-width: 1023px){
   .header{
+    &__content{
+     &:before{
+       content: '';
+       position: absolute;
+       z-index: 2;
+       top: 0;
+       left: 0;
+       width: 100vw;
+       height: 74px;
+       background: $color-black;
+     }
+    }
     &__cross{
       position: relative;
+      z-index: 3;
       display: block;
       height: 12px;
       width: 18px;
+      padding: 5px;
+      box-sizing: content-box;
       span{
         position: absolute;
-        left: 0;
+        left: 5px;
         width: 18px;
         height: 2px;
         border-radius: 20px;
         background-color: $color-primary;
         transition: 300ms;
         &:nth-child(1){
-          top: 0;
+          top: 5px;
         }
         &:nth-child(2){
           top: 50%;
           transform: translateY(-50%);
         }
         &:nth-child(3){
-          bottom: 0;
+          bottom: 5px;
+        }
+      }
+    }
+    &__wrapper{
+      position: fixed;
+      z-index: 1;
+      top: -100vh;
+      left: 0;
+      background-color: $color-black;
+      width: 100%;
+      height: 100vh;
+      padding: 0 24px;
+      transition: 300ms ease-in-out;
+      &_nav{
+        overflow-y: auto;
+        padding: 96px 0;
+        max-height: 100%;
+        display: grid;
+        grid-template-areas: 'a a a''b c d';
+        grid-template-columns: 1fr 1fr minmax(40px,80px);
+        ul{
+          grid-area: a;
+          margin: 0 0 28px 0;
+          li{
+            width: 100%;
+            a{
+              padding: 28px 0;
+            }
+          }
+        }
+        button{
+          &:nth-of-type(1){
+            grid-area: b;
+          }
+          &:nth-of-type(2){
+            grid-area: c;
+          }
+        }
+        p{
+          grid-area: d;
+          width: 100%;
         }
       }
     }
     &.active{
       .header{
         &__cross{
-          z-index: 2;
           span{
             background-color: $color-grey;
-            &:nth-child(2){
-              left: 5px;
+            &:nth-child(1), &:nth-child(3){
+              left: 0;
             }
           }
         }
         &__wrapper{
-          position: fixed;
-          z-index: 2;
           top: 0;
-          left: 0;
-          background-color: $color-black;
-          width: 100vw;
-          height: 100vh;
-          padding: 0 24px;
-          &_nav{
-            overflow-y: auto;
-            padding: 125px 0;
-            max-height: 100%;
-            flex-wrap: wrap;
-            justify-content: center;
-            ul{
-              flex: 1 0 100%;
-              margin: 0 0 28px 0;
-              li{
-                width: 100%;
-              }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 374px) {
+  .header{
+    &__logo{
+      width: 144px;
+      height: 18px;
+    }
+    &__wrapper{
+      &_nav{
+        ul{
+          li{
+            a{
+              font-size: 16px;
+              line-height: 25px;
             }
           }
         }
+      }
+    }
+    button+button{
+      margin: 0 20px 0 6px;
+    }
+  }
+}
+@media(max-width: 359px){
+  .header{
+    button + button {
+      margin: 0 10px 0 4px;
+    }
+    p{
+      span{
+        padding: 0 20px 0 0;
       }
     }
   }
