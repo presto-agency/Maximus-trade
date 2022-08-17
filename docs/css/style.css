@@ -685,6 +685,10 @@ h6 {
     margin: 0 0 17px 0;
   }
 
+  .footer__panel_nav .common-link.active a {
+    border-bottom: 1px solid #C7A363;
+  }
+
   .footer__panel_nav .common-link a {
     padding: 5px 0;
   }
