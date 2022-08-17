@@ -6,20 +6,6 @@
   width: 100vw;
   padding: 37px 0 10px 0;
   background-color: $color-black;
-  &__logo{
-    position: relative;
-    z-index: 3;
-    width: 213px;
-    height: 27px;
-    a{
-      display: block;
-      img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
   &__content{
     display: flex;
     justify-content: space-between;
@@ -74,7 +60,7 @@
     }
   }
 }
-@media(max-width: 1023px){
+@media(max-width: 1199px){
   .header{
     &__content{
      &:before{
@@ -236,10 +222,6 @@
 }
 @media (max-width: 374px) {
   .header{
-    &__logo{
-      width: 144px;
-      height: 18px;
-    }
     &__wrapper{
       &_nav{
         ul{

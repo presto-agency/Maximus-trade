@@ -219,6 +219,21 @@ h6 {
   transition: 300ms;
 }
 
+.common-logo a {
+  display: block;
+  position: relative;
+  z-index: 3;
+  width: 213px;
+  height: 27px;
+}
+
+.common-logo a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .header {
   position: fixed;
   z-index: 10;
@@ -227,24 +242,6 @@ h6 {
   width: 100vw;
   padding: 37px 0 10px 0;
   background-color: #070C11;
-}
-
-.header__logo {
-  position: relative;
-  z-index: 3;
-  width: 213px;
-  height: 27px;
-}
-
-.header__logo a {
-  display: block;
-}
-
-.header__logo a img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .header__content {
@@ -342,7 +339,7 @@ h6 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 56px 0;
+  padding: 42px 0;
   border-top: 1px solid rgba(249, 249, 249, 0.3);
   border-bottom: 1px solid rgba(249, 249, 249, 0.3);
 }
@@ -377,7 +374,7 @@ h6 {
   margin: 0 0 0 6px;
 }
 
-.footer__panel_links {
+.footer__links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -387,11 +384,15 @@ h6 {
   margin: 0 -8px;
 }
 
-.footer__panel_links li {
+.footer__links._mob {
+  display: none;
+}
+
+.footer__links li {
   margin: 0 8px;
 }
 
-.footer__panel_links li a {
+.footer__links li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -410,7 +411,7 @@ h6 {
   transition: 300ms;
 }
 
-.footer__panel_links li a svg {
+.footer__links li a svg {
   fill: #B9B9B9;
   height: 17px;
   width: 17px;
@@ -419,12 +420,12 @@ h6 {
   transition: 300ms;
 }
 
-.footer__panel_links li:hover a {
+.footer__links li:hover a {
   border: 1px solid #C7A363;
   background-color: #C7A363;
 }
 
-.footer__panel_links li:hover a svg {
+.footer__links li:hover a svg {
   fill: #fff;
 }
 
@@ -434,7 +435,7 @@ h6 {
   line-height: 25px;
   color: #B9B9B9;
   text-align: center;
-  padding: 25px 0 57px 0;
+  padding: 25px 0 55px 0;
 }
 
 .footer p:before {
@@ -450,7 +451,7 @@ h6 {
   background-size: cover;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .button:hover {
     background-color: rgba(199, 163, 99, 0.2);
   }
@@ -464,11 +465,7 @@ h6 {
   }
 }
 
-@media (max-width: 1023px) {
-  .root {
-    padding: 74px 0 0 0;
-  }
-
+@media (max-width: 1199px) {
   .header__content:before {
     content: "";
     position: absolute;
@@ -643,14 +640,97 @@ h6 {
   .header button + button {
     margin: 0 22px 0 6px;
   }
+
+  .footer__content {
+    -webkit-box-align: initial;
+        -ms-flex-align: initial;
+            align-items: initial;
+  }
+
+  .footer__content {
+    border-top: initial;
+    padding: 20px 0;
+  }
+
+  .footer__links {
+    margin: 47px -8px 0 -8px;
+    display: none;
+  }
+
+  .footer__links._mob {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .footer__panel_nav {
+    -webkit-box-align: initial;
+        -ms-flex-align: initial;
+            align-items: initial;
+    margin: 0;
+  }
+
+  .footer__panel_nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    -webkit-box-align: initial;
+        -ms-flex-align: initial;
+            align-items: initial;
+  }
+
+  .footer__panel_nav .common-link {
+    margin: 0 0 17px 0;
+  }
+
+  .footer__panel_nav .common-link a {
+    padding: 5px 0;
+  }
+
+  .footer .button {
+    display: none;
+  }
 }
 
-@media (max-width: 374px) {
-  .header__logo {
+@media (max-width: 1023px) {
+  .root {
+    padding: 74px 0 0 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer__panel_nav {
+    margin: 0 0 0 15px;
+  }
+
+  .footer__panel_nav .common-link {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 474px) {
+  .common-logo a {
     width: 144px;
     height: 18px;
   }
 
+  .footer__panel_nav .common-link:last-child {
+    margin: 0;
+  }
+
+  .footer__panel_nav .common-link a {
+    padding: 0;
+  }
+
+  .footer__links li a {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (max-width: 374px) {
   .header__wrapper_nav ul .common-link a {
     font-size: 16px;
     line-height: 25px;
