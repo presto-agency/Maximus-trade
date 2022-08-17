@@ -1,0 +1,80 @@
+.footer{
+  position: relative;
+  &__content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 56px 0;
+    border-top: 1px solid rgba($color-grey-300, 0.3);
+    border-bottom: 1px solid rgba($color-grey-300, 0.3);
+  }
+  &__panel{
+    display: flex;
+    &_nav{
+      display: flex;
+      align-items: center;
+      margin: 0 30px 0 0;
+      ul{
+        display: flex;
+        align-items: center;
+        margin: 0 44px;
+      }
+      button + button{
+        margin: 0 0 0 6px;
+      }
+    }
+    &_links{
+      display: flex;
+      align-items: center;
+      margin: 0 -8px;
+      li{
+        margin: 0 8px;
+        a{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: transparent;
+          border: 1px solid $color-grey;
+          width: 48px;
+          height: 48px;
+          transition: 300ms;
+          svg{
+            fill: $color-grey;
+            height: 17px;
+            width: 17px;
+            transition: 300ms;
+          }
+        }
+        &:hover{
+          a{
+            border: 1px solid $color-primary;
+            background-color: $color-primary;
+            svg{
+              fill: $color-white;
+            }
+          }
+        }
+      }
+    }
+  }
+  p{
+    position: relative;
+    font-size: 13px;
+    line-height: 25px;
+    color: $color-grey;
+    text-align: center;
+    padding: 25px 0 57px 0;
+    &:before{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 25px;
+      width: 100%;
+      background-image: url("../img/decor-border.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}

@@ -1,49 +1,11 @@
 .header{
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100vw;
   padding: 37px 0 10px 0;
   background-color: $color-black;
-  &.login{
-    .header{
-      &__wrapper{
-        &_nav{
-          .button{
-            position: relative;
-            white-space: nowrap;
-            padding: 17px 20px 17px 47px;
-            &:before{
-              content: '';
-              position: absolute;
-              z-index: 2;
-              top: 50%;
-              transform: translateY(-50%);
-              left: 17px;
-              width: 16px;
-              height: 16px;
-              background-image: url("../img/user.svg");
-              background-repeat: no-repeat;
-              background-position: center;
-              background-size: 16px 16px;
-            }
-          }
-        }
-      }
-    }
-    &.super-user{
-      .header{
-        &__wrapper{
-          &_nav{
-            .button{
-              &:before{
-                width: 17px;
-                height: 12px;
-                background-image: url("../img/crown.svg");
-                background-size: 17px 12px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
   &__logo{
     position: relative;
     z-index: 3;
@@ -71,30 +33,6 @@
         display: flex;
         align-items: center;
         margin: 0 44px;
-        li{
-          &.active{
-            a{
-              color: $color-primary;
-              border-bottom: 3px solid $color-primary;
-            }
-          }
-          a{
-            display: block;
-            padding: 15px 25px;
-            color: $color-grey;
-            font-size: 14px;
-            line-height: 25px;
-            font-weight: 500;
-            transition: 300ms;
-          }
-          @media (min-width: 1024px) {
-            &:hover{
-              a{
-                color: $color-primary;
-              }
-            }
-          }
-        }
       }
     }
   }
@@ -199,7 +137,7 @@
           grid-area: a;
           flex-direction: column;
           margin: 0 0 28px 0;
-          li{
+          .common-link{
             width: 100%;
             &.active{
               a{
@@ -305,7 +243,7 @@
     &__wrapper{
       &_nav{
         ul{
-          li{
+          .common-link{
             a{
               font-size: 16px;
               line-height: 25px;
