@@ -7,6 +7,14 @@ h1, h2, h3, h4{
 h1{
   font-size: 80px;
   line-height: 100%;
+  @media (max-width: 1023px) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+  @media (max-width: 767px) {
+    font-size: 40px;
+    line-height: 40px;
+  }
 }
 
 h2{
@@ -46,4 +54,8 @@ p{
   font-weight: 400;
   letter-spacing: 1px;
   color: $color-grey;
+  @media (max-width: 474px) {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }
