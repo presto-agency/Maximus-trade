@@ -1,0 +1,49 @@
+h1, h2, h3, h4{
+  font-family: 'Romul';
+  color: $color-primary;
+  font-weight: 400;
+}
+
+h1{
+  font-size: 80px;
+  line-height: 100%;
+}
+
+h2{
+  font-size: 50px;
+  line-height: 55px;
+}
+
+h3{
+  font-size: 36px;
+  line-height: 40px;
+}
+
+h4{
+  font-size: 20px;
+  line-height: 22px;
+}
+
+.H-1{
+  @extend h1
+}
+
+.H-2{
+  @extend h2
+}
+
+.H-3{
+  @extend h3
+}
+
+.H-4{
+  @extend  h4
+}
+
+p{
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: $color-grey;
+}

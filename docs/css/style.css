@@ -117,13 +117,62 @@ img {
 }
 
 h1,
+.H-1,
 h2,
+.H-2,
 h3,
+.H-3,
 h4,
+.H-4,
 h5,
 h6 {
   font-weight: inherit;
   font-size: inherit;
+}
+
+h1,
+.H-1,
+h2,
+.H-2,
+h3,
+.H-3,
+h4,
+.H-4 {
+  font-family: "Romul";
+  color: #C7A363;
+  font-weight: 400;
+}
+
+h1,
+.H-1 {
+  font-size: 80px;
+  line-height: 100%;
+}
+
+h2,
+.H-2 {
+  font-size: 50px;
+  line-height: 55px;
+}
+
+h3,
+.H-3 {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+h4,
+.H-4 {
+  font-size: 20px;
+  line-height: 22px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #B9B9B9;
 }
 
 .wrapper {
@@ -148,12 +197,8 @@ h6 {
   padding: 105px 0 0 0;
 }
 
-.page {
-  position: relative;
-  z-index: 2;
-}
-
 .button {
+  display: block;
   cursor: pointer;
   font-weight: 700;
   font-size: 12px;
@@ -170,6 +215,12 @@ h6 {
 
 .button._grey {
   border: 1px solid #B9B9B9;
+}
+
+.button._primary {
+  padding: 17px 33px;
+  color: #070C11;
+  background-color: #C7A363;
 }
 
 .button._auth {
@@ -451,6 +502,44 @@ h6 {
   background-size: cover;
 }
 
+.hero-block {
+  position: relative;
+  padding: 188px 0 364px 0;
+}
+
+.hero-block__content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-block__content h1,
+.hero-block__content .H-1 {
+  margin: 0 0 45px 0;
+}
+
+.hero-block__content p {
+  margin: 20px 0;
+}
+
+.hero-block__content .button {
+  margin: 55px 0 0 0;
+}
+
+.hero-block__img {
+  position: absolute;
+  top: 8px;
+  right: -50px;
+  width: 646px;
+  height: 748px;
+}
+
+.hero-block__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 @media (min-width: 1200px) {
   .button:hover {
     background-color: rgba(199, 163, 99, 0.2);
@@ -458,6 +547,12 @@ h6 {
 
   .button._grey:hover {
     background-color: rgba(185, 185, 185, 0.3);
+  }
+
+  .button._primary:hover {
+    border: 1px solid #9A7E4C;
+    color: #fff;
+    background-color: #9A7E4C;
   }
 
   .common-link:hover a {
