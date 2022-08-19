@@ -21,21 +21,21 @@ let headerActive = () => {
 let addClassToLink = () => {
     let objects = document.querySelectorAll('.how-to__list>li');
     let topValue = window.innerHeight / 2;
+
     objects.forEach(object => {
-        let bottomValue = (window.innerHeight / 2) - object.offsetHeight;
         function isFullyVisible(el) {
             let elementBoundary = el.getBoundingClientRect();
             let top = elementBoundary.top;
-            let bottom = elementBoundary.bottom;
-            return ((top <= topValue) && (bottom >= bottomValue));
+            return top <= topValue
         }
 
         function scrolling() {
             if (isFullyVisible(object) && !object.classList.contains('active')) {
+                let activeBtn = document.querySelector('.how-to__list>li.active');
                 object.classList.add('active')
-            }
-            else if (!isFullyVisible(object) && object.classList.contains('active')){
-                object.classList.remove('active');
+                if(activeBtn){
+                    activeBtn.classList.remove('active')
+                 }
             }
         }
         window.addEventListener("scroll", scrolling);
