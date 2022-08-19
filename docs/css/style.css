@@ -605,6 +605,10 @@ p {
 }
 
 .iframe-block {
+  padding: 0 44px 0 0;
+}
+
+.iframe-block__container {
   margin: 134px auto 102px;
   max-width: 1265px;
   padding: 0 175px 0 0;
@@ -999,6 +1003,23 @@ p {
   .why-us__bottom li {
     width: calc((100% - 64px) / 2);
   }
+
+  .iframe-block {
+    padding: 0 34px 0 0;
+  }
+
+  .iframe-block__content {
+    padding: 0 0 45% 0;
+  }
+
+  .iframe-block__content:before {
+    content: "";
+    width: 124px;
+    height: 115px;
+    top: -10px;
+    right: -10px;
+    background-size: 124px 115px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -1092,6 +1113,10 @@ p {
 
   .hero-block__content p {
     max-width: 256px;
+  }
+
+  .iframe-block__content {
+    padding: 0 0 70% 0;
   }
 }
 
