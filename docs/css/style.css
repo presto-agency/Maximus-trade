@@ -604,6 +604,100 @@ p {
   margin: 20px 0 0 0;
 }
 
+.iframe-block {
+  margin: 134px auto 102px;
+  max-width: 1265px;
+  padding: 0 175px 0 0;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  width: 100%;
+}
+
+.iframe-block__content {
+  position: relative;
+  padding: 0 0 40% 0;
+}
+
+.iframe-block__content:before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 176px;
+  height: 163px;
+  background-image: url("../img/main-page/triangle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 176px 163px;
+}
+
+.iframe-block__content_wrapper {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  border-radius: 0px 0px 121px 0px;
+  overflow: hidden;
+  background-image: url("../img/main-page/play.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 144px 144px;
+}
+
+.iframe-block__content_wrapper:before {
+  content: "";
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 144px;
+  height: 144px;
+  background-image: url("../img/main-page/play.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 144px 144px;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+  pointer-events: none;
+}
+
+.iframe-block__content_wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0px 0px 121px 0px;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+}
+
+.iframe-block__content_wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
+  border-radius: 0px 0px 121px 0px;
+}
+
+.iframe-block__content_wrapper.active:before {
+  opacity: 0;
+}
+
+.iframe-block__content_wrapper.active img {
+  pointer-events: none;
+  opacity: 0;
+}
+
 @media (min-width: 1200px) {
   .button:hover {
     background-color: rgba(199, 163, 99, 0.2);

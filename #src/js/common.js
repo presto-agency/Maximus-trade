@@ -1,5 +1,6 @@
 window.addEventListener('DOMContentLoaded', function () {
     headerActive()
+    playIframe()
 })
 
 let headerActive = () => {
@@ -16,3 +17,12 @@ let headerActive = () => {
     }
     headerMob?burgerBtn.onclick = () => {headerMob.classList.contains('active')?removeClass():addClass()}:null;
 }
+
+let playIframe = () => {
+    let runBtn = document.querySelector('.iframe-block__content_wrapper')
+    let iframeVideo = document.querySelector('.iframe-block__content_wrapper>iframe')
+    runBtn.onclick = () => {
+        runBtn.classList.add('active')
+        iframeVideo.src += "?autoplay=1";
+    }
+};
