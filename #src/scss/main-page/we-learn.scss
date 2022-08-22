@@ -1,0 +1,39 @@
+.we-learn{
+  margin: 183px 0 160px 0;
+  &__content{
+    display: flex;
+    justify-content: space-between;
+    margin: 66px 0 0 0;
+    p{
+      line-height: 24px;
+    }
+    &_left{
+      flex: 0 1 470px;
+      li{
+        display: flex;
+        margin: 0 0 24px 0;
+        &:last-child{
+          margin: 0;
+        }
+        span{
+          font-family: 'Romul';
+          font-size: 70px;
+          line-height: 84px;
+          color: $color-white;
+        }
+        p{
+          margin: 18px 0 0 24px;
+        }
+      }
+    }
+    &_right{
+      flex: 0 1 416px;
+    }
+  }
+  .info-cards{
+    margin: 34px -16px -16px;
+    li{
+      padding: 70px 50px 50px 50px;
+    }
+  }
+}
