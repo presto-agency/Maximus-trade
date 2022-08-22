@@ -606,10 +606,11 @@ p {
 
 .iframe-block {
   padding: 0 44px 0 0;
+  margin: 134px 0 93px;
 }
 
 .iframe-block__container {
-  margin: 134px auto 93px;
+  margin: 0 auto;
   max-width: 1265px;
   padding: 0 175px 0 0;
   -webkit-box-sizing: content-box;
@@ -1141,6 +1142,10 @@ p {
     width: calc((100% - 64px) / 2);
   }
 
+  .why-us {
+    margin: 0 0 36px 0;
+  }
+
   .why-us__top {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1166,6 +1171,7 @@ p {
   }
 
   .iframe-block {
+    margin: 36px 0 100px 0;
     padding: 0 34px 0 0;
   }
 
@@ -1180,6 +1186,35 @@ p {
     top: -10px;
     right: -10px;
     background-size: 124px 115px;
+  }
+
+  .we-learn__content {
+    margin: 40px 0 50px 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .we-learn__content_left {
+    -webkit-box-flex: initial;
+        -ms-flex: initial;
+            flex: initial;
+    margin: 0 0 50px 0;
+  }
+
+  .we-learn__content_left li {
+    margin: 0 15px 15px 0;
+  }
+
+  .we-learn__content_left li p {
+    margin: 6px 0 0 24px;
+  }
+
+  .we-learn__content_right {
+    -webkit-box-flex: initial;
+        -ms-flex: initial;
+            flex: initial;
   }
 }
 
@@ -1298,6 +1333,20 @@ p {
     width: 270px;
     height: 270px;
   }
+
+  .we-learn {
+    margin: 100px 0;
+  }
+
+  .we-learn__content p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .we-learn__content_left li span {
+    font-size: 40px;
+    line-height: 48px;
+  }
 }
 
 @media (max-width: 474px) {
@@ -1329,7 +1378,7 @@ p {
   }
 
   .iframe-block__content {
-    padding: 0 0 70% 0;
+    padding: 0 0 72% 0;
   }
 }
 

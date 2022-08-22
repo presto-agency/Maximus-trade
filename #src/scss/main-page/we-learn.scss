@@ -37,3 +37,44 @@
     }
   }
 }
+
+@media (max-width: 1023px) {
+  .we-learn{
+    &__content{
+      margin: 40px 0 50px 0;
+      flex-direction: column;
+      &_left{
+        flex: initial;
+        margin: 0 0 50px 0;
+        li{
+          margin: 0 15px 15px 0;
+          p{
+            margin: 6px 0 0 24px;
+          }
+        }
+      }
+      &_right{
+        flex: initial;
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .we-learn{
+    margin: 100px 0;
+    &__content{
+      p{
+        font-size: 12px;
+        line-height: 18px;
+      }
+      &_left{
+        li{
+          span{
+            font-size: 40px;
+            line-height: 48px;
+          }
+        }
+      }
+    }
+  }
+}

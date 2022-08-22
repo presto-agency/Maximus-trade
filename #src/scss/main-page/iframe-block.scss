@@ -1,7 +1,8 @@
 .iframe-block{
   padding: 0 44px 0 0;
+  margin: 134px 0 93px;
   &__container{
-    margin: 134px auto 93px;
+    margin: 0 auto;
     max-width: 1265px;
     padding: 0 175px 0 0;
     box-sizing: content-box;
@@ -83,6 +84,7 @@
 
 @media (max-width: 1023px) {
   .iframe-block{
+    margin: 36px 0 100px 0;
     padding: 0 34px 0 0;
     &__content{
       padding:  0 0 45% 0;
@@ -101,7 +103,7 @@
 @media (max-width: 474px) {
   .iframe-block{
     &__content{
-      padding:  0 0 70% 0;
+      padding:  0 0 72% 0;
     }
   }
 }
