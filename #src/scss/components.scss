@@ -153,13 +153,16 @@
   }
 }
 .decor-line{
-  margin: 80px 0 90px 0;
+  margin: 73px 0 90px 0;
   height: 51px;
   width: 100vw;
   background-image: url("../img/decor-line.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  @media (max-width: 767px) {
+    margin: 60px 0;
+  }
 }
 
 
