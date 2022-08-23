@@ -89,3 +89,72 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .our-history{
+    &__list{
+      li{
+        margin: 20px 0 0 0;
+        a{
+          position: relative;
+          padding: 32px 32px 82px 32px;
+          flex-direction: column;
+          &:before{
+            content: '';
+            position: absolute;
+            left: 32px;
+            bottom: 32px;
+            width: 18px;
+            height: 18px;
+            background-image: url("../img/main-page/triangle.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 18px 18px;
+            transform: rotate(180deg);
+          }
+        }
+        &.reverse{
+          .our-history{
+            &__text{
+              order: initial;
+              margin: 0 0 30px 0;
+            }
+            &__img{
+              order: initial;
+            }
+          }
+        }
+      }
+    }
+    &__text{
+      order: 2;
+      flex: initial;
+      margin: 30px 0 0 0;
+      &:before{
+        display: none;
+      }
+    }
+    &__img{
+      max-width: 100%;
+      height: 200px;
+      order: 1;
+      flex: initial;
+    }
+  }
+}
+
+@media(max-width: 567px){
+  .our-history{
+    margin: 100px 0 60px 0;
+    &__text{
+      p{
+        font-size: 18px;
+        line-height: 21px;
+      }
+      span{
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+  }
+}
