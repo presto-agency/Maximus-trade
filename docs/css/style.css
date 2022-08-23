@@ -874,6 +874,12 @@ p {
 }
 
 .our-history__list li {
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 31px 0 0 0;
+}
+
+.our-history__list li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -881,8 +887,6 @@ p {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 48px 48px 56px 56px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  margin: 31px 0 0 0;
 }
 
 .our-history__list li:first-child {
@@ -940,9 +944,13 @@ p {
   line-height: 28px;
   font-weight: 500;
   color: #fff;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
 }
 
 .our-history__img {
+  overflow: hidden;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 400px;
           flex: 0 1 400px;
@@ -953,6 +961,9 @@ p {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
 }
 
 @media (min-width: 1200px) {
@@ -971,6 +982,16 @@ p {
   }
 
   .common-link:hover a {
+    color: #C7A363;
+  }
+
+  .our-history__list li:hover .our-history__img img {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+
+  .our-history__list li:hover .our-history__text p {
     color: #C7A363;
   }
 }
