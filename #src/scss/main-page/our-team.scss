@@ -65,3 +65,82 @@
     }
   }
 }
+
+@media (max-width: 1199px) {
+  .our-team{
+    &__bottom{
+      margin: 168px -21px -50px;
+      li{
+        width: calc((100% - (21px * 4))/2);
+        margin: 50px 21px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .our-team{
+    &__top{
+      &_left{
+        flex: initial;
+        margin: 0 0 58px 0;
+        h2{
+          margin: 0;
+        }
+        p{
+          line-height: 20px;
+          margin: 17px 0 0 0;
+        }
+      }
+      &_right{
+        flex: initial;
+      }
+      flex-direction: column;
+    }
+    &__bottom{
+      margin: 64px -21px -50px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .our-team{
+    margin: 109px 0 50px 0;
+    .person{
+      p{
+        font-size: 16px;
+        line-height: 19px;
+      }
+    }
+    &__top{
+      &_right{
+        height: 240px;
+        padding: 25px 30px;
+        img{
+          height: 184px;
+          left: 31px;
+        }
+      }
+    }
+    &__bottom{
+      margin: 10px -21px -12px;
+      padding: 0 0 50px 0;
+      li{
+        width: calc(100% - (21px * 2));
+        img{
+          top: -50px;
+        }
+        &:nth-child(2n + 1){
+          margin: 50px 21px 12px 96px;
+          img{
+            left: initial;
+            right: 30px;
+          }
+        }
+        &:nth-child(2n + 2){
+          margin: 50px 96px 12px 21px;
+        }
+      }
+    }
+  }
+}
