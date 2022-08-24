@@ -31,7 +31,7 @@ let addClassToLink = () => {
 let sliderClients = () => {
     let slider = document.querySelector('.our-clients__swiper');
     slider?new Swiper('.our-clients__swiper', {
-        slidesPerView: 'auto',
+        slidesPerView: 1,
         slidesPerGroup: 1,
         loop: 'true',
         speed: 500,
@@ -45,5 +45,10 @@ let sliderClients = () => {
             nextEl: '.our-clients__next',
             prevEl: '.our-clients__prev',
         },
+        breakpoints: {
+            768: {
+                slidesPerView: 'auto',
+            }
+        }
     }): null;
 }

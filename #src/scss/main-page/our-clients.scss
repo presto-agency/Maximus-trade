@@ -57,6 +57,7 @@
 
         &::-webkit-scrollbar-track {
           background: rgba($color-white, 0.3);
+          border-radius: 20px;
         }
 
         &::-webkit-scrollbar-thumb {
@@ -76,9 +77,11 @@
      cursor: pointer;
      padding: 20px;
      border: 1px solid rgba($color-white, 0.3);
-     &:hover{
-       border: 1px solid rgba($color-primary, 0.3);
-       background: $color-primary;
+     @media (min-width: 1200px) {
+       &:hover{
+         border: 1px solid rgba($color-primary, 0.3);
+         background: $color-primary;
+       }
      }
      svg{
        width: 18px;
@@ -95,6 +98,7 @@
   }
   &__pagination{
     position: static;
+    z-index: initial;
     display: flex;
     align-items: center;
     margin: 0 0 0 53px;
@@ -107,6 +111,79 @@
     .swiper-pagination-bullet-active{
       background: $color-white;
       opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .our-clients{
+    &__container{
+      left: initial;
+      max-width: 1087px;
+      padding: 0 24px;
+      box-sizing: content-box;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .our-clients{
+    margin: 50px 0 100px 0;
+    &__swiper{
+      .card-client{
+        padding: 40px 30px 30px 30px;
+        &__top{
+          &_text{
+            p{
+              margin: 0;
+              font-size: 16px;
+              line-height: 19px;
+            }
+            span{
+              margin: 7px 0 0 0;
+              font-size: 10px;
+              line-height: 15px;
+            }
+          }
+          &_img{
+            width: 34px;
+            height: 34px;
+          }
+        }
+        &__bottom{
+          margin: 20px 0 0 0;
+          height: 108px;
+          p{
+            font-size: 12px;
+            line-height: 18px;
+          }
+        }
+      }
+    }
+    &__container{
+      h2{
+        margin: 0 0 30px 0;
+      }
+    }
+    &__btn-wrapper{
+      .arrow{
+        padding: 13px;
+      }
+    }
+    &__next{
+      margin: 0 0 0 22px;
+    }
+    &__navigation{
+      margin: 38px 0 0 0;
+    }
+    &__pagination{
+      margin: 0 0 0 31px;
+      .swiper-pagination-bullet{
+        width: 5px;
+        height: 5px;
+        margin: 0 11px 0 0!important;
+      }
     }
   }
 }

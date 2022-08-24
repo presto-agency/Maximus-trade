@@ -1185,6 +1185,7 @@ p {
 
 .our-clients__swiper .card-client__bottom::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
 }
 
 .our-clients__swiper .card-client__bottom::-webkit-scrollbar-thumb {
@@ -1211,11 +1212,6 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.our-clients__btn-wrapper .arrow:hover {
-  border: 1px solid rgba(199, 163, 99, 0.3);
-  background: #C7A363;
-}
-
 .our-clients__btn-wrapper .arrow svg {
   width: 18px;
   height: 17px;
@@ -1234,6 +1230,7 @@ p {
 
 .our-clients__pagination {
   position: static;
+  z-index: initial;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1282,6 +1279,11 @@ p {
 
   .our-history__list li:hover .our-history__text p {
     color: #C7A363;
+  }
+
+  .our-clients__btn-wrapper .arrow:hover {
+    border: 1px solid rgba(199, 163, 99, 0.3);
+    background: #C7A363;
   }
 }
 
@@ -1538,6 +1540,15 @@ p {
   .our-team__bottom li {
     width: calc((100% - 84px) / 2);
     margin: 50px 21px;
+  }
+
+  .our-clients__container {
+    left: initial;
+    max-width: 1087px;
+    padding: 0 24px;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box;
+    margin: 0 auto;
   }
 }
 
@@ -1920,6 +1931,68 @@ p {
 
   .our-team__bottom li:nth-child(2n+2) {
     margin: 50px 96px 12px 21px;
+  }
+
+  .our-clients {
+    margin: 50px 0 100px 0;
+  }
+
+  .our-clients__swiper .card-client {
+    padding: 40px 30px 30px 30px;
+  }
+
+  .our-clients__swiper .card-client__top_text p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .our-clients__swiper .card-client__top_text span {
+    margin: 7px 0 0 0;
+    font-size: 10px;
+    line-height: 15px;
+  }
+
+  .our-clients__swiper .card-client__top_img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .our-clients__swiper .card-client__bottom {
+    margin: 20px 0 0 0;
+    height: 108px;
+  }
+
+  .our-clients__swiper .card-client__bottom p {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .our-clients__container h2,
+  .our-clients__container .H-2 {
+    margin: 0 0 30px 0;
+  }
+
+  .our-clients__btn-wrapper .arrow {
+    padding: 13px;
+  }
+
+  .our-clients__next {
+    margin: 0 0 0 22px;
+  }
+
+  .our-clients__navigation {
+    margin: 38px 0 0 0;
+  }
+
+  .our-clients__pagination {
+    margin: 0 0 0 31px;
+  }
+
+  .our-clients__pagination .swiper-pagination-bullet {
+    width: 5px;
+    height: 5px;
+    margin: 0 11px 0 0 !important;
   }
 }
 
