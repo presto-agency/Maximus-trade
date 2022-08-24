@@ -1,0 +1,82 @@
+.need-help{
+  margin: 120px 0 100px 0;
+  &__wrapper{
+    position: relative;
+    padding: 70px 0 50px 0;
+  }
+  &__content{
+    max-width: 589px;
+    p{
+      margin: 36px 0 0 0;
+      line-height: 24px;
+    }
+  }
+  &__form{
+    margin: 30px 0 0 0;
+    input{
+      background: transparent;
+      padding: 35px 30px 35px 30px;
+      border: 1px solid rgba($color-white, 0.3);
+      width: 100%;
+      &::placeholder{
+        font-weight: 500;
+        line-height: 24px;
+        color: rgba($color-white, 0.3);
+      }
+      &:focus{
+        color: $color-white;
+        border: 1px solid $color-white;
+      }
+    }
+  }
+  &__input-top{
+    display: flex;
+    input{
+      flex: 0 1 47%;
+      &:last-child{
+        flex: 0 1 53%;
+        margin: 0 0 0 13px;
+      }
+    }
+  }
+  &__input-bottom{
+    position: relative;
+    margin: 15px 0 0 0;
+    button{
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__img{
+    width: 705px;
+    height: 501px;
+    position: absolute;
+    top: 0;
+    right: -362px;
+    padding: 0 0 16px 16px;
+    box-sizing: content-box;
+    &:before{
+      content: '';
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      transform: rotate(-180deg);
+      width: 176px;
+      height: 163px;
+      background-image: url("../img/main-page/triangle.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 176px 163px;
+    }
+    img{
+      position: relative;
+      z-index: 2;
+      border-radius: 260px 0px 0px 0px;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
