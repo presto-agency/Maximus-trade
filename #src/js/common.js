@@ -1,6 +1,5 @@
 window.addEventListener('DOMContentLoaded', function () {
     headerActive()
-    addClassToLink()
 })
 
 let headerActive = () => {
@@ -18,27 +17,3 @@ let headerActive = () => {
     headerMob?burgerBtn.onclick = () => {headerMob.classList.contains('active')?removeClass():addClass()}:null;
 }
 
-let addClassToLink = () => {
-    let objects = document.querySelectorAll('.how-to__list>li');
-    let topValue = window.innerHeight / 2;
-
-    objects.forEach(object => {
-        function isFullyVisible(el) {
-            let elementBoundary = el.getBoundingClientRect();
-            let top = elementBoundary.top;
-            return top <= topValue
-        }
-
-        function scrolling() {
-            if (isFullyVisible(object) && !object.classList.contains('active')) {
-                let activeBtn = document.querySelector('.how-to__list>li.active');
-                object.classList.add('active')
-                if(activeBtn){
-                    activeBtn.classList.remove('active')
-                 }
-            }
-        }
-        window.addEventListener("scroll", scrolling);
-    })
-
-};

@@ -1,4 +1,5 @@
 @@include('common.js');
+@@include('pages/main-page.js');
 
 
 // const bg = () => {
