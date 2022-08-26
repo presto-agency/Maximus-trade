@@ -22,6 +22,7 @@ window.addEventListener('DOMContentLoaded', function () {
     // addClassToLink()
     sliderClients()
     callPopUp()
+    callForgottenPassword()
 })
 
 // let addClassToLink = () => {
@@ -77,10 +78,12 @@ let callPopUp = () => {
     triggersOpen?triggersOpen.forEach((btn) =>
         btn.addEventListener("click", function () {
             let activeTab = document.querySelector(".active-popup");
+            let subPopUp = document.querySelector('.forgotten.active');
             activeTab && activeTab.classList.remove("active-popup");
             let tabAttr = this.getAttribute("data-attr");
             document.getElementById(tabAttr).classList.add("active-popup");
             body.style.overflow = 'hidden';
+            subPopUp?subPopUp.classList.remove('active'):null;
         })
     ):null;
     triggersClose?triggersClose.forEach(btnClose =>
@@ -90,6 +93,18 @@ let callPopUp = () => {
             body.style.overflow = '';
         })
     ):null;
+}
+
+let callForgottenPassword = () => {
+    let openBtn = document.getElementById('forgotten-go');
+    let closeBtn = document.getElementById('forgotten-back');
+    let popUp = document.querySelector('.forgotten');
+    openBtn.onclick = () => {
+        popUp.classList.add('active')
+    }
+    closeBtn.onclick = () => {
+        popUp.classList.remove('active')
+    }
 };
 
 
