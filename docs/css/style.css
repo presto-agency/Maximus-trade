@@ -743,7 +743,8 @@ p {
   text-align: left;
 }
 
-.sign-in__form p a {
+.sign-in__form p span {
+  cursor: pointer;
   color: #B9B9B9;
   -webkit-transition: 300ms;
   -o-transition: 300ms;
@@ -1655,7 +1656,7 @@ p {
     left: -5px;
   }
 
-  .sign-in__form p a:hover {
+  .sign-in__form p span:hover {
     color: #fff;
   }
 

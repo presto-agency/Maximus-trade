@@ -127,7 +127,8 @@
       line-height: 25px;
       font-weight: 500;
       text-align: left;
-      a{
+      span{
+        cursor: pointer;
         color: $color-grey;
         transition: 300ms;
         @media (min-width: 1200px) {
