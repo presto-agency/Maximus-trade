@@ -164,5 +164,20 @@
     margin: 60px 0;
   }
 }
+.input{
+  background: transparent;
+  padding: 35px 30px 35px 30px;
+  border: 1px solid rgba($color-white, 0.3);
+  width: 100%;
+  &::placeholder{
+    font-weight: 500;
+    line-height: 24px;
+    color: rgba($color-white, 0.3);
+  }
+  &:focus{
+    color: $color-white;
+    border: 1px solid $color-white;
+  }
+}
 
 

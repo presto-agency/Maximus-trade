@@ -21,6 +21,7 @@ let headerActive = () => {
 window.addEventListener('DOMContentLoaded', function () {
     // addClassToLink()
     sliderClients()
+    callPopUp()
 })
 
 // let addClassToLink = () => {
@@ -67,6 +68,28 @@ let sliderClients = () => {
             }
         }
     }): null;
+}
+
+let callPopUp = () => {
+    let triggersOpen = document.querySelectorAll(".trigger");
+    let triggersClose = document.querySelectorAll(".sub-close");
+    let body = document.querySelector('body');
+    triggersOpen?triggersOpen.forEach((btn) =>
+        btn.addEventListener("click", function () {
+            let activeTab = document.querySelector(".active-popup");
+            activeTab && activeTab.classList.remove("active-popup");
+            let tabAttr = this.getAttribute("data-attr");
+            document.getElementById(tabAttr).classList.add("active-popup");
+            body.style.overflow = 'hidden';
+        })
+    ):null;
+    triggersClose?triggersClose.forEach(btnClose =>
+        btnClose.addEventListener("click", function () {
+            let closeTabAttr = this.getAttribute("data-close");
+            document.getElementById(closeTabAttr).classList.remove("active-popup");
+            body.style.overflow = '';
+        })
+    ):null;
 };
 
 

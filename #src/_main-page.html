@@ -261,7 +261,7 @@
 </section>
 <!--decor-line-->
 <div class="decor-line"></div>
-<!--finish-decor-line-->
+<!--finish decor-line-->
 <section class="our-partners">
     <div class="container">
         <h2>
@@ -484,11 +484,11 @@
                 </p>
                 <form action="#" class="need-help__form">
                     <div class="need-help__input-top">
-                        <input type="text" placeholder="Имя">
-                        <input type="text" placeholder="Фамилия">
+                        <input class="input" type="text" placeholder="Имя">
+                        <input class="input" type="text" placeholder="Фамилия">
                     </div>
                     <div class="need-help__input-bottom">
-                        <input type="number" placeholder="+38 (0__) ___-__-__">
+                        <input class="input" type="number" placeholder="+38 (0__) ___-__-__">
                         <button class="button _primary" type="submit">записаться</button>
                     </div>
                 </form>
@@ -499,3 +499,36 @@
         </div>
     </div>
 </section>
+<!--sign-in popups-->
+<section id="call-1" class="sign-in">
+    <div class="sign-in__wrapper">
+        <div class="sign-in__content">
+            <div class="sign-in__title">
+                <p>
+                    <strong>
+                        Регистрация
+                    </strong>
+                </p>
+                <p>
+                    для регистрации введите свою почту
+                </p>
+            </div>
+            <form class="sign-in__form">
+                <input class="input" type="text" placeholder="Имя">
+                <input class="input" type="email" placeholder="E-mail">
+                <input class="input" type="password" placeholder="Пароль">
+                <button class="button _primary">Зарегистрироваться</button>
+            </form>
+            <div class="sign-in__bottom">
+                <p>
+                    Регистрируясь, вы соглашаетесь с <span>Правилами использования</span> и <span>Политикой конфиденциальности</span>
+                </p>
+            </div>
+        </div>
+        <div data-close="call-1" class="sign-in__cross sub-close">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</section>
+<!--finish sign-in popups-->
