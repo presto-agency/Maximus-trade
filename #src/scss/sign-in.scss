@@ -31,11 +31,66 @@
     overflow-y: auto;
   }
   &__content{
+    position: relative;
     border: 1px solid rgba($color-primary, 0.3);
     padding: 50px 112px;
     background: $color-black;
     text-align: center;
     margin: 25px;
+    &.forgotten{
+      display: none!important;
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .sign-in{
+        &__title{
+          p{
+            font-size: 12px;
+            line-height: 25px;
+            font-weight: 400;
+          }
+        }
+        &__bottom{
+          p{
+            position: relative;
+            display: inline-block;
+            padding: 0 0 0 36px;
+            cursor: pointer;
+            max-width: initial;
+            margin: 0;
+            font-size: 12px;
+            line-height: 25px;
+            &:before{
+              content: '';
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              width: 18px;
+              height: 10px;
+              background-size: 18px 10px;
+              background-repeat: no-repeat;
+              background-position: center;
+              background-image: url("../img/main-page/arrow-string.svg");
+              transition: 300ms;
+            }
+            @media (min-width: 1200px) {
+              &:hover{
+                &:before{
+                  left: -5px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
   &__title{
     p{
@@ -64,8 +119,27 @@
         margin: 0;
       }
     }
+    p{
+      margin: 18px 0 16px 0;
+      font-size: 12px;
+      line-height: 25px;
+      font-weight: 500;
+      text-align: left;
+      a{
+        color: $color-grey;
+        transition: 300ms;
+        @media (min-width: 1200px) {
+          &:hover{
+            color: $color-white;
+          }
+        }
+      }
+    }
     button{
       margin: 27px 0 0 0;
+    }
+    p+button{
+      margin: 0;
     }
   }
   &__bottom{
@@ -76,6 +150,38 @@
       line-height: 15px;
       span{
         color: $color-blue;
+      }
+      strong{
+        font-size: 12px;
+        line-height: 25px;
+        font-weight: 500;
+      }
+    }
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 14px 0 0 0;
+      li{
+        margin: 0 20px 0 0;
+        &:last-child{
+          margin: 0;
+        }
+        a{
+          display: block;
+          svg{
+            fill: $color-grey;
+            width: 24px;
+            height: 24px;
+          }
+          @media (min-width: 1200px) {
+            &:hover{
+              svg{
+                fill: $color-primary;
+              }
+            }
+          }
+        }
       }
     }
   }
