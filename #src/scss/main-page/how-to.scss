@@ -10,16 +10,19 @@
   &__list{
     max-width: 715px;
     li{
+      cursor: pointer;
       position: relative;
       counter-increment: counting;
       padding: 0 112px 0 112px;
       margin: 0 0 60px 0;
-      &.active{
-        p{
-          opacity: 1;
-        }
-        &:after{
-          opacity: 1;
+      @media (min-width: 1200px) {
+        &:hover{
+          p{
+            opacity: 1;
+          }
+          &:after{
+            opacity: 1;
+          }
         }
       }
       &:last-child{
@@ -77,6 +80,18 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .how-to{
+    &__list{
+      li{
+        p{
+          opacity: 1;
+        }
+      }
     }
   }
 }

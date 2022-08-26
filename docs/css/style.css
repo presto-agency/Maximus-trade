@@ -732,18 +732,11 @@ p {
 }
 
 .how-to__list li {
+  cursor: pointer;
   position: relative;
   counter-increment: counting;
   padding: 0 112px 0 112px;
   margin: 0 0 60px 0;
-}
-
-.how-to__list li.active p {
-  opacity: 1;
-}
-
-.how-to__list li.active:after {
-  opacity: 1;
 }
 
 .how-to__list li:last-child {
@@ -1406,6 +1399,14 @@ p {
     color: #C7A363;
   }
 
+  .how-to__list li:hover p {
+    opacity: 1;
+  }
+
+  .how-to__list li:hover:after {
+    opacity: 1;
+  }
+
   .our-history__list li:hover .our-history__img img {
     -webkit-transform: scale(1.1);
         -ms-transform: scale(1.1);
@@ -1652,6 +1653,10 @@ p {
 
   .footer .button {
     display: none;
+  }
+
+  .how-to__list li p {
+    opacity: 1;
   }
 
   .our-partners {
