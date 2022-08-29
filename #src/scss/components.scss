@@ -178,6 +178,13 @@
     color: $color-white;
     border: 1px solid $color-white;
   }
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
 }
 
 

@@ -372,6 +372,15 @@ p {
   border: 1px solid #fff;
 }
 
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input input[type=number] {
+  -moz-appearance: textfield;
+}
+
 .header {
   position: fixed;
   z-index: 10;
@@ -1633,6 +1642,71 @@ p {
      object-fit: cover;
 }
 
+.cabinet {
+  margin: 35px 0 90px 0;
+}
+
+.cabinet__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 50px 0 0 0;
+}
+
+.cabinet__content .sidebar {
+  width: 100%;
+  max-width: 190px;
+  margin: 0 33px 0 0;
+}
+
+.cabinet__content .sidebar ul li {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #8C8C8C;
+  margin: 0 0 20px 0;
+}
+
+.cabinet__content .sidebar ul li:last-child {
+  margin: 0;
+}
+
+.cabinet__content .sidebar ul li a {
+  color: #8C8C8C;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+}
+
+.cabinet__content .profile {
+  max-width: 640px;
+  padding: 40px 40px 60px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.cabinet__content .profile p strong {
+  font-size: 34px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+.cabinet__content .profile form {
+  margin: 20px 0 0 0;
+}
+
+.cabinet__content .profile form input {
+  margin: 0 0 12px 0;
+  padding: 22px 24px;
+}
+
+.cabinet__content .profile form input:last-of-type {
+  margin: 0;
+}
+
+.cabinet__content .profile form button {
+  margin: 30px 0 0 0;
+}
+
 @media (min-width: 1200px) {
   .button:hover {
     background-color: rgba(199, 163, 99, 0.2);
@@ -1685,6 +1759,10 @@ p {
   .our-clients__btn-wrapper .arrow:hover {
     border: 1px solid rgba(199, 163, 99, 0.3);
     background: #C7A363;
+  }
+
+  .cabinet__content .sidebar ul li:hover a {
+    color: #fff;
   }
 }
 
@@ -2465,6 +2543,31 @@ p {
     height: 5px;
     margin: 0 11px 0 0 !important;
   }
+
+  .cabinet__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .cabinet__content .sidebar {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 37px 34px 47px;
+  }
+
+  .cabinet__content .profile {
+    padding: 37px 34px 47px;
+    margin: 20px 0 0 0;
+    max-width: 100%;
+  }
+
+  .cabinet__content .profile button {
+    width: 100%;
+  }
 }
 
 @media (max-width: 567px) {
@@ -2480,6 +2583,20 @@ p {
   .our-history__text span {
     font-size: 12px;
     line-height: 18px;
+  }
+
+  .cabinet__content {
+    margin: 18px 0 0 0;
+  }
+
+  .cabinet__content .profile p strong {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .cabinet__content .sidebar ul li {
+    margin: 0 0 23px 0;
   }
 }
 
