@@ -1678,6 +1678,14 @@ p {
   transition: 300ms;
 }
 
+.cabinet__content .sidebar ul li.active {
+  color: #fff;
+}
+
+.cabinet__content .sidebar ul li.active a {
+  color: #fff;
+}
+
 .cabinet__content .profile {
   max-width: 640px;
   padding: 40px 40px 60px;
@@ -1759,6 +1767,10 @@ p {
   .our-clients__btn-wrapper .arrow:hover {
     border: 1px solid rgba(199, 163, 99, 0.3);
     background: #C7A363;
+  }
+
+  .cabinet__content .sidebar ul li:hover {
+    color: #fff;
   }
 
   .cabinet__content .sidebar ul li:hover a {

@@ -23,9 +23,16 @@
           }
           @media (min-width: 1200px) {
             &:hover{
+              color: $color-white;
               a{
                 color: $color-white;
               }
+            }
+          }
+          &.active{
+            color: $color-white;
+            a{
+              color: $color-white;
             }
           }
         }
