@@ -2324,6 +2324,15 @@ p {
         -ms-transform: initial;
             transform: initial;
   }
+
+  .cabinet__content .subscription {
+    margin: -16px 0;
+  }
+
+  .cabinet__content .subscription__link {
+    margin: 16px 0;
+    width: 100%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2667,6 +2676,19 @@ p {
     padding: 37px 34px 47px;
   }
 
+  .cabinet__content .subscription {
+    margin: 10px 0;
+  }
+
+  .cabinet__content .subscription__link {
+    padding: 37px 34px 47px;
+    margin: 10px 0;
+  }
+
+  .cabinet__content .subscription__link-check button {
+    width: 100%;
+  }
+
   .cabinet__content .profile {
     padding: 37px 34px 47px;
     margin: 20px 0 0 0;
@@ -2787,5 +2809,10 @@ p {
 
   .our-partners ul li {
     width: calc((100% - 150px) / 3);
+  }
+
+  .cabinet__content .subscription__link p strong {
+    font-size: 30px;
+    line-height: 34px;
   }
 }
