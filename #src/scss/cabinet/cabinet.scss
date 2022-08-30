@@ -63,6 +63,83 @@
         }
       }
     }
+    .subscription{
+      display: flex;
+      flex-wrap: wrap;
+      margin: -16px;
+      width: 100%;
+      &__link{
+        padding: 37px 48px;
+        border: 1px solid rgba($color-white, 0.3);
+        min-height: 390px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 16px;
+        width: calc((100% - (16px * 4))/2);
+        &.current{
+          position: relative;
+          &:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 28px;
+            width: 34px;
+            height: 56px;
+            background-image: url("../img/flag.svg");
+            background-size: 34px 56px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover
+          }
+        }
+        p{
+          color: $color-white;
+          strong{
+            line-height: 51px;
+            font-weight: 700;
+            font-size: 34px;
+          }
+        }
+        &-title{
+          margin: 0 0 19px 0;
+          p{
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 500;
+          }
+        }
+        &-price{
+          p{
+            strong{
+              color: $color-white;
+            }
+            span{
+              display: inline-block;
+              font-size: 12px;
+              line-height: 11px;
+              color: $color-grey-800;
+            }
+          }
+          p{
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 500;
+            color: $color-grey-800;
+          }
+        }
+        &-check{
+          margin: 50px 0 0 0;
+          p{
+            margin: 0 0 20px 0;
+            font-size: 12px;
+            line-height: 14px;
+            font-weight: 500;
+            color: $color-grey-800;
+          }
+        }
+      }
+    }
   }
 }
 

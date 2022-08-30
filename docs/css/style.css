@@ -1715,6 +1715,102 @@ p {
   margin: 30px 0 0 0;
 }
 
+.cabinet__content .subscription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -16px;
+  width: 100%;
+}
+
+.cabinet__content .subscription__link {
+  padding: 37px 48px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  min-height: 390px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 16px;
+  width: calc((100% - 64px) / 2);
+}
+
+.cabinet__content .subscription__link.current {
+  position: relative;
+}
+
+.cabinet__content .subscription__link.current:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 28px;
+  width: 34px;
+  height: 56px;
+  background-image: url("../img/flag.svg");
+  background-size: 34px 56px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.cabinet__content .subscription__link p {
+  color: #fff;
+}
+
+.cabinet__content .subscription__link p strong {
+  line-height: 51px;
+  font-weight: 700;
+  font-size: 34px;
+}
+
+.cabinet__content .subscription__link-title {
+  margin: 0 0 19px 0;
+}
+
+.cabinet__content .subscription__link-title p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.cabinet__content .subscription__link-price p strong {
+  color: #fff;
+}
+
+.cabinet__content .subscription__link-price p span {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 11px;
+  color: #8C8C8C;
+}
+
+.cabinet__content .subscription__link-price p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #8C8C8C;
+}
+
+.cabinet__content .subscription__link-check {
+  margin: 50px 0 0 0;
+}
+
+.cabinet__content .subscription__link-check p {
+  margin: 0 0 20px 0;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
+  color: #8C8C8C;
+}
+
 @media (min-width: 1200px) {
   .button:hover {
     background-color: rgba(199, 163, 99, 0.2);
