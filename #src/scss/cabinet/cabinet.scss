@@ -62,6 +62,17 @@
           margin: 30px 0 0 0;
         }
       }
+      &__bottom{
+        margin: 20px 0 0 0;
+        a, p{
+          font-size: 10px;
+          line-height: 15px;
+        }
+        a{
+          color: $color-blue;
+          text-decoration: underline;
+        }
+      }
     }
     .subscription{
       display: flex;
