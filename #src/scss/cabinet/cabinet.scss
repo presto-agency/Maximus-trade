@@ -252,6 +252,129 @@
         }
       }
     }
+    .payment-story{
+      width: 100%;
+        li{
+          &:first-child{
+            margin: 0;
+          }
+          margin: 20px 0 0 0;
+        }
+        &__no-payment{
+          border: 1px solid rgba($color-white, 0.3);
+          padding: 40px;
+          font-size: 34px;
+          line-height: 40px;
+          font-weight: 700;
+          color: $color-white;
+        }
+      &__payment{
+        position: relative;
+        border: 1px solid rgba($color-white, 0.3);
+        padding: 34px 40px 40px;
+        display: flex;
+        flex-wrap: wrap;
+        &:before{
+          content: '';
+          position: absolute;
+          right: 40px;
+          bottom: 60px;
+          width: 18px;
+          height: 18px;
+          background-image: url("../img/main-page/triangle.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 18px 18px;
+          transform: rotate(90deg);
+        }
+        &-text{
+          flex: 1 0 55%;
+          p{
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 500;
+            &:last-child{
+              margin: 20px 0 0 0;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 3;
+              overflow: hidden;
+            }
+            strong{
+              font-size: 34px;
+              line-height: 40px;
+              font-weight: 700;
+              color: $color-white;
+            }
+          }
+        }
+        &-price{
+          flex: 1 0 45%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          p{
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 500;
+            &:last-child{
+              margin: 14px 0 0 0;
+            }
+            strong{
+              color: $color-white;
+              font-size: 25px;
+              line-height: 29px;
+              font-weight: 700;
+              text-transform: uppercase;
+            }
+          }
+        }
+        &-wallet{
+          margin: 27px 0 0 0;
+          width: 100%;
+          p{
+            font-size: 13px;
+            line-height: 25px;
+            font-weight: 500;
+            color: $color-primary;
+          }
+        }
+        &-input{
+          display: flex;
+          align-items: center;
+          margin: 16px 0 0 0;
+          input{
+            flex: 1 0 60%;
+            padding: 20px;
+          }
+          ul{
+            display: flex;
+            margin: 0 -10px 0 35px;
+            flex: 0 1 40%;
+            li{
+              cursor: pointer;
+              width: 24px;
+              height: 24px;
+              margin: 0 10px;
+              &:first-child{
+                margin: 0 10px;
+              }
+            }
+          }
+          svg{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            fill: $color-primary;
+          }
+          button{
+            width: inherit;
+            height: inherit;
+            background: transparent;
+          }
+        }
+      }
+    }
   }
 }
 @media (max-width: 1199px) {
@@ -300,6 +423,30 @@
           width: 100%;
         }
       }
+      .payment-story{
+        &__payment{
+          padding: 30px;
+          &:before{
+            display: none;
+          }
+          &-text{
+            flex: initial;
+            p{
+              font-size: 12px;
+              line-height: 18px;
+              strong{
+                font-size: 20px;
+                line-height: 24px;
+              }
+            }
+          }
+          &-price{
+            display: block;
+            margin: 27px 0 0 0;
+            flex: initial;
+          }
+        }
+      }
     }
   }
 }
@@ -338,6 +485,27 @@
       .current-subscribe{
         margin: 20px 0 0 0;
         padding: 29px 30px 50px;
+      }
+      .payment-story{
+        margin: 20px 0 0 0;
+        &__no-payment{
+          font-size: 20px;
+          line-height: 24px;
+          padding: 30px;
+        }
+        &__payment{
+          &-input{
+            flex-direction: column;
+            align-items: flex-start;
+            input{
+              flex: initial;
+            }
+            ul{
+              margin: 20px 0 0 0;
+              flex: initial;
+            }
+          }
+        }
       }
     }
   }

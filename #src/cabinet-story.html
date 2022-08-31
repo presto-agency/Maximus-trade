@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Maximus-trade</title>
+</head>
+
+<body>
+<div class="wrapper">
+  @@include('_header.html')
+  <div class="root"></div>
+  <div class="cabinet">
+    <div class="container">
+      <h2>
+        Ivan Ivanov
+      </h2>
+      <div class="cabinet__content">
+        @@include('_sidebar.html')
+        <ul class="payment-story">
+          <li class="payment-story__no-payment">
+            У вас нет счетов
+          </li>
+          <li class="payment-story__payment">
+            <div class="payment-story__payment-text">
+              <p>
+                <strong>
+                  UI/UX Design. Professium
+                </strong>
+              </p>
+              <p>
+                Результаты зависят от опыта и личной дисциплины. Улучшить навыки и повысить продуктивность можно на нашем курсе. Зависят от ....
+              </p>
+            </div>
+            <div class="payment-story__payment-price">
+              <p>
+                Инвестировано
+              </p>
+              <p>
+                <strong>
+                  150 $ /  10 usdt
+                </strong>
+              </p>
+            </div>
+            <div class="payment-story__payment-wallet">
+              <p>
+                Номер кошелька
+              </p>
+              <form class="payment-story__payment-input">
+                <input class="input" type="text" placeholder="wallet number">
+                <ul>
+                  <li>
+                    <svg>
+                      <use xlink:href="img/icons/icons.svg#chain"></use>
+                    </svg>
+                  </li>
+                  <li>
+                    <button type="submit">
+                      <svg>
+                        <use xlink:href="img/icons/icons.svg#memo"></use>
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <svg>
+                      <use xlink:href="img/icons/icons.svg#pen"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </form>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  @@include('_footer.html')
+</div>
+<script src="js/script.min.js"></script>
+</body>
+
+</html>
