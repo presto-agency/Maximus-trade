@@ -375,6 +375,34 @@
         }
       }
     }
+    .account-delete{
+      padding: 40px;
+      border: 1px solid rgba($color-white, 0.3);
+      width: 100%;
+      p{
+        max-width: 640px;
+        font-size: 16px;
+        line-height: 24px;
+        &:nth-child(2){
+          margin: 23px 0 0 0;
+        }
+        &:nth-child(3){
+          margin: 20px 0 0 0;
+        }
+        strong{
+          font-size: 34px;
+          line-height: 40px;
+          font-weight: 700;
+          color: $color-white;
+        }
+        span{
+          font-weight: 800;
+        }
+      }
+      button{
+        margin: 36px 0 0 0;
+      }
+    }
   }
 }
 @media (max-width: 1199px) {
@@ -504,6 +532,15 @@
               margin: 20px 0 0 0;
               flex: initial;
             }
+          }
+        }
+      }
+      .account-delete{
+        margin: 20px 0 0 0;
+        p{
+          strong{
+            font-size: 20px;
+            line-height: 24px;
           }
         }
       }

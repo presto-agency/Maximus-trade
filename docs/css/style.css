@@ -216,6 +216,11 @@ p {
   border: 1px solid #B9B9B9;
 }
 
+.button._red {
+  background-color: #AF323C;
+  border: initial;
+}
+
 .button._primary {
   padding: 17px 33px;
   color: #070C11;
@@ -335,6 +340,7 @@ p {
   padding: 35px 30px 35px 30px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   width: 100%;
+  color: #fff;
 }
 
 .input::-webkit-input-placeholder {
@@ -2125,6 +2131,41 @@ p {
   background: transparent;
 }
 
+.cabinet__content .account-delete {
+  padding: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 100%;
+}
+
+.cabinet__content .account-delete p {
+  max-width: 640px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.cabinet__content .account-delete p:nth-child(2) {
+  margin: 23px 0 0 0;
+}
+
+.cabinet__content .account-delete p:nth-child(3) {
+  margin: 20px 0 0 0;
+}
+
+.cabinet__content .account-delete p strong {
+  font-size: 34px;
+  line-height: 40px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.cabinet__content .account-delete p span {
+  font-weight: 800;
+}
+
+.cabinet__content .account-delete button {
+  margin: 36px 0 0 0;
+}
+
 @media (min-width: 1200px) {
   .button:hover {
     background-color: rgba(199, 163, 99, 0.2);
@@ -2132,6 +2173,10 @@ p {
 
   .button._grey:hover {
     background-color: rgba(185, 185, 185, 0.3);
+  }
+
+  .button._red:hover {
+    background-color: #92262F;
   }
 
   .button._primary:hover {
@@ -3125,6 +3170,15 @@ p {
     -webkit-box-flex: initial;
         -ms-flex: initial;
             flex: initial;
+  }
+
+  .cabinet__content .account-delete {
+    margin: 20px 0 0 0;
+  }
+
+  .cabinet__content .account-delete p strong {
+    font-size: 20px;
+    line-height: 24px;
   }
 }
 

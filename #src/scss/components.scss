@@ -23,6 +23,15 @@
       }
     }
   }
+  &._red{
+    background-color: $color-red;
+    border: initial;
+    @media (min-width: 1200px) {
+      &:hover{
+        background-color: $color-red-dark;
+      }
+    }
+  }
   &._primary{
     padding: 17px 33px;
     color: $color-black;
@@ -169,6 +178,7 @@
   padding: 35px 30px 35px 30px;
   border: 1px solid rgba($color-white, 0.3);
   width: 100%;
+  color: $color-white;
   &::placeholder{
     font-weight: 500;
     line-height: 24px;

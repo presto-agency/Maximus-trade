@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Maximus-trade</title>
+</head>
+
+<body>
+<div class="wrapper">
+  @@include('_header.html')
+  <div class="root"></div>
+  <div class="cabinet">
+    <div class="container">
+      <h2>
+        Ivan Ivanov
+      </h2>
+      <div class="cabinet__content">
+        @@include('_sidebar.html')
+        <div class="account-delete">
+          <p>
+            <strong>
+              Внимание!
+            </strong>
+          </p>
+          <p>
+            Если вы удалите свою учетную запись, весь ваш прогресс будет полностью удален,
+            и <span>вы потеряете доступ к платформе навсегда.</span>
+          </p>
+          <p>
+            <span>
+              Это действие не может быть отменено.
+            </span>
+          </p>
+          <button class="button _red">Удалить аккаунт</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('_footer.html')
+</div>
+<script src="js/script.min.js"></script>
+</body>
+
+</html>
