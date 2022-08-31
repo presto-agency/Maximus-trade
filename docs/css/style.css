@@ -2089,11 +2089,28 @@ p {
   margin: 16px 0 0 0;
 }
 
+.cabinet__content .payment-story__payment-input.active #btn-memo {
+  display: block;
+}
+
+.cabinet__content .payment-story__payment-input.active #btn-chain {
+  display: none;
+}
+
+.cabinet__content .payment-story__payment-input.active #btn-change svg {
+  fill: #B9B9B9;
+}
+
+.cabinet__content .payment-story__payment-input.active input {
+  pointer-events: initial;
+}
+
 .cabinet__content .payment-story__payment-input input {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 60%;
           flex: 1 0 60%;
   padding: 20px;
+  pointer-events: none;
 }
 
 .cabinet__content .payment-story__payment-input ul {
@@ -2104,6 +2121,14 @@ p {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 40%;
           flex: 0 1 40%;
+}
+
+.cabinet__content .payment-story__payment-input ul #btn-memo {
+  display: none;
+}
+
+.cabinet__content .payment-story__payment-input ul #btn-changing {
+  display: block;
 }
 
 .cabinet__content .payment-story__payment-input ul li {

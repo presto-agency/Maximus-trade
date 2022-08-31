@@ -343,14 +343,37 @@
           display: flex;
           align-items: center;
           margin: 16px 0 0 0;
+          &.active{
+            #btn-memo{
+              display: block;
+            }
+            #btn-chain{
+              display: none;
+            }
+            #btn-change{
+              svg{
+                fill: $color-grey;
+              }
+            }
+            input{
+              pointer-events: initial;
+            }
+          }
           input{
             flex: 1 0 60%;
             padding: 20px;
+            pointer-events: none;
           }
           ul{
             display: flex;
             margin: 0 -10px 0 35px;
             flex: 0 1 40%;
+            #btn-memo{
+              display: none;
+            }
+            #btn-changing{
+              display: block;
+            }
             li{
               cursor: pointer;
               width: 24px;

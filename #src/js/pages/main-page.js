@@ -79,10 +79,12 @@ let callForgottenPassword = () => {
     let openBtn = document.getElementById('forgotten-go');
     let closeBtn = document.getElementById('forgotten-back');
     let popUp = document.querySelector('.forgotten');
-    openBtn.onclick = () => {
-        popUp.classList.add('active')
-    }
-    closeBtn.onclick = () => {
-        popUp.classList.remove('active')
+    if(popUp){
+        openBtn.onclick = () => {
+            popUp.classList.add('active')
+        }
+        closeBtn.onclick = () => {
+            popUp.classList.remove('active')
+        }
     }
 }
