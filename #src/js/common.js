@@ -1,5 +1,7 @@
+
 window.addEventListener('DOMContentLoaded', function () {
     headerActive()
+    validateForm()
 })
 
 let headerActive = () => {
@@ -15,5 +17,9 @@ let headerActive = () => {
         body.style.overflow = '';
     }
     headerMob?burgerBtn.onclick = () => {headerMob.classList.contains('active')?removeClass():addClass()}:null;
+}
+
+let validateForm = () => {
+
 }
 

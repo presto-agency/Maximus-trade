@@ -34,7 +34,7 @@ let checkPassword = () => {
     let input_test = document.getElementById('input_test');
     let block_check = document.getElementById('block_check');
 
-    input_test.addEventListener('keyup', function(evt){
+    input_test?input_test.addEventListener('keyup', function(evt){
         let input_test_val = input_test.value;
 
         let is_s = false;
@@ -92,5 +92,5 @@ let checkPassword = () => {
             block_check.style.width = "100%";
             block_check.style.backgroundColor = '#6FC05B';
         };
-    });
+    }):null;
 }

@@ -1,5 +1,7 @@
+
 window.addEventListener('DOMContentLoaded', function () {
     headerActive()
+    validateForm()
 })
 
 let headerActive = () => {
@@ -15,6 +17,10 @@ let headerActive = () => {
         body.style.overflow = '';
     }
     headerMob?burgerBtn.onclick = () => {headerMob.classList.contains('active')?removeClass():addClass()}:null;
+}
+
+let validateForm = () => {
+
 }
 
 ;
@@ -144,7 +150,7 @@ let checkPassword = () => {
     let input_test = document.getElementById('input_test');
     let block_check = document.getElementById('block_check');
 
-    input_test.addEventListener('keyup', function(evt){
+    input_test?input_test.addEventListener('keyup', function(evt){
         let input_test_val = input_test.value;
 
         let is_s = false;
@@ -202,18 +208,8 @@ let checkPassword = () => {
             block_check.style.width = "100%";
             block_check.style.backgroundColor = '#6FC05B';
         };
-    });
+    }):null;
 };
-
-
-// const bg = () => {
-//     document.querySelectorAll(".ibg").forEach(el => {
-//         if (el.querySelector('img')) {
-//             el.style.backgroundImage = 'url(' + el.querySelector('img').getAttribute('src') + ')';
-//             el.querySelector('img').style.display = 'none';
-//         }
-//     });
-// }
 
 
 
