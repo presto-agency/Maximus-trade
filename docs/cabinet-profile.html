@@ -97,12 +97,22 @@
                         </strong>
                     </p>
                     <form action="#">
-                        <input type="text" class="input" placeholder="Name">
-                        <input type="text" class="input" placeholder="Surname">
-                        <input class="input" type="email" placeholder="E-mail">
-                        <input type="number" class="input" placeholder="+7 000 000 00">
-                        <input type="text" class="input" placeholder="Telegram ID">
-                        <button class="button _primary">Редактировать</button>
+                        <label class="input-container">
+                            <input name="name" data-rule="required|name" type="text" class="input" placeholder="Name">
+                        </label>
+                        <label class="input-container">
+                            <input name="lastname" data-rule="required|lastname" type="text" class="input" placeholder="Surname">
+                        </label>
+                        <label class="input-container">
+                            <input name="email" data-rule="required|email" class="input" type="email" placeholder="E-mail">
+                        </label>
+                        <label class="input-container">
+                            <input name="phone" data-rule="required|phone" type="number" class="input" placeholder="+7 000 000 00">
+                        </label>
+                        <label class="input-container">
+                            <input name="telegram" data-rule="required" type="text" class="input" placeholder="Telegram ID">
+                        </label>
+                        <button type="submit" class="button _primary">Редактировать</button>
                     </form>
                 </div>
             </div>
@@ -311,6 +321,7 @@
     </div>
 </section>
 <!--finish sign-in popups-->
+<script src="plugins/js/js-form-validator.min.js"></script>
 <script src="js/script.min.js"></script>
 </body>
 
