@@ -248,10 +248,16 @@
         </p>
       </div>
       <form class="sign-in__form">
-        <input class="input" type="text" placeholder="Имя">
-        <input class="input" type="email" placeholder="E-mail">
-        <input class="input" type="password" placeholder="Пароль">
-        <button class="button _primary">Зарегистрироваться</button>
+        <label class="input-container">
+          <input name="name" data-rule="required|name" class="input" type="text" placeholder="Имя">
+        </label>
+        <label class="input-container">
+          <input name="email" data-rule="required|email" class="input" type="email" placeholder="E-mail">
+        </label>
+        <label class="input-container">
+          <input name="password" data-rule="required" class="input" type="password" placeholder="Пароль">
+        </label>
+        <button type="submit" class="button _primary">Зарегистрироваться</button>
       </form>
       <div class="sign-in__bottom">
         <p>
@@ -279,12 +285,16 @@
         </p>
       </div>
       <form class="sign-in__form">
-        <input class="input" type="email" placeholder="E-mail">
-        <input class="input" type="password" placeholder="Пароль">
+        <label class="input-container">
+          <input name="email" data-rule="required|email" class="input" type="email" placeholder="E-mail">
+        </label>
+        <label class="input-container">
+          <input name="password" data-rule="required" class="input" type="password" placeholder="Пароль">
+        </label>
         <p>
           <span id="forgotten-go">Забыли пароль?</span>
         </p>
-        <button class="button _primary">Зарегистрироваться</button>
+        <button type="submit" class="button _primary">Зарегистрироваться</button>
       </form>
       <div class="sign-in__bottom">
         <p>
@@ -321,8 +331,10 @@
           </p>
         </div>
         <form class="sign-in__form">
-          <input class="input" type="email" placeholder="E-mail">
-          <button class="button _primary">Восстановить пароль</button>
+          <label class="input-container">
+            <input name="email" data-rule="required|email" class="input" type="email" placeholder="E-mail">
+          </label>
+          <button type="submit" class="button _primary">Восстановить пароль</button>
         </form>
         <div class="sign-in__bottom">
           <p id="forgotten-back">

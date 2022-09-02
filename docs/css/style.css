@@ -387,6 +387,44 @@ p {
   -moz-appearance: textfield;
 }
 
+.input-container {
+  position: relative;
+  display: block;
+}
+
+.input-container input.validate-error {
+  border: 1px solid #F75764;
+  color: #F75764;
+}
+
+.input-container input.validate-error::-webkit-input-placeholder {
+  color: rgba(247, 87, 100, 0.3);
+}
+
+.input-container input.validate-error::-moz-placeholder {
+  color: rgba(247, 87, 100, 0.3);
+}
+
+.input-container input.validate-error:-ms-input-placeholder {
+  color: rgba(247, 87, 100, 0.3);
+}
+
+.input-container input.validate-error::-ms-input-placeholder {
+  color: rgba(247, 87, 100, 0.3);
+}
+
+.input-container input.validate-error::placeholder {
+  color: rgba(247, 87, 100, 0.3);
+}
+
+.input-container div.validate-error {
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  color: #F75764;
+  font-size: 12px;
+}
+
 .header {
   position: fixed;
   z-index: 10;
@@ -741,13 +779,16 @@ p {
           flex-direction: column;
 }
 
-.sign-in__form input {
-  padding: 24px;
-  margin: 0 0 12px 0;
+.sign-in__form label {
+  margin: 0 0 22px 0;
 }
 
-.sign-in__form input:last-of-type {
+.sign-in__form label:last-of-type {
   margin: 0;
+}
+
+.sign-in__form label input {
+  padding: 24px;
 }
 
 .sign-in__form p {
@@ -1584,13 +1625,17 @@ p {
   display: flex;
 }
 
-.need-help__input-top input {
+.need-help__input-top label {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 47%;
           flex: 0 1 47%;
 }
 
-.need-help__input-top input:last-child {
+.need-help__input-top label input {
+  width: 100%;
+}
+
+.need-help__input-top label:last-child {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 53%;
           flex: 0 1 53%;
@@ -1599,7 +1644,7 @@ p {
 
 .need-help__input-bottom {
   position: relative;
-  margin: 15px 0 0 0;
+  margin: 25px 0 0 0;
 }
 
 .need-help__input-bottom button {
@@ -2752,13 +2797,13 @@ p {
             flex-direction: column;
   }
 
-  .need-help__input-top input {
+  .need-help__input-top label {
     -webkit-box-flex: initial;
         -ms-flex: initial;
             flex: initial;
   }
 
-  .need-help__input-top input:last-child {
+  .need-help__input-top label:last-child {
     margin: 20px 0 0 0;
   }
 

@@ -16,8 +16,11 @@
   }
   &__input-top{
     display: flex;
-    input{
+    label{
       flex: 0 1 47%;
+      input{
+        width: 100%;
+      }
       &:last-child{
         flex: 0 1 53%;
         margin: 0 0 0 13px;
@@ -26,7 +29,7 @@
   }
   &__input-bottom{
     position: relative;
-    margin: 15px 0 0 0;
+    margin: 25px 0 0 0;
     button{
       position: absolute;
       right: 30px;
@@ -81,7 +84,7 @@
     }
     &__input-top{
       flex-direction: column;
-      input{
+      label{
         flex: initial;
         &:last-child{
           margin: 20px 0 0 0;

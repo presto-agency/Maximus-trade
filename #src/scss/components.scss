@@ -197,4 +197,27 @@
   }
 }
 
+.input-container{
+  position: relative;
+  display: block;
+  input{
+    &.validate-error{
+      border: 1px solid $color-red-error;
+      color: $color-red-error;
+      &::placeholder{
+        color: rgba($color-red-error, 0.3);
+      }
+    }
+  }
+  div{
+    &.validate-error{
+      position: absolute;
+      left: 0;
+      bottom: -15px;
+      color: $color-red-error;
+      font-size: 12px;
+    }
+  }
+}
+
 

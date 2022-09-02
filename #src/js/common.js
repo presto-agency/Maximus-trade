@@ -20,6 +20,12 @@ let headerActive = () => {
 }
 
 let validateForm = () => {
-
+    // https://via-profit.github.io/js-form-validator/
+    let formsHandle = document.querySelectorAll('form');
+    formsHandle.forEach( formHandle => {
+        const validator = new Validator(formHandle, function (err, res) {
+            return res;
+        }, {errorClassName: 'validate-error'})
+    })
 }
 

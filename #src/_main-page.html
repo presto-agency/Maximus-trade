@@ -482,14 +482,20 @@
                 <p>
                     Оставьте номер телефона и получите консультацию
                 </p>
-                <form action="go" class="need-help__form">
+                <form action="#" class="need-help__form">
                     <div class="need-help__input-top">
-                        <input class="input username" type="text" placeholder="Имя">
-                        <input class="input username" type="text" placeholder="Фамилия">
+                        <label class="input-container">
+                            <input name="name" data-rule="required|name" class="input" type="text" placeholder="Имя">
+                        </label>
+                        <label class="input-container">
+                            <input name="lastname" data-rule="required|lastname" class="input" type="text" placeholder="Фамилия">
+                        </label>
                     </div>
                     <div class="need-help__input-bottom">
-                        <input class="input" type="number" placeholder="+38 (0__) ___-__-__">
-                        <button class="button _primary" type="submit">записаться</button>
+                        <label class="input-container">
+                            <input name="phone" data-rule="required|phone" class="input" type="number" placeholder="+38 (0__) ___-__-__">
+                        </label>
+                        <button type="submit" class="button _primary" type="submit">записаться</button>
                     </div>
                 </form>
             </div>
