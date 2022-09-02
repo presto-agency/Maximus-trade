@@ -2161,6 +2161,11 @@ p {
   margin: 16px 0 0 0;
 }
 
+.cabinet__content .payment-story__payment-input.copied #btn-chain p {
+  pointer-events: initial;
+  opacity: 1;
+}
+
 .cabinet__content .payment-story__payment-input.active #btn-memo {
   display: block;
 }
@@ -2173,16 +2178,20 @@ p {
   fill: #B9B9B9;
 }
 
-.cabinet__content .payment-story__payment-input.active input {
+.cabinet__content .payment-story__payment-input.active label {
   pointer-events: initial;
 }
 
-.cabinet__content .payment-story__payment-input input {
+.cabinet__content .payment-story__payment-input label {
+  width: 100%;
   -webkit-box-flex: 1;
       -ms-flex: 1 0 60%;
           flex: 1 0 60%;
-  padding: 20px;
   pointer-events: none;
+}
+
+.cabinet__content .payment-story__payment-input input {
+  padding: 20px;
 }
 
 .cabinet__content .payment-story__payment-input ul {
@@ -2201,6 +2210,32 @@ p {
 
 .cabinet__content .payment-story__payment-input ul #btn-changing {
   display: block;
+}
+
+.cabinet__content .payment-story__payment-input ul #btn-chain {
+  position: relative;
+}
+
+.cabinet__content .payment-story__payment-input ul #btn-chain p {
+  opacity: 0;
+  pointer-events: none;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -30px;
+  color: #fff;
+  width: 135px;
+  font-size: 10px;
+  line-height: 12px;
+  background-color: #B9B9B9;
+  border-radius: 20px;
+  padding: 5px;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
 }
 
 .cabinet__content .payment-story__payment-input ul li {
@@ -3256,7 +3291,7 @@ p {
             align-items: flex-start;
   }
 
-  .cabinet__content .payment-story__payment-input input {
+  .cabinet__content .payment-story__payment-input label {
     -webkit-box-flex: initial;
         -ms-flex: initial;
             flex: initial;

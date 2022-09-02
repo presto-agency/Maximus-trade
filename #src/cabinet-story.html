@@ -49,12 +49,17 @@
                 Номер кошелька
               </p>
               <form class="payment-story__payment-input">
-                <input value="dfsdf6sd7f6s98df7s9df0sd8f0sd8f0s9d8f0s" class="input" type="text">
+                <label class="input-container">
+                  <input name="wallet" data-rule="required" value="dfsdf6sd7f6s98df7s9df0sd8f0sd8f0s9d8f0s" class="input" type="text">
+                </label>
                 <ul>
                   <li id="btn-chain">
                     <svg>
                       <use xlink:href="img/icons/icons.svg#chain"></use>
                     </svg>
+                    <p>
+                      Wallet number was copied!
+                    </p>
                   </li>
                   <li id="btn-change">
                     <svg>
@@ -196,6 +201,7 @@
   </div>
 </section>
 <!--finish sign-in popups-->
+<script src="plugins/js/js-form-validator.min.js"></script>
 <script src="js/script.min.js"></script>
 </body>
 

@@ -7,13 +7,15 @@ let inputChange = () => {
     let btn_pen = document.getElementById('btn-change');
     let btn_memo = document.getElementById('btn-memo');
     let btn_chain = document.getElementById('btn-chain');
-    let input = document.querySelector('.payment-story__payment-input>input')
+    let input = document.querySelector('.payment-story__payment-input>label>input')
     btn_pen?btn_pen.onclick = () => {addActive()}: null;
     btn_memo?btn_memo.onclick = () => {removeActive()}: null;
     btn_chain?btn_chain.onclick = () => {copyText()}: null;
     let removeActive = () => {
-        input.setAttribute(value, input.value)
-        btn_memo.parentNode.parentNode.classList.remove('active')
+        if(input.value.length > 0){
+            input.setAttribute(value, input.value)
+            btn_memo.parentNode.parentNode.classList.remove('active')
+        }
     }
     let addActive = () => {
         input.select()
@@ -21,7 +23,10 @@ let inputChange = () => {
     }
     let copyText = () => {
         let textToCopy = input.value;
+        btn_chain.parentNode.parentNode.classList.add('copied')
         navigator.clipboard.writeText(textToCopy)
+        let removeCopied = () => {btn_chain.parentNode.parentNode.classList.remove('copied')}
+        setTimeout(removeCopied, 1500)
     }
 }
 
