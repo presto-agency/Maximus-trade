@@ -26,16 +26,22 @@
                         </strong>
                     </p>
                     <form action="#">
-                        <input type="password" class="input" placeholder="Текущий пароль">
-                        <input id="input_test" type="password" class="input" placeholder="Новый пароль">
+                        <label class="input-container">
+                            <input name="password" data-rule="required" type="password" class="input" placeholder="Текущий пароль">
+                        </label>
+                        <label class="input-container">
+                            <input name="password-2" data-rule="required" id="input_test" type="password" class="input" placeholder="Новый пароль">
+                        </label>
                         <p>
                             <strong>
                                 Надежность пароля
                             </strong>
                             <span style="width: 10%; background-color: #F75764;" id="block_check"></span>
                         </p>
-                        <input type="password" class="input" placeholder="Подтвердить новый пароль">
-                        <button class="button _primary">Сохранить пароль</button>
+                        <label class="input-container">
+                            <input name="password-3" data-rule="required" type="password" class="input" placeholder="Подтвердить новый пароль">
+                        </label>
+                        <button type="submit" class="button _primary">Сохранить пароль</button>
                     </form>
                     <div class="profile__bottom">
                         <p>
@@ -169,6 +175,7 @@
     </div>
 </section>
 <!--finish sign-in popups-->
+<script src="plugins/js/js-form-validator.min.js"></script>
 <script src="js/script.min.js"></script>
 </body>
 
