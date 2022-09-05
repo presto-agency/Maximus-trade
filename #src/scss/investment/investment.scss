@@ -1,4 +1,5 @@
 .investment{
+  margin: 47px 0 90px 0;
   .product{
     margin: 50px 0;
     &__item{
@@ -55,7 +56,7 @@
           line-height: 24px;
           font-weight: 500;
           &:first-of-type{
-            margin: 0 0 22px 0;
+            margin: 26px 0 22px 0;
           }
           strong{
             font-size: 25px;
@@ -65,7 +66,7 @@
           }
         }
         .button{
-          margin: 40px 0 0 0;
+          margin: 36px 0 0 0;
           width: 100%;
         }
       }
@@ -75,7 +76,7 @@
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
-    margin: 50px 0;
+    margin: 50px 0 40px 0;
     scrollbar-width: none;
     cursor: grab;
     &::-webkit-scrollbar {
@@ -128,7 +129,7 @@
     position: relative;
     width: 100%;
     height: 16px;
-    margin: 50px 0 100px 0;
+    margin: 40px 0 0 0;
     &:before{
       content: '';
       position: absolute;
