@@ -2339,10 +2339,18 @@ p {
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
 }
 
-.investment .product__item-text p:first-child {
+.investment .product__item-text p:nth-child(1) {
   margin: 0 0 20px 0;
+}
+
+.investment .product__item-text p:nth-child(2) {
+  min-height: 120px;
 }
 
 .investment .product__item-text p strong {
@@ -2350,6 +2358,11 @@ p {
   line-height: 47px;
   font-weight: 700;
   color: #fff;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  min-height: 47px;
 }
 
 .investment .product__item-price {
@@ -2390,6 +2403,8 @@ p {
   overflow-x: auto;
   margin: 50px 0;
   scrollbar-width: none;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 .investment .line-items::-webkit-scrollbar {
@@ -2447,6 +2462,7 @@ p {
 }
 
 .investment .line-items__item p {
+  cursor: pointer;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
@@ -2479,10 +2495,13 @@ p {
 .investment__progress-bar span {
   position: absolute;
   top: 0;
-  left: 3%;
+  left: 0;
   width: 16px;
   height: 16px;
   background-color: #C7A363;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
 }
 
 @media (min-width: 1200px) {

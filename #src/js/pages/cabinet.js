@@ -3,6 +3,7 @@ window.addEventListener('DOMContentLoaded', function () {
     checkPassword()
     investmentPopup()
     customScroll()
+    grabCursor()
 })
 
 let inputChange = () => {
@@ -113,21 +114,66 @@ let investmentPopup = () => {
             activeTab?activeTab.classList.remove("active"):null;
             activeLink?activeLink.classList.remove("active-link"):null;
             document.getElementById(tabAttr).classList.add("active");
-            btn.classList.add("active-link");
+            btn.parentNode.classList.add("active-link");
         })
     ):null;
 }
 
 let customScroll = () => {
-    let items = Array.from(document.querySelectorAll('.line-items__item'));
-    let portion = `${(100 / items.length)}` + '%'
+    let items = Array.from(document.querySelectorAll('.line-items__item>p'));
+    let scrollThumb = document.querySelector('.investment__progress-bar>span');
+    let portion = `${(100 / items.length)}`;
+    scrollThumb.style.left = portion + '%';
     items.forEach(item => {
         item.onclick = () => {
-            switch (item) {
-                case item === 0:
-
-
+            if(items.indexOf(item) === 0) {
+                scrollThumb.style.left = portion + '%';
+            }
+            else {
+                scrollThumb.style.left = `${portion * (items.indexOf(item) + 1)}%`;
             }
         }
     })
+}
+
+let grabCursor = () => {
+    let containers = document.querySelectorAll('.line-items');
+    if (window.screen.width > 1024) {
+        let startY;
+        let scrollTop;
+        let startX;
+        let scrollLeft;
+        let isDown;
+
+        containers.forEach(container => {
+            container.addEventListener('mousedown', e => mouseIsDown(e));
+            container.addEventListener('mouseup', e => mouseUp(e))
+            container.addEventListener('mouseleave', e => mouseLeave(e));
+            container.addEventListener('mousemove', e => mouseMove(e));
+            function mouseIsDown(e) {
+                isDown = true;
+                startY = e.pageY - container.offsetTop;
+                startX = e.pageX - container.offsetLeft;
+                scrollLeft = container.scrollLeft;
+                scrollTop = container.scrollTop;
+            }
+            function mouseUp(e) {
+                isDown = false;
+            }
+            function mouseLeave(e) {
+                isDown = false;
+            }
+            function mouseMove(e) {
+                if (isDown) {
+                    e.preventDefault();
+                    const y = e.pageY - container.offsetTop;
+                    const x = e.pageX - container.offsetLeft;
+                    const walkY = y - startY;
+                    const walkX = x - startX;
+                    container.scrollTop = scrollTop - walkY;
+                    container.scrollLeft = scrollLeft - walkX;
+                }
+            }
+        });
+    }
 }
