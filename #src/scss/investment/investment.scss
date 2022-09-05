@@ -109,8 +109,9 @@
       &.active-link{
         background-color: $color-primary;
         &:before{
-        background-image: url("../img/main-page/triangle_w.svg");
+          background-image: url("../img/main-page/triangle_w.svg");
           transform: initial;
+          transition: 300ms;
       }
       }
       p{

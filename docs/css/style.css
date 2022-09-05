@@ -2463,6 +2463,9 @@ p {
   -webkit-transform: initial;
       -ms-transform: initial;
           transform: initial;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
 }
 
 .investment .line-items__item p {
