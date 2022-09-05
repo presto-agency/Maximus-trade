@@ -1,7 +1,7 @@
 
 window.addEventListener('DOMContentLoaded', function () {
     headerActive()
-    validateForm()
+    // validateForm()
 })
 
 let headerActive = () => {

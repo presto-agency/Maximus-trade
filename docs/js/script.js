@@ -1,7 +1,7 @@
 
 window.addEventListener('DOMContentLoaded', function () {
     headerActive()
-    validateForm()
+    // validateForm()
 })
 
 let headerActive = () => {
@@ -138,6 +138,8 @@ let callForgottenPassword = () => {
 window.addEventListener('DOMContentLoaded', function () {
     inputChange()
     checkPassword()
+    investmentPopup()
+    customScroll()
 })
 
 let inputChange = () => {
@@ -235,6 +237,36 @@ let checkPassword = () => {
             block_check.style.backgroundColor = '#6FC05B';
         };
     }):null;
+}
+
+let investmentPopup = () => {
+    let currentBlock  = document.querySelector(".investment");
+    let triggersOpen = document.querySelectorAll(".trigger-inv");
+    triggersOpen?triggersOpen.forEach((btn) =>
+        btn.addEventListener("click", function () {
+            let activeTab = currentBlock.querySelector(".active");
+            let activeLink = currentBlock.querySelector(".active-link");
+            let tabAttr = this.getAttribute("data-attr");
+            activeTab?activeTab.classList.remove("active"):null;
+            activeLink?activeLink.classList.remove("active-link"):null;
+            document.getElementById(tabAttr).classList.add("active");
+            btn.classList.add("active-link");
+        })
+    ):null;
+}
+
+let customScroll = () => {
+    let items = Array.from(document.querySelectorAll('.line-items__item'));
+    let portion = `${(100 / items.length)}` + '%'
+    items.forEach(item => {
+        item.onclick = () => {
+            switch (item) {
+                case item === 0:
+
+
+            }
+        }
+    })
 };
 
 

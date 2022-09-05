@@ -1,0 +1,136 @@
+.investment{
+  .product{
+    margin: 50px 0;
+    &__item{
+      display: none;
+      &.active{
+        display: flex;
+      }
+      padding: 50px;
+      border: 1px solid rgba($color-white, 0.3);
+      &-img{
+        flex: 1 1 280px;
+        height: 200px;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      &-text{
+        flex: 1 1 420px;
+        margin: 0 55px 0 40px;
+        p{
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 500;
+          &:first-child{
+            margin: 0 0 20px 0;
+          }
+          strong{
+            font-size: 40px;
+            line-height: 47px;
+            font-weight: 700;
+            color: $color-white;
+          }
+        }
+      }
+      &-price{
+        flex: 1 1 192px;
+        text-align: center;
+        p{
+          font-size: 16px;
+          line-height: 24px;
+          font-weight: 500;
+          &:first-of-type{
+            margin: 0 0 22px 0;
+          }
+          strong{
+            font-size: 25px;
+            line-height: 30px;
+            font-weight: 700;
+            color: $color-white;
+          }
+        }
+        .button{
+          margin: 40px 0 0 0;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .line-items{
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 50px 0;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    &__item{
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      border: 1px solid rgba($color-white, 0.3);
+      flex: 0 0 calc((100% - (31px * 4))/5);
+      height: 192px;
+      padding: 40px 20px;
+      margin: 0 31px 0 0;
+      transition: 300ms;
+      &:before{
+        content: '';
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        width: 18px;
+        height: 18px;
+        transform: rotate(90deg);
+        background-image: url("../img/main-page/triangle.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 18px 18px;
+        transition: 300ms;
+      }
+      &.active-link{
+        background-color: $color-primary;
+        &:before{
+        background-image: url("../img/main-page/triangle_w.svg");
+          transform: initial;
+      }
+      }
+      p{
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 700;
+        color: $color-white;
+      }
+      &:last-child{
+        margin: 0;
+      }
+    }
+  }
+  &__progress-bar{
+    position: relative;
+    width: 100%;
+    height: 16px;
+    margin: 50px 0 100px 0;
+    &:before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      height: 2px;
+      background-color: $color-primary;
+    }
+    span{
+      position: absolute;
+      top: 0;
+      left: 3%;
+      width: 16px;
+      height: 16px;
+      background-color: $color-primary;
+    }
+  }
+}
