@@ -120,20 +120,25 @@ let investmentPopup = () => {
 }
 
 let customScroll = () => {
-    let items = Array.from(document.querySelectorAll('.line-items__item>p'));
-    let scrollThumb = document.querySelector('.investment__progress-bar>span');
-    let portion = `${(100 / items.length)}`;
-    scrollThumb.style.left = portion + '%';
-    items.forEach(item => {
-        item.onclick = () => {
-            if(items.indexOf(item) === 0) {
-                scrollThumb.style.left = portion + '%';
-            }
-            else {
-                scrollThumb.style.left = `${portion * (items.indexOf(item) + 1)}%`;
-            }
+    thumbMoving()
+    window.addEventListener("resize", thumbMoving )
+    function thumbMoving (){
+        let items = Array.from(document.querySelectorAll('.line-items__item>p'));
+        if(items.length>0) {
+            let scrollThumb = document.querySelector('.investment__progress-bar>span');
+            let portion = `${(100 / items.length)}`;
+            scrollThumb.style.left = portion + '%';
+            items.forEach(item => {
+                item.onclick = () => {
+                    if (items.indexOf(item) === 0) {
+                        scrollThumb.style.left = portion + '%';
+                    } else {
+                        scrollThumb.style.left = `${portion * (items.indexOf(item) + 1)}%`;
+                    }
+                }
+            })
         }
-    })
+    }
 }
 
 let grabCursor = () => {
