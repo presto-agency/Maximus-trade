@@ -1,4 +1,3 @@
-
 window.addEventListener('DOMContentLoaded', function () {
     headerActive()
     // validateForm()
@@ -19,29 +18,34 @@ let headerActive = () => {
     headerMob?burgerBtn.onclick = () => {headerMob.classList.contains('active')?removeClass():addClass()}:null;
 }
 
-let validateForm = () => {
+let  validateForm = () => {
     // https://via-profit.github.io/js-form-validator/
-    let formsHandle = document.querySelectorAll('form');
-
-    formsHandle.forEach( formHandle => {
-        const validator = new Validator(formHandle, function (err, res) {
-            return res;
-        },{
-            rules: {
-                compare: function (value) {
-                    return (value === document.getElementById('input_test').value);
-                }
-            },
-            messages: {
-                en: {
-                    compare: {
-                        incorrect: 'Passwords are not the same'
+    const forms = document.querySelectorAll('form')
+    if(forms.length > 0){
+        for(let form of forms){
+            const validator = new Validator(form, function (err, res) {
+                return res;
+            },{
+                rules: {
+                    compare: function (value) {
+                        return (value === document.getElementById('input_test').value);
                     }
-                }
-            },
-            errorClassName: 'validate-error'
-        })
-    })
+                },
+                messages: {
+                    en: {
+                        compare: {
+                            incorrect: 'Passwords are not the same'
+                        }
+                    }
+                },
+                errorClassName: 'validate-error',
+                onAir: false,
+            })
+            validator.validate()
+
+            return validator
+        }
+    }
 }
 
 let callPopUp_2 = (currentBlock) => {
@@ -65,6 +69,7 @@ window.addEventListener('DOMContentLoaded', function () {
     sliderClients()
     callPopUp()
     callForgottenPassword()
+    scrollToForm()
 })
 
 let sliderClients = () => {
@@ -128,6 +133,19 @@ let callForgottenPassword = () => {
             popUp.classList.remove('active')
         }
     }
+}
+
+let scrollToForm = () => {
+    let anchor = document.querySelector('.hero-block__content>button');
+    let element= document.querySelector('.need-help')
+    let topElement = element.offsetTop;
+    anchor.addEventListener('click', function (e) {
+        window.scroll({
+            behavior: 'smooth',
+            left: 0,
+            top: topElement - 150
+        });
+    })
 };
 window.addEventListener('DOMContentLoaded', function () {
     inputChange()

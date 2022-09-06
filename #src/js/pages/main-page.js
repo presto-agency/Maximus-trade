@@ -2,6 +2,7 @@ window.addEventListener('DOMContentLoaded', function () {
     sliderClients()
     callPopUp()
     callForgottenPassword()
+    scrollToForm()
 })
 
 let sliderClients = () => {
@@ -65,4 +66,17 @@ let callForgottenPassword = () => {
             popUp.classList.remove('active')
         }
     }
+}
+
+let scrollToForm = () => {
+    let anchor = document.querySelector('.hero-block__content>button');
+    let element= document.querySelector('.need-help')
+    let topElement = element.offsetTop;
+    anchor.addEventListener('click', function (e) {
+        window.scroll({
+            behavior: 'smooth',
+            left: 0,
+            top: topElement - 150
+        });
+    })
 }
