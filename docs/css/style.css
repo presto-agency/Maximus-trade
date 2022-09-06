@@ -218,6 +218,7 @@ p {
 
 .button._red {
   background-color: #AF323C;
+  color: #fff;
   border: initial;
 }
 
@@ -1711,6 +1712,7 @@ p {
 }
 
 .cabinet__content .sidebar ul li {
+  cursor: pointer;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
@@ -1722,26 +1724,31 @@ p {
   margin: 0;
 }
 
-.cabinet__content .sidebar ul li a {
+.cabinet__content .sidebar ul li p {
   color: #8C8C8C;
   -webkit-transition: 300ms;
   -o-transition: 300ms;
   transition: 300ms;
 }
 
-.cabinet__content .sidebar ul li.active {
+.cabinet__content .sidebar ul li.active-link {
   color: #fff;
 }
 
-.cabinet__content .sidebar ul li.active a {
+.cabinet__content .sidebar ul li.active-link p {
   color: #fff;
 }
 
 .cabinet__content .profile {
+  display: none;
   max-width: 640px;
   width: 100%;
   padding: 40px 40px 60px;
   border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.cabinet__content .profile.active {
+  display: block;
 }
 
 .cabinet__content .profile p strong {
@@ -1809,16 +1816,25 @@ p {
 }
 
 .cabinet__content .subscription {
+  display: none;
+  width: 100%;
+}
+
+.cabinet__content .subscription.active {
+  display: block;
+}
+
+.cabinet__content .subscription-user {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: -16px;
-  width: 100%;
+  width: calc(100% + 32px);
 }
 
-.cabinet__content .subscription__link {
+.cabinet__content .subscription-user__link {
   padding: 37px 48px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   min-height: 390px;
@@ -1836,11 +1852,11 @@ p {
   width: calc((100% - 64px) / 2);
 }
 
-.cabinet__content .subscription__link.current {
+.cabinet__content .subscription-user__link.current {
   position: relative;
 }
 
-.cabinet__content .subscription__link.current:before {
+.cabinet__content .subscription-user__link.current:before {
   content: "";
   position: absolute;
   top: 0;
@@ -1854,49 +1870,49 @@ p {
   background-size: cover;
 }
 
-.cabinet__content .subscription__link p {
+.cabinet__content .subscription-user__link p {
   color: #fff;
 }
 
-.cabinet__content .subscription__link p strong {
+.cabinet__content .subscription-user__link p strong {
   line-height: 51px;
   font-weight: 700;
   font-size: 34px;
 }
 
-.cabinet__content .subscription__link-title {
+.cabinet__content .subscription-user__link-title {
   margin: 0 0 19px 0;
 }
 
-.cabinet__content .subscription__link-title p {
+.cabinet__content .subscription-user__link-title p {
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
 }
 
-.cabinet__content .subscription__link-price p strong {
+.cabinet__content .subscription-user__link-price p strong {
   color: #fff;
 }
 
-.cabinet__content .subscription__link-price p span {
+.cabinet__content .subscription-user__link-price p span {
   display: inline-block;
   font-size: 12px;
   line-height: 11px;
   color: #8C8C8C;
 }
 
-.cabinet__content .subscription__link-price p {
+.cabinet__content .subscription-user__link-price p {
   font-size: 16px;
   line-height: 24px;
   font-weight: 500;
   color: #8C8C8C;
 }
 
-.cabinet__content .subscription__link-check {
+.cabinet__content .subscription-user__link-check {
   margin: 50px 0 0 0;
 }
 
-.cabinet__content .subscription__link-check p {
+.cabinet__content .subscription-user__link-check p {
   margin: 0 0 20px 0;
   font-size: 12px;
   line-height: 14px;
@@ -1904,13 +1920,13 @@ p {
   color: #8C8C8C;
 }
 
-.cabinet__content .current-subscribe {
+.cabinet__content .subscription-super {
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 37px 48px 80px;
   width: 100%;
 }
 
-.cabinet__content .current-subscribe__title {
+.cabinet__content .subscription-super__title {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1924,24 +1940,25 @@ p {
   padding: 0 0 23px 0;
 }
 
-.cabinet__content .current-subscribe__title p {
+.cabinet__content .subscription-super__title p {
   font-size: 12px;
   line-height: 18px;
   font-weight: 500;
 }
 
-.cabinet__content .current-subscribe__title p strong,
-.cabinet__content .current-subscribe__title p span {
+.cabinet__content .subscription-super__title p strong,
+.cabinet__content .subscription-super__title p span {
   display: block;
+  color: #fff;
 }
 
-.cabinet__content .current-subscribe__title p strong {
+.cabinet__content .subscription-super__title p strong {
   font-size: 34px;
   line-height: 51px;
   font-weight: 700;
 }
 
-.cabinet__content .current-subscribe__title p span {
+.cabinet__content .subscription-super__title p span {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -1950,7 +1967,7 @@ p {
   font-weight: 500;
 }
 
-.cabinet__content .current-subscribe__title a {
+.cabinet__content .subscription-super__title a {
   font-size: 14px;
   line-height: 21px;
   font-weight: 500;
@@ -1960,11 +1977,11 @@ p {
   transition: 300ms;
 }
 
-.cabinet__content .current-subscribe__title a:hover {
+.cabinet__content .subscription-super__title a:hover {
   color: #fff;
 }
 
-.cabinet__content .current-subscribe__list {
+.cabinet__content .subscription-super__list {
   position: relative;
   width: 100%;
   display: -webkit-box;
@@ -1975,7 +1992,7 @@ p {
   margin: 42px -75px -13px -32px;
 }
 
-.cabinet__content .current-subscribe__list:before {
+.cabinet__content .subscription-super__list:before {
   content: "";
   position: absolute;
   top: 13px;
@@ -1988,7 +2005,7 @@ p {
   background-color: #8C8C8C;
 }
 
-.cabinet__content .current-subscribe__list li {
+.cabinet__content .subscription-super__list li {
   position: relative;
   width: calc((100% - 214px) / 2);
   margin: 13px 75px 13px 32px;
@@ -1996,26 +2013,26 @@ p {
           box-sizing: content-box;
 }
 
-.cabinet__content .current-subscribe__list li a {
+.cabinet__content .subscription-super__list li a {
   display: block;
   padding: 0 50px 0 0;
 }
 
-.cabinet__content .current-subscribe__list li a p {
+.cabinet__content .subscription-super__list li a p {
   font-size: 12px;
   line-height: 18px;
   font-weight: 500;
   color: #8C8C8C;
 }
 
-.cabinet__content .current-subscribe__list li a p strong {
+.cabinet__content .subscription-super__list li a p strong {
   font-size: 24px;
   line-height: 36px;
   font-weight: 700;
   color: #fff;
 }
 
-.cabinet__content .current-subscribe__list li a svg {
+.cabinet__content .subscription-super__list li a svg {
   position: absolute;
   top: 50%;
   right: 0;
@@ -2031,7 +2048,12 @@ p {
 }
 
 .cabinet__content .payment-story {
+  display: none;
   width: 100%;
+}
+
+.cabinet__content .payment-story.active {
+  display: block;
 }
 
 .cabinet__content .payment-story li {
@@ -2264,9 +2286,14 @@ p {
 }
 
 .cabinet__content .account-delete {
+  display: none;
   padding: 40px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   width: 100%;
+}
+
+.cabinet__content .account-delete.active {
+  display: block;
 }
 
 .cabinet__content .account-delete p {
@@ -2562,11 +2589,11 @@ p {
     color: #fff;
   }
 
-  .cabinet__content .sidebar ul li:hover a {
+  .cabinet__content .sidebar ul li:hover p {
     color: #fff;
   }
 
-  .cabinet__content .current-subscribe__list li:hover a svg {
+  .cabinet__content .subscription-super__list li:hover a svg {
     fill: #C7A363;
   }
 }
@@ -2839,7 +2866,7 @@ p {
     margin: 0 auto;
   }
 
-  .cabinet__content .current-subscribe__title {
+  .cabinet__content .subscription-super__title {
     -webkit-box-align: initial;
         -ms-flex-align: initial;
             align-items: initial;
@@ -2848,34 +2875,34 @@ p {
     padding: 0;
   }
 
-  .cabinet__content .current-subscribe__title p {
+  .cabinet__content .subscription-super__title p {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 100%;
             flex: 1 0 100%;
   }
 
-  .cabinet__content .current-subscribe__title p:last-of-type {
+  .cabinet__content .subscription-super__title p:last-of-type {
     margin: 20px 0 30px 0;
   }
 
-  .cabinet__content .current-subscribe__title p span {
+  .cabinet__content .subscription-super__title p span {
     position: static;
   }
 
-  .cabinet__content .current-subscribe__list {
+  .cabinet__content .subscription-super__list {
     margin: 30px 0 0 0;
   }
 
-  .cabinet__content .current-subscribe__list:before {
+  .cabinet__content .subscription-super__list:before {
     display: none;
   }
 
-  .cabinet__content .current-subscribe__list li {
+  .cabinet__content .subscription-super__list li {
     width: 100%;
     margin: 0 0 30px 0;
   }
 
-  .cabinet__content .current-subscribe__list li:last-child {
+  .cabinet__content .subscription-super__list li:last-child {
     margin: 0;
   }
 }
@@ -3062,11 +3089,12 @@ p {
             transform: initial;
   }
 
-  .cabinet__content .subscription {
+  .cabinet__content .subscription-user {
     margin: -16px 0;
+    width: 100%;
   }
 
-  .cabinet__content .subscription__link {
+  .cabinet__content .subscription-user__link {
     margin: 16px 0;
     width: 100%;
   }
@@ -3504,17 +3532,22 @@ p {
     padding: 37px 34px 47px;
   }
 
-  .cabinet__content .subscription {
+  .cabinet__content .subscription-user {
     margin: 10px 0;
   }
 
-  .cabinet__content .subscription__link {
+  .cabinet__content .subscription-user__link {
     padding: 37px 34px 47px;
     margin: 10px 0;
   }
 
-  .cabinet__content .subscription__link-check button {
+  .cabinet__content .subscription-user__link-check button {
     width: 100%;
+  }
+
+  .cabinet__content .subscription-super {
+    margin: 20px 0 0 0;
+    padding: 29px 30px 50px;
   }
 
   .cabinet__content .profile {
@@ -3525,11 +3558,6 @@ p {
 
   .cabinet__content .profile button {
     width: 100%;
-  }
-
-  .cabinet__content .current-subscribe {
-    margin: 20px 0 0 0;
-    padding: 29px 30px 50px;
   }
 
   .cabinet__content .payment-story {
@@ -3612,12 +3640,12 @@ p {
     margin: 0 0 23px 0;
   }
 
-  .cabinet__content .current-subscribe__list li a p {
+  .cabinet__content .subscription-super__list li a p {
     font-size: 10px;
     line-height: 15px;
   }
 
-  .cabinet__content .current-subscribe__list li a p strong {
+  .cabinet__content .subscription-super__list li a p strong {
     font-size: 16px;
     line-height: 24px;
   }
@@ -3704,17 +3732,17 @@ p {
     width: calc((100% - 150px) / 3);
   }
 
-  .cabinet__content .subscription__link p strong {
+  .cabinet__content .subscription-user__link p strong {
     font-size: 30px;
     line-height: 34px;
   }
 
-  .cabinet__content .current-subscribe__title p strong {
+  .cabinet__content .subscription-super__title p strong {
     font-size: 28px;
     line-height: 30px;
   }
 
-  .cabinet__content .current-subscribe__title a {
+  .cabinet__content .subscription-super__title a {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;

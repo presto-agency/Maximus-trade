@@ -44,34 +44,28 @@ let validateForm = () => {
     })
 }
 
+let callPopUp_2 = (currentBlock) => {
+    let triggersOpen = document.querySelectorAll(".trigger-inv");
+    triggersOpen?triggersOpen.forEach((btn) =>
+        btn.addEventListener("click", function () {
+            let activeTab = currentBlock.querySelector(".active");
+            let activeLink = currentBlock.querySelector(".active-link");
+            let tabAttr = this.getAttribute("data-attr");
+            activeTab?activeTab.classList.remove("active"):null;
+            activeLink?activeLink.classList.remove("active-link"):null;
+            document.getElementById(tabAttr).classList.add("active");
+            btn.parentNode.classList.add("active-link");
+        })
+    ):null;
+}
+
+
 ;
 window.addEventListener('DOMContentLoaded', function () {
-    // addClassToLink()
     sliderClients()
     callPopUp()
     callForgottenPassword()
 })
-
-// let addClassToLink = () => {
-//     let objects = document.querySelectorAll('.how-to__list>li');
-//     let topValue = window.innerHeight / 2;
-//     objects.forEach(object => {
-//         function isFullyVisible(el) {
-//             let elementBoundary = el.getBoundingClientRect();
-//             let top = elementBoundary.top;
-//             return top <= topValue
-//         }
-//
-//         function scrolling() {
-//             if (isFullyVisible(object) && !object.classList.contains('active')) {
-//                 object.classList.add('active')
-//                 console.log(object)
-//             }
-//         }
-//         window.addEventListener("scroll", scrolling);
-//     })
-//
-// };
 
 let sliderClients = () => {
     let slider = document.querySelector('.our-clients__swiper');
@@ -138,9 +132,8 @@ let callForgottenPassword = () => {
 window.addEventListener('DOMContentLoaded', function () {
     inputChange()
     checkPassword()
-    investmentPopup()
-    customScroll()
-    grabCursor()
+    let currentBlock  = document.querySelector(".cabinet");
+    callPopUp_2(currentBlock)
 })
 
 let inputChange = () => {
@@ -240,21 +233,14 @@ let checkPassword = () => {
     }):null;
 }
 
-let investmentPopup = () => {
+
+;
+window.addEventListener('DOMContentLoaded', function () {
     let currentBlock  = document.querySelector(".investment");
-    let triggersOpen = document.querySelectorAll(".trigger-inv");
-    triggersOpen?triggersOpen.forEach((btn) =>
-        btn.addEventListener("click", function () {
-            let activeTab = currentBlock.querySelector(".active");
-            let activeLink = currentBlock.querySelector(".active-link");
-            let tabAttr = this.getAttribute("data-attr");
-            activeTab?activeTab.classList.remove("active"):null;
-            activeLink?activeLink.classList.remove("active-link"):null;
-            document.getElementById(tabAttr).classList.add("active");
-            btn.parentNode.classList.add("active-link");
-        })
-    ):null;
-}
+    callPopUp_2(currentBlock)
+    customScroll()
+    grabCursor()
+})
 
 let customScroll = () => {
     thumbMoving()

@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <title>Maximus-trade</title>
+
+    <link rel="preload" href="fonts/Romul.woff" as="font" type="font/woff" crossorigin="anonymous"/>
+    <link rel="preload" href="fonts/Roboto-Regular.woff" as="font" type="font/woff" crossorigin="anonymous"/>
+    <link rel="preload" href="fonts/Roboto-Medium.woff" as="font" type="font/woff" crossorigin="anonymous"/>
+    <link rel="preload" href="fonts/Roboto-Bold.woff" as="font" type="font/woff" crossorigin="anonymous"/>
+</head>
+
+<body>
+<div class="wrapper">
+    @@include('_header.html')
+    <div class="root"></div>
+    <div class="cabinet">
+        <div class="container">
+            <h2>
+                Ivan Ivanov
+            </h2>
+            <div class="cabinet__content">
+                @@include('_sidebar.html')
+
+<!--                profile-->
+                <div id="call-profile" class="profile active">
+                    <p>
+                        <strong>
+                            Личные данные
+                        </strong>
+                    </p>
+                    <form action="#">
+                        <label class="input-container">
+                            <input name="name" data-rule="required|name" type="text" class="input" placeholder="Name">
+                        </label>
+                        <label class="input-container">
+                            <input name="lastname" data-rule="required|lastname" type="text" class="input" placeholder="Surname">
+                        </label>
+                        <label class="input-container">
+                            <input name="email" data-rule="required|email" class="input" type="email" placeholder="E-mail">
+                        </label>
+                        <label class="input-container">
+                            <input name="phone" data-rule="required|phone" type="number" class="input" placeholder="+7 000 000 00">
+                        </label>
+                        <label class="input-container">
+                            <input name="telegram" data-rule="required" type="text" class="input" placeholder="Telegram ID">
+                        </label>
+                        <button type="submit" class="button _primary">Редактировать</button>
+                    </form>
+                </div>
+<!--                finish profile-->
+
+<!--                subscription-->
+                <div id="call-subscribe"  class="subscription">
+                    <ul class="subscription-user">
+                              <li class="subscription-user__link">
+                                <div class="subscription-user__link-wrapper">
+                                  <div class="subscription-user__link-title">
+                                    <p>
+                                      <strong>
+                                        Ежемесячная
+                                      </strong>
+                                    </p>
+                                    <p>
+                                      подписка
+                                    </p>
+                                  </div>
+                                  <div class="subscription-user__link-price">
+                                    <p>
+                                      <strong>
+                                        ₽324
+                                      </strong>
+                                      <span>
+                                      .50 <br> /месяц
+                                    </span>
+                                    </p>
+                                    <p>
+                                      ₽649.00 месяц
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="subscription-user__link-check">
+                                  <p>
+                                    Оплата за месяц <br>
+                                    в размере 324.5 rub
+                                  </p>
+                                  <button class="button _primary">Вибрать Тариф</button>
+                                </div>
+                              </li>
+                              <li class="subscription-user__link current">
+                                <div class="subscription-user__link-wrapper">
+                                  <div class="subscription-user__link-title">
+                                    <p>
+                                      <strong>
+                                        Годовая
+                                      </strong>
+                                    </p>
+                                    <p>
+                                      подписка
+                                    </p>
+                                  </div>
+                                  <div class="subscription-user__link-price">
+                                    <p>
+                                      <strong>
+                                        ₽184
+                                      </strong>
+                                      <span>
+                                      .50 <br> /месяц
+                                    </span>
+                                    </p>
+                                    <p>
+                                      ₽369.00 месяц
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="subscription-user__link-check">
+                                  <p>
+                                    Оплата за год <br>
+                                    в размере 2214 rub
+                                  </p>
+                                  <button class="button _primary">Вибрать Тариф</button>
+                                </div>
+                              </li>
+                            </ul>
+                    <div class="subscription-super">
+                        <div class="subscription-super__title">
+                            <p>
+                                <strong>
+                                    Ежемесячная
+                                </strong>
+                                <span>
+                                подписка
+                            </span>
+                            </p>
+                            <p>
+                                Действительна до: 3 марта 2022 г.
+                            </p>
+                            <a href="#">
+                                Обновить
+                            </a>
+                            <a href="#">
+                                Отменить подписку
+                            </a>
+                        </div>
+                        <ul class="subscription-super__list">
+                            <li>
+                                <a href="#">
+                                    <p>
+                                        <strong>
+                                            Учебник дизайнера
+                                        </strong>
+                                    </p>
+                                    <p>
+                                        Описание телеграмм канала
+                                    </p>
+                                    <svg>
+                                        <use xlink:href="img/icons/icons.svg#telegram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>
+                                        <strong>
+                                            Учебник дизайнера
+                                        </strong>
+                                    </p>
+                                    <p>
+                                        Описание телеграмм канала
+                                    </p>
+                                    <svg>
+                                        <use xlink:href="img/icons/icons.svg#telegram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>
+                                        <strong>
+                                            Учебник дизайнера
+                                        </strong>
+                                    </p>
+                                    <p>
+                                        Описание телеграмм канала
+                                    </p>
+                                    <svg>
+                                        <use xlink:href="img/icons/icons.svg#telegram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>
+                                        <strong>
+                                            Учебник дизайнера
+                                        </strong>
+                                    </p>
+                                    <p>
+                                        Описание телеграмм канала
+                                    </p>
+                                    <svg>
+                                        <use xlink:href="img/icons/icons.svg#telegram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>
+                                        <strong>
+                                            Учебник дизайнера
+                                        </strong>
+                                    </p>
+                                    <p>
+                                        Описание телеграмм канала
+                                    </p>
+                                    <svg>
+                                        <use xlink:href="img/icons/icons.svg#telegram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <p>
+                                        <strong>
+                                            Учебник дизайнера
+                                        </strong>
+                                    </p>
+                                    <p>
+                                        Описание телеграмм канала
+                                    </p>
+                                    <svg>
+                                        <use xlink:href="img/icons/icons.svg#telegram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+<!--                finish subscription-->
+
+<!--                safety-->
+                <div id="call-safety" class="profile">
+                    <p>
+                        <strong>
+                            Изменить текущий пароль
+                        </strong>
+                    </p>
+                    <form action="#">
+                        <label class="input-container">
+                            <input name="password" data-rule="required" type="password" class="input" placeholder="Текущий пароль">
+                        </label>
+                        <label class="input-container">
+                            <input name="password-2" data-rule="required" id="input_test" type="password" class="input" placeholder="Новый пароль">
+                        </label>
+                        <p>
+                            <strong>
+                                Надежность пароля
+                            </strong>
+                            <span style="width: 10%; background-color: #F75764;" id="block_check"></span>
+                        </p>
+                        <label class="input-container">
+                            <input name="password-3" data-rule="required|compare" type="password" class="input" placeholder="Подтвердить новый пароль">
+                        </label>
+                        <button type="submit" class="button _primary">Сохранить пароль</button>
+                    </form>
+                    <div class="profile__bottom">
+                        <p>
+                            Не можите вспонить свой текущий пароль ?
+                        </p>
+                        <a href="#">
+                            Сбросить пароль по электронной почте
+                        </a>
+                    </div>
+                </div>
+<!--                finish safety-->
+
+<!--                story-->
+                <ul id="call-story" class="payment-story">
+                    <li class="payment-story__no-payment">
+                        У вас нет счетов
+                    </li>
+                    <li class="payment-story__payment">
+                        <div class="payment-story__payment-text">
+                            <p>
+                                <strong>
+                                    UI/UX Design. Professium
+                                </strong>
+                            </p>
+                            <p>
+                                Результаты зависят от опыта и личной дисциплины. Улучшить навыки и повысить продуктивность можно на нашем курсе. Зависят от ....
+                            </p>
+                        </div>
+                        <div class="payment-story__payment-price">
+                            <p>
+                                Инвестировано
+                            </p>
+                            <p>
+                                <strong>
+                                    150 $ /  10 usdt
+                                </strong>
+                            </p>
+                        </div>
+                        <div class="payment-story__payment-wallet">
+                            <p>
+                                Номер кошелька
+                            </p>
+                            <form class="payment-story__payment-input">
+                                <label class="input-container">
+                                    <input name="wallet" data-rule="required" value="dfsdf6sd7f6s98df7s9df0sd8f0sd8f0s9d8f0s" class="input" type="text">
+                                </label>
+                                <ul>
+                                    <li id="btn-chain">
+                                        <svg>
+                                            <use xlink:href="img/icons/icons.svg#chain"></use>
+                                        </svg>
+                                        <p>
+                                            Wallet number was copied!
+                                        </p>
+                                    </li>
+                                    <li id="btn-change">
+                                        <svg>
+                                            <use xlink:href="img/icons/icons.svg#pen"></use>
+                                        </svg>
+                                    </li>
+                                    <li id="btn-memo">
+                                        <button>
+                                            <svg>
+                                                <use xlink:href="img/icons/icons.svg#memo"></use>
+                                            </svg>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </form>
+                        </div>
+                    </li>
+                </ul>
+<!--                finish story-->
+
+<!--                delete-->
+                <div id="call-delete" class="account-delete">
+                    <p>
+                        <strong>
+                            Внимание!
+                        </strong>
+                    </p>
+                    <p>
+                        Если вы удалите свою учетную запись, весь ваш прогресс будет полностью удален,
+                        и <span>вы потеряете доступ к платформе навсегда.</span>
+                    </p>
+                    <p>
+            <span>
+              Это действие не может быть отменено.
+            </span>
+                    </p>
+                    <button class="button _red">Удалить аккаунт</button>
+                </div>
+<!--                finish delete-->
+            </div>
+        </div>
+    </div>
+
+    @@include('_footer.html')
+</div>
+<!--sign-in popups-->
+<section id="call-1" class="sign-in">
+    <div class="sign-in__wrapper">
+        <div class="sign-in__content">
+            <div class="sign-in__title">
+                <p>
+                    <strong>
+                        Регистрация
+                    </strong>
+                </p>
+                <p>
+                    для регистрации введите свою почту
+                </p>
+            </div>
+            <form class="sign-in__form">
+                <label class="input-container">
+                    <input name="name" data-rule="required|name" class="input" type="text" placeholder="Имя">
+                </label>
+                <label class="input-container">
+                    <input name="email" data-rule="required|email" class="input" type="email" placeholder="E-mail">
+                </label>
+                <label class="input-container">
+                    <input name="password" data-rule="required" class="input" type="password" placeholder="Пароль">
+                </label>
+                <button type="submit" class="button _primary">Зарегистрироваться</button>
+            </form>
+            <div class="sign-in__bottom">
+                <p>
+                    Регистрируясь, вы соглашаетесь с <span>Правилами использования</span> и <span>Политикой конфиденциальности</span>
+                </p>
+            </div>
+        </div>
+        <div data-close="call-1" class="sign-in__cross sub-close">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</section>
+<section id="call-2" class="sign-in">
+    <div class="sign-in__wrapper">
+        <div class="sign-in__content">
+            <div class="sign-in__title">
+                <p>
+                    <strong>
+                        Авторизация
+                    </strong>
+                </p>
+                <p>
+                    войдите в свой аккаунт на сайте
+                </p>
+            </div>
+            <form class="sign-in__form">
+                <label class="input-container">
+                    <input name="email" data-rule="required|email" class="input" type="email" placeholder="E-mail">
+                </label>
+                <label class="input-container">
+                    <input name="password" data-rule="required" class="input" type="password" placeholder="Пароль">
+                </label>
+                <p>
+                    <span id="forgotten-go">Забыли пароль?</span>
+                </p>
+                <button type="submit" class="button _primary">Зарегистрироваться</button>
+            </form>
+            <div class="sign-in__bottom">
+                <p>
+                    <strong>
+                        Быстрый вход:
+                    </strong>
+                </p>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <svg>
+                                <use xlink:href="img/icons/icons.svg#telegram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <svg>
+                                <use xlink:href="img/icons/icons.svg#google"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sign-in__content forgotten">
+                <div class="sign-in__title">
+                    <p>
+                        <strong>
+                            Забыли пароль?
+                        </strong>
+                    </p>
+                    <p>
+                        Напиши почту от своего аккаунта на MaximusTrade. Мы вышлем инструкцию по восстановлению пароля.
+                    </p>
+                </div>
+                <form class="sign-in__form">
+                    <label class="input-container">
+                        <input name="email" data-rule="required|email" class="input" type="email" placeholder="E-mail">
+                    </label>
+                    <button type="submit" class="button _primary">Восстановить пароль</button>
+                </form>
+                <div class="sign-in__bottom">
+                    <p id="forgotten-back">
+                        Назад
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div data-close="call-2" class="sign-in__cross sub-close">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</section>
+<!--finish sign-in popups-->
+<script src="plugins/js/js-form-validator.min.js"></script>
+<script src="js/script.min.js"></script>
+</body>
+
+</html>

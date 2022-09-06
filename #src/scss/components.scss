@@ -25,6 +25,7 @@
   }
   &._red{
     background-color: $color-red;
+    color: $color-white;
     border: initial;
     @media (min-width: 1200px) {
       &:hover{

@@ -44,3 +44,19 @@ let validateForm = () => {
     })
 }
 
+let callPopUp_2 = (currentBlock) => {
+    let triggersOpen = document.querySelectorAll(".trigger-inv");
+    triggersOpen?triggersOpen.forEach((btn) =>
+        btn.addEventListener("click", function () {
+            let activeTab = currentBlock.querySelector(".active");
+            let activeLink = currentBlock.querySelector(".active-link");
+            let tabAttr = this.getAttribute("data-attr");
+            activeTab?activeTab.classList.remove("active"):null;
+            activeLink?activeLink.classList.remove("active-link"):null;
+            document.getElementById(tabAttr).classList.add("active");
+            btn.parentNode.classList.add("active-link");
+        })
+    ):null;
+}
+
+

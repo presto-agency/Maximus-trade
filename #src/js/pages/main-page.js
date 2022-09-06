@@ -1,30 +1,8 @@
 window.addEventListener('DOMContentLoaded', function () {
-    // addClassToLink()
     sliderClients()
     callPopUp()
     callForgottenPassword()
 })
-
-// let addClassToLink = () => {
-//     let objects = document.querySelectorAll('.how-to__list>li');
-//     let topValue = window.innerHeight / 2;
-//     objects.forEach(object => {
-//         function isFullyVisible(el) {
-//             let elementBoundary = el.getBoundingClientRect();
-//             let top = elementBoundary.top;
-//             return top <= topValue
-//         }
-//
-//         function scrolling() {
-//             if (isFullyVisible(object) && !object.classList.contains('active')) {
-//                 object.classList.add('active')
-//                 console.log(object)
-//             }
-//         }
-//         window.addEventListener("scroll", scrolling);
-//     })
-//
-// };
 
 let sliderClients = () => {
     let slider = document.querySelector('.our-clients__swiper');

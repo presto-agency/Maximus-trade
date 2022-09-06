@@ -9,6 +9,7 @@
       margin: 0 33px 0 0;
       ul{
         li{
+          cursor: pointer;
           font-size: 14px;
           line-height: 16px;
           font-weight: 500;
@@ -17,21 +18,21 @@
           &:last-child{
             margin: 0;
           }
-          a{
+          p{
             color: $color-grey-800;
             transition: 300ms;
           }
           @media (min-width: 1200px) {
             &:hover{
               color: $color-white;
-              a{
+              p{
                 color: $color-white;
               }
             }
           }
-          &.active{
+          &.active-link{
             color: $color-white;
-            a{
+            p{
               color: $color-white;
             }
           }
@@ -39,10 +40,14 @@
       }
     }
     .profile{
+      display: none;
       max-width: 640px;
       width: 100%;
       padding: 40px 40px 60px;
       border: 1px solid rgba($color-white, 0.3);
+      &.active{
+        display: block;
+      }
       p{
         strong{
           font-size: 34px;
@@ -95,177 +100,186 @@
         }
       }
     }
+
     .subscription{
-      display: flex;
-      flex-wrap: wrap;
-      margin: -16px;
+      display: none;
       width: 100%;
-      &__link{
-        padding: 37px 48px;
-        border: 1px solid rgba($color-white, 0.3);
-        min-height: 390px;
+      &.active{
+        display: block;
+      }
+      &-user{
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin: 16px;
-        width: calc((100% - (16px * 4))/2);
-        &.current{
+        flex-wrap: wrap;
+        margin: -16px;
+        width: calc(100% + 32px);
+        &__link{
+          padding: 37px 48px;
+          border: 1px solid rgba($color-white, 0.3);
+          min-height: 390px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          margin: 16px;
+          width: calc((100% - (16px * 4)) / 2);
+          &.current{
+            position: relative;
+            &:before{
+              content: '';
+              position: absolute;
+              top: 0;
+              right: 28px;
+              width: 34px;
+              height: 56px;
+              background-image: url("../img/flag.svg");
+              background-size: 34px 56px;
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover
+            }
+          }
+          p{
+            color: $color-white;
+            strong{
+              line-height: 51px;
+              font-weight: 700;
+              font-size: 34px;
+            }
+          }
+          &-title{
+            margin: 0 0 19px 0;
+            p{
+              font-size: 16px;
+              line-height: 24px;
+              font-weight: 500;
+            }
+          }
+          &-price{
+            p{
+              strong{
+                color: $color-white;
+              }
+              span{
+                display: inline-block;
+                font-size: 12px;
+                line-height: 11px;
+                color: $color-grey-800;
+              }
+            }
+            p{
+              font-size: 16px;
+              line-height: 24px;
+              font-weight: 500;
+              color: $color-grey-800;
+            }
+          }
+          &-check{
+            margin: 50px 0 0 0;
+            p{
+              margin: 0 0 20px 0;
+              font-size: 12px;
+              line-height: 14px;
+              font-weight: 500;
+              color: $color-grey-800;
+            }
+          }
+        }
+      }
+      &-super{
+        border: 1px solid rgba($color-white, 0.3);
+        padding: 37px 48px 80px;
+        width: 100%;
+        &__title{
           position: relative;
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-between;
+          padding: 0 0 23px 0;
+          p{
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: 500;
+            strong, span{
+              display: block;
+              color: $color-white;
+            }
+            strong{
+              font-size: 34px;
+              line-height: 51px;
+              font-weight: 700;
+            }
+            span{
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              font-size: 16px;
+              line-height: 24px;
+              font-weight: 500;
+            }
+          }
+          a{
+            font-size: 14px;
+            line-height: 21px;
+            font-weight: 500;
+            color: $color-primary;
+            transition: 300ms;
+            &:hover{
+              color: $color-white;
+            }
+          }
+        }
+        &__list{
+          position: relative;
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          margin: 42px -75px -13px -32px;
           &:before{
             content: '';
             position: absolute;
-            top: 0;
-            right: 28px;
-            width: 34px;
-            height: 56px;
-            background-image: url("../img/flag.svg");
-            background-size: 34px 56px;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover
+            top: 13px;
+            right: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: calc(100% - 26px);
+            background-color: $color-grey-800;
           }
-        }
-        p{
-          color: $color-white;
-          strong{
-            line-height: 51px;
-            font-weight: 700;
-            font-size: 34px;
-          }
-        }
-        &-title{
-          margin: 0 0 19px 0;
-          p{
-            font-size: 16px;
-            line-height: 24px;
-            font-weight: 500;
-          }
-        }
-        &-price{
-          p{
-            strong{
-              color: $color-white;
-            }
-            span{
-              display: inline-block;
-              font-size: 12px;
-              line-height: 11px;
-              color: $color-grey-800;
-            }
-          }
-          p{
-            font-size: 16px;
-            line-height: 24px;
-            font-weight: 500;
-            color: $color-grey-800;
-          }
-        }
-        &-check{
-          margin: 50px 0 0 0;
-          p{
-            margin: 0 0 20px 0;
-            font-size: 12px;
-            line-height: 14px;
-            font-weight: 500;
-            color: $color-grey-800;
-          }
-        }
-      }
-    }
-    .current-subscribe{
-      border: 1px solid rgba($color-white, 0.3);
-      padding: 37px 48px 80px;
-      width: 100%;
-      &__title{
-        position: relative;
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        padding: 0 0 23px 0;
-        p{
-          font-size: 12px;
-          line-height: 18px;
-          font-weight: 500;
-          strong, span{
-            display: block;
-          }
-          strong{
-            font-size: 34px;
-            line-height: 51px;
-            font-weight: 700;
-          }
-          span{
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            font-size: 16px;
-            line-height: 24px;
-            font-weight: 500;
-          }
-        }
-        a{
-          font-size: 14px;
-          line-height: 21px;
-          font-weight: 500;
-          color: $color-primary;
-          transition: 300ms;
-          &:hover{
-            color: $color-white;
-          }
-        }
-      }
-      &__list{
-        position: relative;
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        margin: 42px -75px -13px -32px;
-        &:before{
-          content: '';
-          position: absolute;
-          top: 13px;
-          right: 50%;
-          transform: translateX(-50%);
-          width: 2px;
-          height: calc(100% - 26px);
-          background-color: $color-grey-800;
-        }
-        li{
-          position: relative;
-          width: calc((100% - ((75px * 2) + (32px * 2)))/2);
-          margin: 13px 75px 13px 32px;
-          box-sizing: content-box;
-          a{
-            display: block;
-            padding: 0 50px 0 0;
-            p{
-              font-size: 12px;
-              line-height: 18px;
-              font-weight: 500;
-              color: $color-grey-800;
-              strong{
-                font-size: 24px;
-                line-height: 36px;
-                font-weight: 700;
-                color: $color-white;
+          li{
+            position: relative;
+            width: calc((100% - ((75px * 2) + (32px * 2)))/2);
+            margin: 13px 75px 13px 32px;
+            box-sizing: content-box;
+            a{
+              display: block;
+              padding: 0 50px 0 0;
+              p{
+                font-size: 12px;
+                line-height: 18px;
+                font-weight: 500;
+                color: $color-grey-800;
+                strong{
+                  font-size: 24px;
+                  line-height: 36px;
+                  font-weight: 700;
+                  color: $color-white;
+                }
+              }
+              svg{
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                width: 24px;
+                height: 24px;
+                fill: $color-white;
+                transition: 300ms;
               }
             }
-            svg{
-              position: absolute;
-              top: 50%;
-              right: 0;
-              transform: translateY(-50%);
-              width: 24px;
-              height: 24px;
-              fill: $color-white;
-              transition: 300ms;
-            }
-          }
-          @media (min-width: 1200px) {
-            &:hover{
-              a{
-                svg{
-                  fill: $color-primary;
+            @media (min-width: 1200px) {
+              &:hover{
+                a{
+                  svg{
+                    fill: $color-primary;
+                  }
                 }
               }
             }
@@ -273,8 +287,13 @@
         }
       }
     }
+
     .payment-story{
+      display: none;
       width: 100%;
+      &.active{
+        display: block;
+      }
         li{
           &:first-child{
             margin: 0;
@@ -451,9 +470,13 @@
       }
     }
     .account-delete{
+      display: none;
       padding: 40px;
       border: 1px solid rgba($color-white, 0.3);
       width: 100%;
+      &.active{
+        display: block;
+      }
       p{
         max-width: 640px;
         font-size: 16px;
@@ -483,31 +506,33 @@
 @media (max-width: 1199px) {
   .cabinet{
     &__content{
-      .current-subscribe{
-        &__title{
-          align-items: initial;
-          flex-wrap: wrap;
-          padding: 0;
-          p{
-            &:last-of-type{
-              margin: 20px 0 30px 0;
-            }
-            flex: 1 0 100%;
-            span{
-              position: static;
+      .subscription{
+        &-super{
+          &__title{
+            align-items: initial;
+            flex-wrap: wrap;
+            padding: 0;
+            p{
+              &:last-of-type{
+                margin: 20px 0 30px 0;
+              }
+              flex: 1 0 100%;
+              span{
+                position: static;
+              }
             }
           }
-        }
-        &__list{
-          margin: 30px 0 0 0;
-          &:before{
-            display: none;
-          }
-          li{
-            width: 100%;
-            margin: 0 0 30px 0;
-            &:last-child{
-              margin: 0;
+          &__list{
+            margin: 30px 0 0 0;
+            &:before{
+              display: none;
+            }
+            li{
+              width: 100%;
+              margin: 0 0 30px 0;
+              &:last-child{
+                margin: 0;
+              }
             }
           }
         }
@@ -520,10 +545,13 @@
   .cabinet{
     &__content{
       .subscription{
-        margin: -16px 0;
-        &__link{
-          margin: 16px 0;
+        &-user{
+          margin: -16px 0;
           width: 100%;
+          &__link{
+            margin: 16px 0;
+            width: 100%;
+          }
         }
       }
       .payment-story{
@@ -566,15 +594,21 @@
         padding: 37px 34px 47px;
       }
       .subscription{
-        margin: 10px 0;
-        &__link{
-          padding: 37px 34px 47px;
+        &-user{
           margin: 10px 0;
-          &-check{
-            button{
-              width: 100%;
+          &__link{
+            padding: 37px 34px 47px;
+            margin: 10px 0;
+            &-check{
+              button{
+                width: 100%;
+              }
             }
           }
+        }
+        &-super{
+          margin: 20px 0 0 0;
+          padding: 29px 30px 50px;
         }
       }
       .profile{
@@ -584,10 +618,6 @@
         button{
           width: 100%;
         }
-      }
-      .current-subscribe{
-        margin: 20px 0 0 0;
-        padding: 29px 30px 50px;
       }
       .payment-story{
         margin: 20px 0 0 0;
@@ -643,16 +673,18 @@
           }
         }
       }
-      .current-subscribe{
-        &__list{
-          li{
-            a{
-              p{
-                font-size: 10px;
-                line-height: 15px;
-                strong{
-                  font-size: 16px;
-                  line-height: 24px;
+      .subscription{
+        &-super{
+          &__list{
+            li{
+              a{
+                p{
+                  font-size: 10px;
+                  line-height: 15px;
+                  strong{
+                    font-size: 16px;
+                    line-height: 24px;
+                  }
                 }
               }
             }
@@ -667,25 +699,27 @@
   .cabinet{
     &__content{
       .subscription{
-        &__link{
-          p{
-            strong{
-              font-size: 30px;
-              line-height: 34px;
+        &-user{
+          &__link{
+            p{
+              strong{
+                font-size: 30px;
+                line-height: 34px;
+              }
             }
           }
         }
-      }
-      .current-subscribe{
-        &__title{
-          p{
-            strong{
-              font-size: 28px;
-              line-height: 30px;
+        &-super{
+          &__title{
+            p{
+              strong{
+                font-size: 28px;
+                line-height: 30px;
+              }
             }
-          }
-          a{
-            flex: 0 1 100%;
+            a{
+              flex: 0 1 100%;
+            }
           }
         }
       }
