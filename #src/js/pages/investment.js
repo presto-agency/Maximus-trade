@@ -1,8 +1,9 @@
 window.addEventListener('DOMContentLoaded', function () {
-    let currentBlock  = document.querySelector(".investment");
-    callPopUp_2(currentBlock)
+    let investmentBlock  = document.querySelector(".investment");
+    investmentBlock?callPopUp_2(investmentBlock):null;
     customScroll()
     grabCursor()
+    // validateForm(document.querySelector('#ident-8'))
 })
 
 let customScroll = () => {

@@ -1,6 +1,14 @@
 window.addEventListener('DOMContentLoaded', function () {
     headerActive()
-    // validateForm()
+    // validateForm(document.querySelector('#ident-1'))
+    // document.querySelector('#ident-1').addEventListener('submit', function(e){
+    //     if(validateForm(document.querySelector('#ident-1'))===false){
+    //         e.preventDefault()
+    //     }
+    // })
+    // validateForm(document.querySelector('#ident-2'))
+    // validateForm(document.querySelector('#ident-3'))
+    // validateForm(document.querySelector('#ident-4'))
 })
 
 let headerActive = () => {
@@ -18,33 +26,28 @@ let headerActive = () => {
     headerMob?burgerBtn.onclick = () => {headerMob.classList.contains('active')?removeClass():addClass()}:null;
 }
 
-let  validateForm = () => {
+let  validateForm = (form) => {
     // https://via-profit.github.io/js-form-validator/
-    const forms = document.querySelectorAll('form')
-    if(forms.length > 0){
-        for(let form of forms){
-            const validator = new Validator(form, function (err, res) {
-                return res;
-            },{
-                rules: {
-                    compare: function (value) {
-                        return (value === document.getElementById('input_test').value);
+    if(form){
+        let validation =  new Validator(form, function (err, res) {
+            return res;
+        },{
+            rules: {
+                compare: function (value) {
+                    return (value === document.getElementById('input_test').value);
+                }
+            },
+            messages: {
+                en: {
+                    compare: {
+                        incorrect: 'Passwords are not the same'
                     }
-                },
-                messages: {
-                    en: {
-                        compare: {
-                            incorrect: 'Passwords are not the same'
-                        }
-                    }
-                },
-                errorClassName: 'validate-error',
-                onAir: false,
-            })
-            validator.validate()
-
-            return validator
-        }
+                }
+            },
+            errorClassName: 'validate-error',
+            // onAir: false,
+        })
+        return validation.validate()
     }
 }
 
@@ -52,9 +55,9 @@ let callPopUp_2 = (currentBlock) => {
     let triggersOpen = document.querySelectorAll(".trigger-inv");
     triggersOpen?triggersOpen.forEach((btn) =>
         btn.addEventListener("click", function () {
-            let activeTab = currentBlock.querySelector(".active");
             let activeLink = currentBlock.querySelector(".active-link");
             let tabAttr = this.getAttribute("data-attr");
+            let activeTab = currentBlock.querySelector(".active");
             activeTab?activeTab.classList.remove("active"):null;
             activeLink?activeLink.classList.remove("active-link"):null;
             document.getElementById(tabAttr).classList.add("active");

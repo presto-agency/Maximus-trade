@@ -1,8 +1,12 @@
 window.addEventListener('DOMContentLoaded', function () {
     inputChange()
     checkPassword()
-    let currentBlock  = document.querySelector(".cabinet");
-    callPopUp_2(currentBlock)
+    let cabinetBlock  = document.querySelector(".cabinet");
+    cabinetBlock?callPopUp_2(cabinetBlock):null;
+    // validateForm(document.querySelector('#ident-5'))
+    // validateForm(document.querySelector('#ident-6'))
+    // validateForm(document.querySelector('#ident-7'))
+
 })
 
 let inputChange = () => {
