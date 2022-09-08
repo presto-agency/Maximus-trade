@@ -475,7 +475,7 @@ p {
   margin: 0 0 0 6px;
 }
 
-.header__drop-menu .sort-select {
+.header .sort-select {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -492,7 +492,7 @@ p {
   margin: 0 0 0 32px;
 }
 
-.header__drop-menu .sort-select.turn-arrow:before {
+.header .sort-select.turn-arrow:before {
   -webkit-transition: 300ms;
   -o-transition: 300ms;
   transition: 300ms;
@@ -500,10 +500,10 @@ p {
           transform: translateY(-50%) rotateX(180deg);
 }
 
-.header__drop-menu .sort-select:before {
+.header .sort-select:before {
   content: "";
   position: absolute;
-  right: 7px;
+  right: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
@@ -519,7 +519,7 @@ p {
   transition: 300ms;
 }
 
-.header__drop-menu .sort-select span {
+.header .sort-select span {
   text-align: center;
   font-size: 12px;
   line-height: 14px;
@@ -529,11 +529,11 @@ p {
   cursor: pointer;
 }
 
-.header__drop-menu .sort-select ul {
+.header .sort-select ul {
   position: absolute;
-  left: 0;
+  left: 50%;
   top: 40px;
-  width: 78px;
+  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -547,9 +547,12 @@ p {
   -webkit-transition: 300ms;
   -o-transition: 300ms;
   transition: 300ms;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
-.header__drop-menu .sort-select ul li {
+.header .sort-select ul li {
   font-size: 12px;
   line-height: 14px;
   font-weight: 700;
@@ -558,11 +561,11 @@ p {
   margin: 0 0 3px 0;
 }
 
-.header__drop-menu .sort-select ul li:last-child {
+.header .sort-select ul li:last-child {
   margin: 0;
 }
 
-.header__drop-menu .sort-select ul li a {
+.header .sort-select ul li a {
   color: #B9B9B9;
 }
 
@@ -2770,9 +2773,10 @@ p {
     grid-area: c;
   }
 
-  .header__wrapper_nav p {
+  .header__wrapper_nav .sort-select {
     grid-area: d;
     width: 100%;
+    margin: 0;
   }
 
   .header.active .header__cross span {
@@ -2820,7 +2824,7 @@ p {
             flex: 1 0 100%;
   }
 
-  .header.login .header__wrapper_nav p {
+  .header.login .header__wrapper_nav .sort-select {
     width: 78px;
   }
 
@@ -2833,10 +2837,6 @@ p {
     height: 12px;
     background-image: url("../img/crown.svg");
     background-size: 17px 12px;
-  }
-
-  .header p {
-    margin: 0;
   }
 
   .header button + button {
@@ -3782,14 +3782,6 @@ p {
 @media (max-width: 359px) {
   .header button + button {
     margin: 0 10px 0 4px;
-  }
-
-  .header p span {
-    padding: 0 20px 0 0;
-  }
-
-  .header.login p span {
-    padding: 0 31px 0 0;
   }
 
   .footer__links li a {

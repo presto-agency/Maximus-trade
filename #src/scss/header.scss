@@ -28,104 +28,72 @@
   button + button{
     margin: 0 0 0 6px;
   }
-  &__drop-menu{
-    .sort-select{
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 78px;
-      height: 40px;
-      border-left: 1px solid $color-grey;
-      margin: 0 0 0 32px;
-      &.turn-arrow{
-        &:before{
-          transition: 300ms;
-          transform: translateY(-50%) rotateX(180deg);
-        }
-      }
+  .sort-select{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 78px;
+    height: 40px;
+    border-left: 1px solid $color-grey;
+    margin: 0 0 0 32px;
+    &.turn-arrow{
       &:before{
-        content: '';
-        position: absolute;
-        right: 7px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 8px;
-        height: 10px;
-        background-image: url("../img/tip.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 8px 10px;
         transition: 300ms;
+        transform: translateY(-50%) rotateX(180deg);
       }
-      span{
-          text-align: center;
-          font-size: 12px;
-          line-height: 14px;
-          font-weight: 700;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 8px;
+      height: 10px;
+      background-image: url("../img/tip.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 8px 10px;
+      transition: 300ms;
+    }
+    span{
+      text-align: center;
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: 700;
+      color: $color-grey;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+    ul{
+      position: absolute;
+      left: 50%;
+      top: 40px;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      overflow: hidden;
+      max-height: 0;
+      transition: 300ms;
+      transform: translateX(-50%);
+      li{
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 700;
+        color: $color-grey;
+        text-transform: uppercase;
+        margin: 0 0 3px 0;
+        &:last-child{
+          margin: 0;
+        }
+        a{
           color: $color-grey;
-          text-transform: uppercase;
-          cursor: pointer;
-      }
-      ul{
-        position: absolute;
-        left: 0;
-        top: 40px;
-        width: 78px;
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-        overflow: hidden;
-        max-height: 0;
-        transition: 300ms;
-        li{
-          font-size: 12px;
-          line-height: 14px;
-          font-weight: 700;
-          color: $color-grey;
-          text-transform: uppercase;
-          margin: 0 0 3px 0;
-          &:last-child{
-            margin: 0;
-          }
-          a{
-            color: $color-grey;
-          }
         }
       }
     }
   }
-  //p{
-  //  display: flex;
-  //  justify-content: flex-end;
-  //  align-items: center;
-  //  font-size: 12px;
-  //  line-height: 14px;
-  //  font-weight: 700;
-  //  color: $color-grey;
-  //  width: 78px;
-  //  height: 40px;
-  //  border-left: 1px solid $color-grey;
-  //  margin: 0 0 0 32px;
-  //  span{
-  //    position: relative;
-  //    cursor: pointer;
-  //    padding: 0 31px 0 0;
-  //    &:before{
-  //      content: '';
-  //      position: absolute;
-  //      right: 7px;
-  //      top: 50%;
-  //      transform: translateY(-50%);
-  //      width: 8px;
-  //      height: 10px;
-  //      background-image: url("../img/tip.svg");
-  //      background-repeat: no-repeat;
-  //      background-position: center;
-  //      background-size: 8px 10px;
-  //    }
-  //  }
-  //}
 }
 @media(max-width: 1199px){
   .header{
@@ -211,9 +179,10 @@
             grid-area: c;
           }
         }
-        p{
+        .sort-select{
           grid-area: d;
           width: 100%;
+          margin: 0;
         }
       }
     }
@@ -257,7 +226,7 @@
             ul{
               flex: 1 0 100%;
             }
-            p{
+            .sort-select{
               width: 78px
             }
             button{
@@ -278,9 +247,6 @@
           }
         }
       }
-    }
-    p{
-      margin: 0;
     }
     button+button{
       margin: 0 22px 0 6px;
@@ -310,18 +276,6 @@
   .header{
     button + button {
       margin: 0 10px 0 4px;
-    }
-    p{
-      span{
-        padding: 0 20px 0 0;
-      }
-    }
-    &.login{
-      p{
-        span{
-          padding: 0 31px 0 0;
-        }
-      }
     }
   }
 }
