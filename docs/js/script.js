@@ -178,8 +178,8 @@ let dropMenu = () => {
 
         const onMouseScroll = () => {
             if (!blockList.classList.contains('container-active')) {
-                return;
-            };
+                return
+            }
             if (window.scrollY > 0) {
                 hideSelectMenu();
             }
@@ -187,9 +187,8 @@ let dropMenu = () => {
 
         const onOutsideClick = (e) => {
             if (!blockList.classList.contains('container-active')) {
-                return;
-            };
-
+                return
+            }
             if (!e.target.classList.contains('sort-select__item') && !e.target.classList.contains('sort-select__current')) {
                 hideSelectMenu();
             };
