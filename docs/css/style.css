@@ -475,33 +475,32 @@ p {
   margin: 0 0 0 6px;
 }
 
-.header p {
+.header__drop-menu .sort-select {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 12px;
-  line-height: 14px;
-  font-weight: 700;
-  color: #B9B9B9;
   width: 78px;
   height: 40px;
   border-left: 1px solid #B9B9B9;
   margin: 0 0 0 32px;
 }
 
-.header p span {
-  position: relative;
-  cursor: pointer;
-  padding: 0 31px 0 0;
+.header__drop-menu .sort-select.turn-arrow:before {
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+  -webkit-transform: translateY(-50%) rotateX(180deg);
+          transform: translateY(-50%) rotateX(180deg);
 }
 
-.header p span:before {
+.header__drop-menu .sort-select:before {
   content: "";
   position: absolute;
   right: 7px;
@@ -515,6 +514,56 @@ p {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 8px 10px;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+}
+
+.header__drop-menu .sort-select span {
+  text-align: center;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 700;
+  color: #B9B9B9;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.header__drop-menu .sort-select ul {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  width: 78px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+}
+
+.header__drop-menu .sort-select ul li {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 700;
+  color: #B9B9B9;
+  text-transform: uppercase;
+  margin: 0 0 3px 0;
+}
+
+.header__drop-menu .sort-select ul li:last-child {
+  margin: 0;
+}
+
+.header__drop-menu .sort-select ul li a {
+  color: #B9B9B9;
 }
 
 .footer {

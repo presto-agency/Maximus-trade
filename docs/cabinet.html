@@ -17,47 +17,59 @@
 <body>
 <div class="wrapper">
     <header class="header">
-    <div class="container _l">
-        <div class="header__content">
-            <div class="common-logo">
-                <a href="#">
-                    <img src="img/logo.svg" alt="logo">
-                </a>
+  <div class="container _l">
+    <div class="header__content">
+      <div class="common-logo">
+        <a href="#">
+          <img src="img/logo.svg" alt="logo">
+        </a>
+      </div>
+      <div class="header__wrapper">
+        <nav class="header__wrapper_nav">
+          <ul>
+            <li class="common-link active">
+              <a href="#">
+                Партнеры
+              </a>
+            </li>
+            <li class="common-link">
+              <a href="#">
+                Инвестиции
+              </a>
+            </li>
+            <li class="common-link">
+              <a href="#">
+                Обучение
+              </a>
+            </li>
+          </ul>
+          <button data-attr="call-1" class="button trigger">Регистрация</button>
+          <button data-attr="call-2" class="button _grey trigger">Войти</button>
+          <!--                    <button class="button _auth super-user">IVAN IVANOV</button>-->
+          <!--                  start dropMenu-->
+          <div class="header__drop-menu">
+            <div id="sort" class="sort-select">
+              <span id="current-value" class="sort-select__current">ru</span>
+              <ul id="sort-list" class="sort-select__list">
+                <li title="ru" data-value="ru" class="sort-select__item active">
+                  <a href="#">ru</a>
+                </li>
+                <li title="eng" data-value="eng" class="sort-select__item">
+                  <a href="#">eng</a>
+                </li>
+              </ul>
             </div>
-            <div class="header__wrapper">
-                <nav class="header__wrapper_nav">
-                    <ul>
-                        <li class="common-link active">
-                            <a href="#">
-                                Партнеры
-                            </a>
-                        </li>
-                        <li class="common-link">
-                            <a href="#">
-                                Инвестиции
-                            </a>
-                        </li>
-                        <li class="common-link">
-                            <a href="#">
-                                Обучение
-                            </a>
-                        </li>
-                    </ul>
-                    <button data-attr="call-1" class="button trigger">Регистрация</button>
-                    <button data-attr="call-2" class="button _grey trigger">Войти</button>
-<!--                    <button class="button _auth super-user">IVAN IVANOV</button>-->
-                    <p>
-                        <span>RU</span>
-                    </p>
-                </nav>
-            </div>
-            <div class="header__cross">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
+          </div>
+          <!--                  finish drop menu-->
+        </nav>
+      </div>
+      <div class="header__cross">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
+  </div>
 </header>
     <div class="root"></div>
     <div class="cabinet">
