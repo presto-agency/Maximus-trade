@@ -113,7 +113,7 @@
 
 
         <!--                profile-->
-        <div id="call-profile" class="profile active">
+        <div id="call-profile" class="profile edit active">
           <p>
             <strong>
               Личные данные
@@ -121,21 +121,22 @@
           </p>
           <form id="ident-5" action="#">
             <label class="input-container">
-              <input name="name" data-rule="required|name" type="text" class="input" placeholder="Name">
+              <input name="name" value="Ivan" data-rule="required|name" type="text" class="input" placeholder="Name">
             </label>
             <label class="input-container">
-              <input name="lastname" data-rule="required|lastname" type="text" class="input" placeholder="Surname">
+              <input name="lastname" value="Surname" data-rule="required|lastname" type="text" class="input" placeholder="Surname">
             </label>
             <label class="input-container">
-              <input name="email" data-rule="required|email" class="input" type="email" placeholder="E-mail">
+              <input name="email"  data-rule="required|email" class="input" type="email" placeholder="E-mail">
             </label>
             <label class="input-container">
-              <input name="phone" data-rule="required|phone" type="number" class="input" placeholder="+7 000 000 00">
+              <input name="phone"  data-rule="required|phone" type="number" class="input" placeholder="+7 000 000 00">
             </label>
             <label class="input-container">
-              <input name="telegram" data-rule="required" type="text" class="input" placeholder="Telegram ID">
+              <input name="telegram"  data-rule="required" type="text" class="input" placeholder="Telegram ID">
             </label>
-            <button type="submit" class="button _primary">Редактировать</button>
+            <button class="button edit-btn _primary">Редактировать</button>
+            <button type="submit" class="button save-btn _primary">Сохранить</button>
           </form>
         </div>
         <!--                finish profile-->

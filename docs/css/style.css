@@ -1860,6 +1860,30 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.cabinet__content .profile.edit.active-edit label {
+  pointer-events: initial;
+}
+
+.cabinet__content .profile.edit.active-edit label input {
+  border: 1px solid #fff;
+}
+
+.cabinet__content .profile.edit.active-edit .button.save-btn {
+  display: block;
+}
+
+.cabinet__content .profile.edit.active-edit .button.edit-btn {
+  display: none;
+}
+
+.cabinet__content .profile.edit label {
+  pointer-events: none;
+}
+
+.cabinet__content .profile.edit .button.save-btn {
+  display: none;
+}
+
 .cabinet__content .profile.active {
   display: block;
 }

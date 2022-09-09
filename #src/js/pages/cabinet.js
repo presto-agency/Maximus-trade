@@ -1,6 +1,7 @@
 window.addEventListener('DOMContentLoaded', function () {
     inputChange()
     checkPassword()
+    editInputs()
     let cabinetBlock  = document.querySelector(".cabinet");
     cabinetBlock?callPopUp_2(cabinetBlock):null;
     // validateForm(document.querySelector('#ident-5'))
@@ -18,10 +19,8 @@ let inputChange = () => {
     btn_memo?btn_memo.onclick = () => {removeActive()}: null;
     btn_chain?btn_chain.onclick = () => {copyText()}: null;
     let removeActive = () => {
-        if(input.value.length > 0){
-            input.setAttribute(value, input.value)
-            btn_memo.parentNode.parentNode.classList.remove('active')
-        }
+        input.setAttribute('value', input.value)
+        btn_memo.parentNode.parentNode.classList.remove('active')
     }
     let addActive = () => {
         input.select()
@@ -104,6 +103,26 @@ let checkPassword = () => {
             block_check.style.backgroundColor = '#6FC05B';
         };
     }):null;
+}
+
+let editInputs = () => {
+    let editItem = document.querySelector('.edit');
+    if(editItem){
+        let editBtn = editItem.querySelector('.edit-btn');
+        let saveBtn = editItem.querySelector('.save-btn');
+        let inputs = editItem.querySelectorAll('input');
+          editBtn.onclick = (e) => {
+          e.preventDefault()
+            editItem.classList.add('active-edit');
+        }
+        saveBtn.onclick = () => {
+            editItem.classList.add('active-edit');
+            inputs.forEach(input => {
+                input.setAttribute('value', input.value)
+                editItem.classList.remove('active-edit');
+            })
+        }
+    }
 }
 
 
