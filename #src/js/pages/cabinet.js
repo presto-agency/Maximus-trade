@@ -4,10 +4,6 @@ window.addEventListener('DOMContentLoaded', function () {
     editInputs()
     let cabinetBlock  = document.querySelector(".cabinet");
     cabinetBlock?callPopUp_2(cabinetBlock):null;
-    // validateForm(document.querySelector('#ident-5'))
-    // validateForm(document.querySelector('#ident-6'))
-    // validateForm(document.querySelector('#ident-7'))
-
 })
 
 let inputChange = () => {

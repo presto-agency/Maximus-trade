@@ -1,14 +1,5 @@
 window.addEventListener('DOMContentLoaded', function () {
     headerActive()
-    // validateForm(document.querySelector('#ident-1'))
-    // document.querySelector('#ident-1').addEventListener('submit', function(e){
-    //     if(validateForm(document.querySelector('#ident-1'))===false){
-    //         e.preventDefault()
-    //     }
-    // })
-    // validateForm(document.querySelector('#ident-2'))
-    // validateForm(document.querySelector('#ident-3'))
-    // validateForm(document.querySelector('#ident-4'))
 })
 
 let headerActive = () => {
@@ -24,10 +15,6 @@ let headerActive = () => {
         body.style.overflow = '';
     }
     headerMob?burgerBtn.onclick = () => {headerMob.classList.contains('active')?removeClass():addClass()}:null;
-}
-
-let  validateForm = (form) => {
-
 }
 
 let callPopUp_2 = (currentBlock) => {
