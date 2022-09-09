@@ -33,21 +33,21 @@
               Личные данные
             </strong>
           </p>
-          <form id="ident-5" action="#">
+          <form action="#">
             <label class="input-container">
-              <input name="name" value="Ivan" data-rule="required|name" type="text" class="input" placeholder="Name">
+              <input name="name" value="Ivan" type="text" class="input" placeholder="Name">
             </label>
             <label class="input-container">
-              <input name="lastname" value="Surname" data-rule="required|lastname" type="text" class="input" placeholder="Surname">
+              <input name="lastname" value="Surname" type="text" class="input" placeholder="Surname">
             </label>
             <label class="input-container">
-              <input name="email"  data-rule="required|email" class="input" type="email" placeholder="E-mail">
+              <input name="email" class="input" type="email" placeholder="E-mail">
             </label>
             <label class="input-container">
-              <input name="phone"  data-rule="required|phone" type="number" class="input" placeholder="+7 000 000 00">
+              <input name="phone" type="number" class="input" placeholder="+7 000 000 00">
             </label>
             <label class="input-container">
-              <input name="telegram"  data-rule="required" type="text" class="input" placeholder="Telegram ID">
+              <input name="telegram" type="text" class="input" placeholder="Telegram ID">
             </label>
             <button class="button edit-btn _primary">Редактировать</button>
             <button type="submit" class="button save-btn _primary">Сохранить</button>
@@ -250,12 +250,12 @@
               Изменить текущий пароль
             </strong>
           </p>
-          <form id="ident-6" action="#">
+          <form action="#">
             <label class="input-container">
-              <input name="password" data-rule="required" type="password" class="input" placeholder="Текущий пароль">
+              <input name="password" type="password" class="input" placeholder="Текущий пароль">
             </label>
             <label class="input-container">
-              <input name="password-2" data-rule="required" id="input_test" type="password" class="input"
+              <input name="password-2" id="input_test" type="password" class="input"
                      placeholder="Новый пароль">
             </label>
             <p>
@@ -312,9 +312,9 @@
               <p>
                 Номер кошелька
               </p>
-              <form id="ident-7" class="payment-story__payment-input">
+              <form class="payment-story__payment-input">
                 <label class="input-container">
-                  <input name="wallet" data-rule="required" value="dfsdf6sd7f6s98df7s9df0sd8f0sd8f0s9d8f0s"
+                  <input name="wallet" value="dfsdf6sd7f6s98df7s9df0sd8f0sd8f0s9d8f0s"
                          class="input" type="text">
                 </label>
                 <ul>
@@ -386,20 +386,19 @@
       </div>
       <form class="sign-in__form">
         <label class="input-container">
-          <input name="name" data-rule="required|name" class="input" type="text" placeholder="Имя">
+          <input name="name" class="input" type="text" placeholder="Имя">
         </label>
         <label class="input-container">
-          <input name="email" data-rule="required|email" class="input" type="email" placeholder="E-mail">
+          <input name="email" class="input" type="email" placeholder="E-mail">
         </label>
         <label class="input-container">
-          <input name="password" data-rule="required" class="input" type="password" placeholder="Пароль">
+          <input name="password" class="input" type="password" placeholder="Пароль">
         </label>
         <button type="submit" class="button _primary">Зарегистрироваться</button>
       </form>
       <div class="sign-in__bottom">
         <p>
-          Регистрируясь, вы соглашаетесь с <span>Правилами использования</span> и
-          <span>Политикой конфиденциальности</span>
+          Регистрируясь, вы соглашаетесь с <span>Правилами использования</span> и <span>Политикой конфиденциальности</span>
         </p>
       </div>
     </div>
@@ -424,10 +423,10 @@
       </div>
       <form class="sign-in__form">
         <label class="input-container">
-          <input name="email" data-rule="required|email" class="input" type="email" placeholder="E-mail">
+          <input name="email" class="input" type="email" placeholder="E-mail">
         </label>
         <label class="input-container">
-          <input name="password" data-rule="required" class="input" type="password" placeholder="Пароль">
+          <input name="password" class="input" type="password" placeholder="Пароль">
         </label>
         <p>
           <span id="forgotten-go">Забыли пароль?</span>
@@ -468,9 +467,9 @@
             Напиши почту от своего аккаунта на MaximusTrade. Мы вышлем инструкцию по восстановлению пароля.
           </p>
         </div>
-        <form class="sign-in__form">
+        <form id="ident-3" class="sign-in__form">
           <label class="input-container">
-            <input name="email" data-rule="required|email" class="input" type="email" placeholder="E-mail">
+            <input name="email" class="input" type="email" placeholder="E-mail">
           </label>
           <button type="submit" class="button _primary">Восстановить пароль</button>
         </form>
@@ -514,7 +513,6 @@
   </div>
 </section>
 <!--finish sign-in popups-->
-<script src="plugins/js/js-form-validator.min.js"></script>
 <script src="js/script.min.js"></script>
 </body>
 

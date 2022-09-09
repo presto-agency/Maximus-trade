@@ -37,15 +37,15 @@
                         для регистрации введите свою почту
                     </p>
                 </div>
-                <form id="ident-1" class="sign-in__form">
+                <form class="sign-in__form">
                     <label class="input-container">
-                        <input name="name" data-rule="required|name" class="input" type="text" placeholder="Имя">
+                        <input name="name" class="input" type="text" placeholder="Имя">
                     </label>
                     <label class="input-container">
-                        <input name="email" data-rule="required|email" class="input" type="email" placeholder="E-mail">
+                        <input name="email" class="input" type="email" placeholder="E-mail">
                     </label>
                     <label class="input-container">
-                        <input name="password" data-rule="required" class="input" type="password" placeholder="Пароль">
+                        <input name="password" class="input" type="password" placeholder="Пароль">
                     </label>
                     <button type="submit" class="button _primary">Зарегистрироваться</button>
                 </form>
@@ -74,12 +74,12 @@
                         войдите в свой аккаунт на сайте
                     </p>
                 </div>
-                <form id="ident-2" class="sign-in__form">
+                <form class="sign-in__form">
                     <label class="input-container">
-                        <input name="email" data-rule="required|email" class="input" type="email" placeholder="E-mail">
+                        <input name="email" class="input" type="email" placeholder="E-mail">
                     </label>
                     <label class="input-container">
-                        <input name="password" data-rule="required" class="input" type="password" placeholder="Пароль">
+                        <input name="password" class="input" type="password" placeholder="Пароль">
                     </label>
                     <p>
                         <span id="forgotten-go">Забыли пароль?</span>
@@ -122,7 +122,7 @@
                     </div>
                     <form id="ident-3" class="sign-in__form">
                         <label class="input-container">
-                            <input name="email" data-rule="required|email" class="input" type="email" placeholder="E-mail">
+                            <input name="email" class="input" type="email" placeholder="E-mail">
                         </label>
                         <button type="submit" class="button _primary">Восстановить пароль</button>
                     </form>
@@ -141,7 +141,6 @@
     </section>
     <!--finish sign-in popups-->
     <script src="plugins/js/swiper-bundle.min.js"></script>
-    <script src="plugins/js/js-form-validator.min.js"></script>
     <script src="js/script.min.js"></script>
 </body>
 

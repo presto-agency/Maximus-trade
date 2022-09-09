@@ -27,28 +27,7 @@ let headerActive = () => {
 }
 
 let  validateForm = (form) => {
-    // https://via-profit.github.io/js-form-validator/
-    if(form){
-        let validation =  new Validator(form, function (err, res) {
-            return res;
-        },{
-            rules: {
-                compare: function (value) {
-                    return (value === document.getElementById('input_test').value);
-                }
-            },
-            messages: {
-                en: {
-                    compare: {
-                        incorrect: 'Passwords are not the same'
-                    }
-                }
-            },
-            errorClassName: 'validate-error',
-            // onAir: false,
-        })
-        return validation.validate()
-    }
+
 }
 
 let callPopUp_2 = (currentBlock) => {

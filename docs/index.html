@@ -531,18 +531,18 @@
                 <p>
                     Оставьте номер телефона и получите консультацию
                 </p>
-                <form id="ident-4" action="#" class="need-help__form">
+                <form action="#" class="need-help__form">
                     <div class="need-help__input-top">
                         <label class="input-container">
-                            <input name="name" data-rule="required|name" class="input" type="text" placeholder="Имя">
+                            <input name="name" class="input" type="text" placeholder="Имя">
                         </label>
                         <label class="input-container">
-                            <input name="lastname" data-rule="required|lastname" class="input" type="text" placeholder="Фамилия">
+                            <input name="lastname" class="input" type="text" placeholder="Фамилия">
                         </label>
                     </div>
                     <div class="need-help__input-bottom">
                         <label class="input-container">
-                            <input name="phone" data-rule="required|phone" class="input" type="number" placeholder="+38 (0__) ___-__-__">
+                            <input name="phone" class="input" type="number" placeholder="+38 (0__) ___-__-__">
                         </label>
                         <button type="submit" class="button _primary" type="submit">записаться</button>
                     </div>
@@ -655,15 +655,15 @@
                         для регистрации введите свою почту
                     </p>
                 </div>
-                <form id="ident-1" class="sign-in__form">
+                <form class="sign-in__form">
                     <label class="input-container">
-                        <input name="name" data-rule="required|name" class="input" type="text" placeholder="Имя">
+                        <input name="name" class="input" type="text" placeholder="Имя">
                     </label>
                     <label class="input-container">
-                        <input name="email" data-rule="required|email" class="input" type="email" placeholder="E-mail">
+                        <input name="email" class="input" type="email" placeholder="E-mail">
                     </label>
                     <label class="input-container">
-                        <input name="password" data-rule="required" class="input" type="password" placeholder="Пароль">
+                        <input name="password" class="input" type="password" placeholder="Пароль">
                     </label>
                     <button type="submit" class="button _primary">Зарегистрироваться</button>
                 </form>
@@ -692,12 +692,12 @@
                         войдите в свой аккаунт на сайте
                     </p>
                 </div>
-                <form id="ident-2" class="sign-in__form">
+                <form class="sign-in__form">
                     <label class="input-container">
-                        <input name="email" data-rule="required|email" class="input" type="email" placeholder="E-mail">
+                        <input name="email" class="input" type="email" placeholder="E-mail">
                     </label>
                     <label class="input-container">
-                        <input name="password" data-rule="required" class="input" type="password" placeholder="Пароль">
+                        <input name="password" class="input" type="password" placeholder="Пароль">
                     </label>
                     <p>
                         <span id="forgotten-go">Забыли пароль?</span>
@@ -740,7 +740,7 @@
                     </div>
                     <form id="ident-3" class="sign-in__form">
                         <label class="input-container">
-                            <input name="email" data-rule="required|email" class="input" type="email" placeholder="E-mail">
+                            <input name="email" class="input" type="email" placeholder="E-mail">
                         </label>
                         <button type="submit" class="button _primary">Восстановить пароль</button>
                     </form>
@@ -759,7 +759,6 @@
     </section>
     <!--finish sign-in popups-->
     <script src="plugins/js/swiper-bundle.min.js"></script>
-    <script src="plugins/js/js-form-validator.min.js"></script>
     <script src="js/script.min.js"></script>
 </body>
 
