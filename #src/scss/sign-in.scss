@@ -40,7 +40,6 @@
         .button{
           padding: 17px 0;
           width: 100%;
-          max-width: 200px;
           &._grey{
             background-color: rgba(#212327, 1);
             border: initial;
@@ -294,7 +293,6 @@
           flex-direction: column;
           margin: 32px 0 0 0;
           .button{
-            max-width: 100%;
             &:first-child{
               order: 2;
             }

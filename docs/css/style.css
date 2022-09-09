@@ -747,7 +747,6 @@ p {
 .sign-in.popup-universal .sign-in__bottom .button {
   padding: 17px 0;
   width: 100%;
-  max-width: 200px;
 }
 
 .sign-in.popup-universal .sign-in__bottom .button._grey {
@@ -3737,10 +3736,6 @@ p {
         -ms-flex-direction: column;
             flex-direction: column;
     margin: 32px 0 0 0;
-  }
-
-  .sign-in.popup-universal .sign-in__bottom .button {
-    max-width: 100%;
   }
 
   .sign-in.popup-universal .sign-in__bottom .button:first-child {
