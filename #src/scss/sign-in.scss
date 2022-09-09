@@ -19,6 +19,42 @@
   &.active-popup{
     display: block;
   }
+  &.popup-universal{
+    .sign-in{
+      &__content{
+        padding: 61px 68px 72px;
+      }
+      &__title{
+        p{
+          font-weight: 500;
+          line-height: 24px;
+          &:first-child{
+            margin: 0 0 40px 0;
+          }
+        }
+      }
+      &__bottom{
+        display: flex;
+        justify-content: center;
+        margin: 60px 0 0 0;
+        .button{
+          padding: 17px 0;
+          width: 100%;
+          max-width: 200px;
+          &._grey{
+            background-color: rgba(#212327, 1);
+            border: initial;
+            &:hover{
+              background-color: rgba(#212327, 0.5);
+            }
+          }
+        }
+        button+button{
+          margin: 0 0 0 16px;
+        }
+      }
+    }
+  }
   &__wrapper{
     position: relative;
     z-index: 2;
@@ -235,6 +271,38 @@
     &__form{
       input{
         padding: 24px 19px;
+      }
+    }
+  }
+}
+
+@media (max-width: 567px) {
+  .sign-in{
+    &.popup-universal{
+      .sign-in{
+        &__content{
+          padding: 50px 30px 30px;
+        }
+        &__title{
+          p{
+            &:first-child{
+              margin: 0 0 30px 0;
+            }
+          }
+        }
+        &__bottom{
+          flex-direction: column;
+          margin: 32px 0 0 0;
+          .button{
+            max-width: 100%;
+            &:first-child{
+              order: 2;
+            }
+          }
+          button+button{
+            margin: 0 0 15px 0;
+          }
+        }
       }
     }
   }
