@@ -184,6 +184,7 @@ window.addEventListener('DOMContentLoaded', function () {
     inputChange()
     checkPassword()
     editInputs()
+    // checkMatching(document.querySelector('input[name = "password-3"]'));
     let cabinetBlock  = document.querySelector(".cabinet");
     cabinetBlock?callPopUp_2(cabinetBlock):null;
 })
@@ -302,6 +303,21 @@ let editInputs = () => {
         }
     }
 }
+
+let checkMatching = (input) => {
+    input.addEventListener("input", function () {
+        let pass_3 = document.querySelector('input[name = "password-2"]');
+        if (input.value != pass_3.value) {
+            input.setCustomValidity('Password Must be Matching.');
+        } else {
+            input.setCustomValidity('');
+        }
+    })
+}
+
+
+
+
 
 
 ;

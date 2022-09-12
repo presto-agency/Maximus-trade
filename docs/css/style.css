@@ -379,6 +379,31 @@ p {
   border: 1px solid #fff;
 }
 
+.input:focus:invalid {
+  border: 1px solid #F75764;
+  color: #F75764;
+}
+
+.input:focus:invalid::-webkit-input-placeholder {
+  color: rgba(247, 87, 100, 0.3);
+}
+
+.input:focus:invalid::-moz-placeholder {
+  color: rgba(247, 87, 100, 0.3);
+}
+
+.input:focus:invalid:-ms-input-placeholder {
+  color: rgba(247, 87, 100, 0.3);
+}
+
+.input:focus:invalid::-ms-input-placeholder {
+  color: rgba(247, 87, 100, 0.3);
+}
+
+.input:focus:invalid::placeholder {
+  color: rgba(247, 87, 100, 0.3);
+}
+
 .input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
@@ -389,41 +414,7 @@ p {
 }
 
 .input-container {
-  position: relative;
   display: block;
-}
-
-.input-container input.validate-error {
-  border: 1px solid #F75764;
-  color: #F75764;
-}
-
-.input-container input.validate-error::-webkit-input-placeholder {
-  color: rgba(247, 87, 100, 0.3);
-}
-
-.input-container input.validate-error::-moz-placeholder {
-  color: rgba(247, 87, 100, 0.3);
-}
-
-.input-container input.validate-error:-ms-input-placeholder {
-  color: rgba(247, 87, 100, 0.3);
-}
-
-.input-container input.validate-error::-ms-input-placeholder {
-  color: rgba(247, 87, 100, 0.3);
-}
-
-.input-container input.validate-error::placeholder {
-  color: rgba(247, 87, 100, 0.3);
-}
-
-.input-container div.validate-error {
-  position: absolute;
-  left: 0;
-  bottom: -15px;
-  color: #F75764;
-  font-size: 12px;
 }
 
 .header {

@@ -534,15 +534,15 @@
                 <form action="#" class="need-help__form">
                     <div class="need-help__input-top">
                         <label class="input-container">
-                            <input name="name" class="input" type="text" placeholder="Имя">
+                            <input required name="name" class="input" type="text" placeholder="Имя">
                         </label>
                         <label class="input-container">
-                            <input name="lastname" class="input" type="text" placeholder="Фамилия">
+                            <input required name="lastname" class="input" type="text" placeholder="Фамилия">
                         </label>
                     </div>
                     <div class="need-help__input-bottom">
                         <label class="input-container">
-                            <input name="phone" class="input" type="number" placeholder="+38 (0__) ___-__-__">
+                            <input required name="phone" class="input" type="number" placeholder="+38 (0__) ___-__-__">
                         </label>
                         <button type="submit" class="button _primary" type="submit">записаться</button>
                     </div>
@@ -657,13 +657,13 @@
                 </div>
                 <form class="sign-in__form">
                     <label class="input-container">
-                        <input name="name" class="input" type="text" placeholder="Имя">
+                        <input required name="name" class="input" type="text" placeholder="Имя">
                     </label>
                     <label class="input-container">
-                        <input name="email" class="input" type="email" placeholder="E-mail">
+                        <input required name="email" class="input" type="email" placeholder="E-mail">
                     </label>
                     <label class="input-container">
-                        <input name="password" class="input" type="password" placeholder="Пароль">
+                        <input required name="password" class="input" type="password" placeholder="Пароль">
                     </label>
                     <button type="submit" class="button _primary">Зарегистрироваться</button>
                 </form>
@@ -694,10 +694,10 @@
                 </div>
                 <form class="sign-in__form">
                     <label class="input-container">
-                        <input name="email" class="input" type="email" placeholder="E-mail">
+                        <input required name="email" class="input" type="email" placeholder="E-mail">
                     </label>
                     <label class="input-container">
-                        <input name="password" class="input" type="password" placeholder="Пароль">
+                        <input required name="password" class="input" type="password" placeholder="Пароль">
                     </label>
                     <p>
                         <span id="forgotten-go">Забыли пароль?</span>
@@ -740,7 +740,7 @@
                     </div>
                     <form id="ident-3" class="sign-in__form">
                         <label class="input-container">
-                            <input name="email" class="input" type="email" placeholder="E-mail">
+                            <input required name="email" class="input" type="email" placeholder="E-mail">
                         </label>
                         <button type="submit" class="button _primary">Восстановить пароль</button>
                     </form>

@@ -188,6 +188,15 @@
   &:focus{
     color: $color-white;
     border: 1px solid $color-white;
+    //error validate classes
+    &:invalid {
+      border: 1px solid $color-red-error;
+      color: $color-red-error;
+      &::placeholder{
+        color: rgba($color-red-error, 0.3);
+      }
+    }
+    //finish error validate classes
   }
   &::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -198,29 +207,8 @@
   }
 }
 
-//error validate classes
 .input-container{
-  position: relative;
   display: block;
-  input{
-    &.validate-error{
-      border: 1px solid $color-red-error;
-      color: $color-red-error;
-      &::placeholder{
-        color: rgba($color-red-error, 0.3);
-      }
-    }
-  }
-  div{
-    &.validate-error{
-      position: absolute;
-      left: 0;
-      bottom: -15px;
-      color: $color-red-error;
-      font-size: 12px;
-    }
-  }
 }
-//finish error validate classes
 
 
