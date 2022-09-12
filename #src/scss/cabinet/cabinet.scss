@@ -60,15 +60,18 @@
         &.active-edit {
           label {
             pointer-events: initial;
-            input{
+
+            input {
               border: 1px solid $color-white;
             }
           }
+
           .button {
             &.save-btn {
               display: block;
             }
           }
+
           .button {
             &.edit-btn {
               display: none;

@@ -1,13 +1,16 @@
-.why-us{
+.why-us {
   margin: 0 0 134px 0;
-  &__top{
+
+  &__top {
     display: flex;
     justify-content: space-between;
-    h2{
+
+    h2 {
       flex: 0 1 528px;
       margin: 0 20px 0 0;
     }
-    p{
+
+    p {
       flex: 0 1 417px;
       line-height: 24px;
     }
@@ -15,18 +18,22 @@
 }
 
 @media (max-width: 1023px) {
-  .why-us{
+  .why-us {
     margin: 0 0 36px 0;
-    &__top{
+
+    &__top {
       h2, p {
         flex: initial;
       }
-      h2{
+
+      h2 {
         margin: 0 0 20px 0;
       }
-      p{
+
+      p {
         line-height: 18px;
       }
+
       flex-direction: column;
     }
   }

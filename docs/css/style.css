@@ -380,28 +380,28 @@ p {
 }
 
 .input:focus:invalid {
-  border: 1px solid #F75764;
-  color: #F75764;
+  border: 1px solid #F75764 !important;
+  color: #F75764 !important;
 }
 
 .input:focus:invalid::-webkit-input-placeholder {
-  color: rgba(247, 87, 100, 0.3);
+  color: rgba(247, 87, 100, 0.3) !important;
 }
 
 .input:focus:invalid::-moz-placeholder {
-  color: rgba(247, 87, 100, 0.3);
+  color: rgba(247, 87, 100, 0.3) !important;
 }
 
 .input:focus:invalid:-ms-input-placeholder {
-  color: rgba(247, 87, 100, 0.3);
+  color: rgba(247, 87, 100, 0.3) !important;
 }
 
 .input:focus:invalid::-ms-input-placeholder {
-  color: rgba(247, 87, 100, 0.3);
+  color: rgba(247, 87, 100, 0.3) !important;
 }
 
 .input:focus:invalid::placeholder {
-  color: rgba(247, 87, 100, 0.3);
+  color: rgba(247, 87, 100, 0.3) !important;
 }
 
 .input::-webkit-inner-spin-button {

@@ -1,4 +1,4 @@
-.button{
+.button {
   display: block;
   cursor: pointer;
   font-weight: 700;
@@ -11,45 +11,50 @@
   background-color: transparent;
   transition: 300ms;
   @media (min-width: 1200px) {
-    &:hover{
+    &:hover {
       background-color: rgba($color-primary, 0.2);
     }
   }
-  &._grey{
+
+  &._grey {
     border: 1px solid $color-grey;
     @media (min-width: 1200px) {
-      &:hover{
+      &:hover {
         background-color: rgba($color-grey, 0.3);
       }
     }
   }
-  &._red{
+
+  &._red {
     background-color: $color-red;
     color: $color-white;
     border: initial;
     @media (min-width: 1200px) {
-      &:hover{
+      &:hover {
         background-color: $color-red-dark;
       }
     }
   }
-  &._primary{
+
+  &._primary {
     padding: 17px 33px;
     color: $color-black;
     background-color: $color-primary;
     @media (min-width: 1200px) {
-      &:hover{
+      &:hover {
         border: 1px solid $color-primary-dark;
         color: $color-white;
         background-color: $color-primary-dark;
       }
     }
   }
-  &._auth{
+
+  &._auth {
     position: relative;
     white-space: nowrap;
     padding: 17px 20px 17px 47px;
-    &:before{
+
+    &:before {
       content: '';
       position: absolute;
       z-index: 2;
@@ -63,8 +68,9 @@
       background-position: center;
       background-size: 16px 16px;
     }
-    &.super-user{
-      &:before{
+
+    &.super-user {
+      &:before {
         width: 17px;
         height: 12px;
         background-image: url("../img/crown.svg");
@@ -73,14 +79,16 @@
     }
   }
 }
-.common-link{
-  &.active{
-    a{
+
+.common-link {
+  &.active {
+    a {
       color: $color-primary;
       border-bottom: 3px solid $color-primary;
     }
   }
-  a{
+
+  a {
     display: block;
     padding: 15px 25px;
     color: $color-grey;
@@ -89,80 +97,94 @@
     font-weight: 500;
     transition: 300ms;
   }
+
   @media (min-width: 1200px) {
-    &:hover{
-      a{
+    &:hover {
+      a {
         color: $color-primary;
       }
     }
   }
 }
-.common-logo{
-  a{
+
+.common-logo {
+  a {
     display: block;
     position: relative;
     z-index: 3;
     width: 213px;
     height: 27px;
-    img{
+
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+
     @media (max-width: 474px) {
       width: 144px;
       height: 18px;
     }
   }
 }
-.info-cards{
+
+.info-cards {
   display: flex;
   flex-wrap: wrap;
   margin: 112px -16px -16px;
-  li{
-    width: calc((100% - (16px * 6))/3);
+
+  li {
+    width: calc((100% - (16px * 6)) / 3);
     margin: 16px;
     padding: 50px 50px 84px 50px;
     border: 1px solid rgba($color-white, 0.3);
-    img{
+
+    img {
       width: auto;
       height: 64px;
       margin: 0 0 36px 0;
     }
-    p{
+
+    p {
       line-height: 24px;
-      strong{
+
+      strong {
         font-family: 'Romul';
         font-size: 20px;
         line-height: 24px;
       }
     }
-    p + p{
+
+    p + p {
       margin: 20px 0 0 0;
     }
   }
+
   @media (max-width: 1023px) {
     margin: 38px -16px -16px;
-    li{
-      width: calc((100% - (16px * 4))/2);
+    li {
+      width: calc((100% - (16px * 4)) / 2);
     }
   }
   @media (max-width: 767px) {
     margin: 37px 0 -10px;
-    li{
+    li {
       padding: 40px 50px 40px 30px;
       margin: 10px 0;
       width: 100%;
-      img{
+
+      img {
         margin: 0 0 33px 0;
       }
-      p{
+
+      p {
         line-height: 18px;
       }
     }
   }
 }
-.decor-line{
+
+.decor-line {
   margin: 73px 0 90px 0;
   height: 51px;
   width: 100vw;
@@ -174,40 +196,47 @@
     margin: 60px 0;
   }
 }
-.input{
+
+.input {
   background: transparent;
   padding: 35px 30px 35px 30px;
   border: 1px solid rgba($color-white, 0.3);
   width: 100%;
   color: $color-white;
-  &::placeholder{
+
+  &::placeholder {
     font-weight: 500;
     line-height: 24px;
     color: rgba($color-white, 0.3);
   }
-  &:focus{
+
+  &:focus {
     color: $color-white;
     border: 1px solid $color-white;
     //error validate classes
     &:invalid {
-      border: 1px solid $color-red-error;
-      color: $color-red-error;
-      &::placeholder{
-        color: rgba($color-red-error, 0.3);
+      border: 1px solid $color-red-error !important;
+      color: $color-red-error !important;
+
+      &::placeholder {
+        color: rgba($color-red-error, 0.3) !important;
       }
     }
+
     //finish error validate classes
   }
+
   &::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
+
   input[type=number] {
     -moz-appearance: textfield;
   }
 }
 
-.input-container{
+.input-container {
   display: block;
 }
 

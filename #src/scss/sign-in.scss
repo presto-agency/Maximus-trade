@@ -1,4 +1,4 @@
-.sign-in{
+.sign-in {
   display: none;
   position: fixed;
   z-index: 11;
@@ -6,7 +6,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  &:before{
+
+  &:before {
     content: '';
     position: absolute;
     top: 0;
@@ -16,45 +17,55 @@
     background: rgba($color-white, 0.01);
     backdrop-filter: blur(10px);
   }
-  &.active-popup{
+
+  &.active-popup {
     display: block;
   }
-  &.popup-universal{
-    .sign-in{
-      &__content{
+
+  &.popup-universal {
+    .sign-in {
+      &__content {
         padding: 61px 68px 72px;
       }
-      &__title{
-        p{
+
+      &__title {
+        p {
           font-weight: 500;
           line-height: 24px;
-          &:first-child{
+
+          &:first-child {
             margin: 0 0 40px 0;
           }
         }
       }
-      &__bottom{
+
+      &__bottom {
         display: flex;
         justify-content: center;
         margin: 60px 0 0 0;
-        .button{
+
+        .button {
           padding: 17px 0;
           width: 100%;
-          &._grey{
+
+          &._grey {
             background-color: rgba(#212327, 1);
             border: initial;
-            &:hover{
+
+            &:hover {
               background-color: rgba(#212327, 0.5);
             }
           }
         }
-        button+button{
+
+        button + button {
           margin: 0 0 0 16px;
         }
       }
     }
   }
-  &__wrapper{
+
+  &__wrapper {
     position: relative;
     z-index: 2;
     top: 50%;
@@ -65,14 +76,16 @@
     max-height: 100%;
     overflow-y: auto;
   }
-  &__content{
+
+  &__content {
     position: relative;
     border: 1px solid rgba($color-primary, 0.3);
     padding: 50px 112px;
     background: $color-black;
     text-align: center;
     margin: 25px;
-    &.forgotten{
+
+    &.forgotten {
       display: none;
       position: absolute;
       top: 0;
@@ -82,19 +95,22 @@
       height: 100%;
       flex-direction: column;
       justify-content: center;
-      &.active{
+
+      &.active {
         display: flex;
       }
-      .sign-in{
-        &__title{
-          p{
+
+      .sign-in {
+        &__title {
+          p {
             font-size: 12px;
             line-height: 25px;
             font-weight: 400;
           }
         }
-        &__bottom{
-          p{
+
+        &__bottom {
+          p {
             position: relative;
             display: inline-block;
             padding: 0 0 0 36px;
@@ -103,7 +119,8 @@
             margin: 0;
             font-size: 12px;
             line-height: 25px;
-            &:before{
+
+            &:before {
               content: '';
               position: absolute;
               left: 0;
@@ -117,9 +134,10 @@
               background-image: url("../img/main-page/arrow-string.svg");
               transition: 300ms;
             }
+
             @media (min-width: 1200px) {
-              &:hover{
-                &:before{
+              &:hover {
+                &:before {
                   left: -5px;
                 }
               }
@@ -129,15 +147,18 @@
       }
     }
   }
-  &__title{
-    p{
+
+  &__title {
+    p {
       font-size: 16px;
       line-height: 25px;
       font-weight: 600;
-      &:first-child{
+
+      &:first-child {
         margin: 0 0 20px 0;
       }
-      strong{
+
+      strong {
         display: block;
         font-family: 'Romul';
         font-size: 24px;
@@ -145,78 +166,95 @@
       }
     }
   }
-  &__form{
+
+  &__form {
     margin: 25px 0 27px 0;
     display: flex;
     flex-direction: column;
-    label{
+
+    label {
       margin: 0 0 22px 0;
-      &:last-of-type{
+
+      &:last-of-type {
         margin: 0;
       }
-      input{
+
+      input {
         padding: 24px;
       }
     }
-    p{
+
+    p {
       margin: 18px 0 16px 0;
       font-size: 12px;
       line-height: 25px;
       font-weight: 500;
       text-align: left;
-      span{
+
+      span {
         cursor: pointer;
         color: $color-grey;
         transition: 300ms;
         @media (min-width: 1200px) {
-          &:hover{
+          &:hover {
             color: $color-white;
           }
         }
       }
     }
-    button{
+
+    button {
       margin: 27px 0 0 0;
     }
-    p+button{
+
+    p + button {
       margin: 0;
     }
   }
-  &__bottom{
-    p{
+
+  &__bottom {
+    p {
       margin: 27px auto 0;
       max-width: 263px;
       font-size: 10px;
       line-height: 15px;
-      span{
+
+      span {
         color: $color-blue;
       }
-      strong{
+
+      strong {
         font-size: 12px;
         line-height: 25px;
         font-weight: 500;
       }
     }
-    ul{
+
+    ul {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       margin: 14px 0 0 0;
-      li{
+
+      li {
         margin: 0 20px 0 0;
-        &:last-child{
+
+        &:last-child {
           margin: 0;
         }
-        a{
+
+        a {
           display: block;
-          svg{
+
+          svg {
             fill: $color-grey;
             width: 24px;
             height: 24px;
           }
+
           @media (min-width: 1200px) {
-            &:hover{
-              svg{
+            &:hover {
+              svg {
                 fill: $color-primary;
               }
             }
@@ -225,7 +263,8 @@
       }
     }
   }
-  &__cross{
+
+  &__cross {
     cursor: pointer;
     position: absolute;
     top: 44px;
@@ -234,7 +273,8 @@
     height: 15px;
     box-sizing: content-box;
     padding: 10px;
-    span{
+
+    span {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -242,10 +282,12 @@
       height: 2px;
       width: 15px;
       background: $color-white;
-      &:first-child{
+
+      &:first-child {
         transform: translateX(-50%) translateY(-50%) rotate(45deg);
       }
-      &:last-child{
+
+      &:last-child {
         transform: translateX(-50%) translateY(-50%) rotate(-45deg);
       }
     }
@@ -253,22 +295,25 @@
 }
 
 @media (max-width: 767px) {
-  .sign-in{
-    &__title{
-      p{
+  .sign-in {
+    &__title {
+      p {
         font-size: 12px;
         line-height: 14px;
-        strong{
+
+        strong {
           font-size: 20px;
           line-height: 24px;
         }
       }
     }
-    &__content{
+
+    &__content {
       padding: 52px 30px;
     }
-    &__form{
-      input{
+
+    &__form {
+      input {
         padding: 24px 19px;
       }
     }
@@ -276,28 +321,32 @@
 }
 
 @media (max-width: 567px) {
-  .sign-in{
-    &.popup-universal{
-      .sign-in{
-        &__content{
+  .sign-in {
+    &.popup-universal {
+      .sign-in {
+        &__content {
           padding: 50px 30px 30px;
         }
-        &__title{
-          p{
-            &:first-child{
+
+        &__title {
+          p {
+            &:first-child {
               margin: 0 0 30px 0;
             }
           }
         }
-        &__bottom{
+
+        &__bottom {
           flex-direction: column;
           margin: 32px 0 0 0;
-          .button{
-            &:first-child{
+
+          .button {
+            &:first-child {
               order: 2;
             }
           }
-          button+button{
+
+          button + button {
             margin: 0 0 15px 0;
           }
         }

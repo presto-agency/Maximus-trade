@@ -1,42 +1,51 @@
-.our-clients{
+.our-clients {
   margin: 124px 0 120px 0;
-  &__container{
+
+  &__container {
     position: relative;
     left: calc(50% - 540px);
     max-width: 1312px;
-    h2{
+
+    h2 {
       margin: 0 0 60px 0;
     }
   }
-  &__swiper{
-    .card-client{
+
+  &__swiper {
+    .card-client {
       width: 640px;
       padding: 50px 50px 60px 50px;
       border: 1px solid rgba($color-white, 0.3);
-      &__top{
+
+      &__top {
         display: flex;
         justify-content: space-between;
-        &_text{
+
+        &_text {
           flex: 0 1 50%;
-          p{
+
+          p {
             font-family: 'Romul';
             font-size: 20px;
             line-height: 24px;
             margin: 18px 0 0 0;
           }
-          span{
+
+          span {
             display: block;
             font-size: 13px;
             line-height: 25px;
             color: $color-primary;
           }
         }
-        &_img{
+
+        &_img {
           height: 72px;
           width: 72px;
           border-radius: 50%;
           overflow: hidden;
-          img{
+
+          img {
             border-radius: 50%;
             width: 100%;
             height: 100%;
@@ -44,14 +53,17 @@
           }
         }
       }
-      &__bottom{
+
+      &__bottom {
         height: 96px;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
         margin: 23px 0 0 0;
-        p{
+
+        p {
           line-height: 24px;
         }
+
         &::-webkit-scrollbar {
           width: 5px;
         }
@@ -68,48 +80,57 @@
       }
     }
   }
-  &__navigation{
+
+  &__navigation {
     display: flex;
     margin: 50px 0 0 0;
   }
-  &__btn-wrapper{
+
+  &__btn-wrapper {
     display: flex;
-   .arrow{
-     cursor: pointer;
-     padding: 20px;
-     border: 1px solid rgba($color-white, 0.3);
-     @media (min-width: 1200px) {
-       &:hover{
-         border: 1px solid rgba($color-primary, 0.3);
-         background: $color-primary;
-       }
-     }
-     svg{
-       width: 18px;
-       height: 17px;
-       fill: $color-white;
-     }
-   }
+
+    .arrow {
+      cursor: pointer;
+      padding: 20px;
+      border: 1px solid rgba($color-white, 0.3);
+      @media (min-width: 1200px) {
+        &:hover {
+          border: 1px solid rgba($color-primary, 0.3);
+          background: $color-primary;
+        }
+      }
+
+      svg {
+        width: 18px;
+        height: 17px;
+        fill: $color-white;
+      }
+    }
   }
-  &__next{
+
+  &__next {
     margin: 0 0 0 28px;
-    svg{
+
+    svg {
       transform: rotate(180deg);
     }
   }
-  &__pagination{
+
+  &__pagination {
     position: static;
     z-index: initial;
     display: flex;
     align-items: center;
     margin: 0 0 0 53px;
-    .swiper-pagination-bullet{
+
+    .swiper-pagination-bullet {
       border-radius: initial;
       background: $color-white;
       opacity: 0.3;
-      margin: 0 16px 0 0!important;
+      margin: 0 16px 0 0 !important;
     }
-    .swiper-pagination-bullet-active{
+
+    .swiper-pagination-bullet-active {
       background: $color-white;
       opacity: 1;
     }
@@ -117,8 +138,8 @@
 }
 
 @media (max-width: 1199px) {
-  .our-clients{
-    &__container{
+  .our-clients {
+    &__container {
       left: initial;
       max-width: 1087px;
       padding: 0 24px;
@@ -129,61 +150,73 @@
 }
 
 @media (max-width: 767px) {
-  .our-clients{
+  .our-clients {
     margin: 50px 0 100px 0;
-    &__swiper{
-      .card-client{
+
+    &__swiper {
+      .card-client {
         padding: 40px 30px 30px 30px;
-        &__top{
-          &_text{
-            p{
+
+        &__top {
+          &_text {
+            p {
               margin: 0;
               font-size: 16px;
               line-height: 19px;
             }
-            span{
+
+            span {
               margin: 7px 0 0 0;
               font-size: 10px;
               line-height: 15px;
             }
           }
-          &_img{
+
+          &_img {
             width: 34px;
             height: 34px;
           }
         }
-        &__bottom{
+
+        &__bottom {
           margin: 20px 0 0 0;
           height: 108px;
-          p{
+
+          p {
             font-size: 12px;
             line-height: 18px;
           }
         }
       }
     }
-    &__container{
-      h2{
+
+    &__container {
+      h2 {
         margin: 0 0 30px 0;
       }
     }
-    &__btn-wrapper{
-      .arrow{
+
+    &__btn-wrapper {
+      .arrow {
         padding: 13px;
       }
     }
-    &__next{
+
+    &__next {
       margin: 0 0 0 22px;
     }
-    &__navigation{
+
+    &__navigation {
       margin: 38px 0 0 0;
     }
-    &__pagination{
+
+    &__pagination {
       margin: 0 0 0 31px;
-      .swiper-pagination-bullet{
+
+      .swiper-pagination-bullet {
         width: 5px;
         height: 5px;
-        margin: 0 11px 0 0!important;
+        margin: 0 11px 0 0 !important;
       }
     }
   }

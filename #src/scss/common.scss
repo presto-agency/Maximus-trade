@@ -1,24 +1,25 @@
-.wrapper{
-	overflow: hidden;
-	min-height: 100%;
-	background-color: $color-black;
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  background-color: $color-black;
 }
 
-.container{
-	max-width: 1087px;
-	padding: 0px 24px;
-	margin: 0px auto;
-    box-sizing: content-box;
-	&._l{
-		max-width: 1310px;
-	}
+.container {
+  max-width: 1087px;
+  padding: 0px 24px;
+  margin: 0px auto;
+  box-sizing: content-box;
+
+  &._l {
+    max-width: 1310px;
+  }
 }
 
-.root{
-	padding: 105px 0 0 0;
-	@media(max-width: 1023px){
-		padding: 74px 0 0 0;
-	}
+.root {
+  padding: 105px 0 0 0;
+  @media(max-width: 1023px) {
+    padding: 74px 0 0 0;
+  }
 }
 
 // .ibg{

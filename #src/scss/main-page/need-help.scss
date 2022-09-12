@@ -1,43 +1,54 @@
-.need-help{
+.need-help {
   margin: 120px 0 100px 0;
-  &__wrapper{
+
+  &__wrapper {
     position: relative;
     padding: 70px 0 50px 0;
   }
-  &__content{
+
+  &__content {
     max-width: 589px;
-    p{
+
+    p {
       margin: 36px 0 0 0;
       line-height: 24px;
     }
   }
-  &__form{
+
+  &__form {
     margin: 30px 0 0 0;
   }
-  &__input-top{
+
+  &__input-top {
     display: flex;
-    label{
+
+    label {
       flex: 0 1 47%;
-      input{
+
+      input {
         width: 100%;
       }
-      &:last-child{
+
+      &:last-child {
         flex: 0 1 53%;
         margin: 0 0 0 13px;
       }
     }
   }
-  &__input-bottom{
+
+  &__input-bottom {
     position: relative;
     margin: 25px 0 0 0;
-    button{
+
+    button {
       position: absolute;
       right: 30px;
       top: 50%;
       transform: translateY(-50%);
     }
   }
-  &__img{
+
+  &__img {
     width: 705px;
     height: 501px;
     position: absolute;
@@ -45,7 +56,8 @@
     right: -362px;
     padding: 0 0 16px 16px;
     box-sizing: content-box;
-    &:before{
+
+    &:before {
       content: '';
       position: absolute;
       bottom: 0px;
@@ -58,7 +70,8 @@
       background-position: center;
       background-size: 176px 163px;
     }
-    img{
+
+    img {
       position: relative;
       z-index: 2;
       border-radius: 260px 0px 0px 0px;
@@ -70,30 +83,38 @@
 }
 
 @media (max-width: 1023px) {
-  .need-help{
+  .need-help {
     margin: 100px 0 110px 0;
-    &__content{
+
+    &__content {
       max-width: 100%;
-      p{
+
+      p {
         font-size: 12px;
         line-height: 18px;
       }
     }
-    &__img{
+
+    &__img {
       display: none;
     }
-    &__input-top{
+
+    &__input-top {
       flex-direction: column;
-      label{
+
+      label {
         flex: initial;
-        &:last-child{
+
+        &:last-child {
           margin: 20px 0 0 0;
         }
       }
     }
-    &__input-bottom{
+
+    &__input-bottom {
       margin: 20px 0 0 0;
-      button{
+
+      button {
         margin: 30px 0 0 0;
         width: 100%;
         position: static;

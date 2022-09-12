@@ -1,43 +1,54 @@
-.we-learn{
+.we-learn {
   margin: 183px 0 160px 0;
-  &__content{
+
+  &__content {
     display: flex;
     justify-content: space-between;
     margin: 66px 0 0 0;
-    p{
+
+    p {
       line-height: 24px;
     }
-    &_left{
+
+    &_left {
       flex: 0 1 470px;
-      li{
+
+      li {
         display: flex;
         margin: 0 0 24px 0;
-        &:last-child{
+
+        &:last-child {
           margin: 0;
         }
-        span{
+
+        span {
           font-family: 'Romul';
           font-size: 70px;
           line-height: 84px;
           color: $color-white;
         }
-        p{
+
+        p {
           margin: 18px 0 0 24px;
         }
       }
     }
-    &_right{
+
+    &_right {
       flex: 0 1 416px;
     }
   }
-  .info-cards{
+
+  .info-cards {
     margin: 34px -16px -16px;
-    li{
+
+    li {
       padding: 70px 50px 50px 50px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      .button{
+
+      .button {
         max-width: 144px;
         margin: 24px 0 0 0;
         padding: 17px 0;
@@ -48,37 +59,44 @@
 }
 
 @media (max-width: 1023px) {
-  .we-learn{
-    &__content{
+  .we-learn {
+    &__content {
       margin: 40px 0 50px 0;
       flex-direction: column;
-      &_left{
+
+      &_left {
         flex: initial;
         margin: 0 0 50px 0;
-        li{
+
+        li {
           margin: 0 15px 15px 0;
-          p{
+
+          p {
             margin: 6px 0 0 24px;
           }
         }
       }
-      &_right{
+
+      &_right {
         flex: initial;
       }
     }
   }
 }
+
 @media (max-width: 767px) {
-  .we-learn{
+  .we-learn {
     margin: 100px 0;
-    &__content{
-      p{
+
+    &__content {
+      p {
         font-size: 12px;
         line-height: 18px;
       }
-      &_left{
-        li{
-          span{
+
+      &_left {
+        li {
+          span {
             font-size: 40px;
             line-height: 48px;
           }

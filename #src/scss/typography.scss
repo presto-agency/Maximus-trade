@@ -1,10 +1,10 @@
-h1, h2, h3, h4{
+h1, h2, h3, h4 {
   font-family: 'Romul';
   color: $color-primary;
   font-weight: 400;
 }
 
-h1{
+h1 {
   font-size: 80px;
   line-height: 100%;
   @media (max-width: 1023px) {
@@ -17,7 +17,7 @@ h1{
   }
 }
 
-h2{
+h2 {
   font-size: 50px;
   line-height: 58px;
   @media (max-width: 1023px) {
@@ -30,33 +30,33 @@ h2{
   }
 }
 
-h3{
+h3 {
   font-size: 36px;
   line-height: 40px;
 }
 
-h4{
+h4 {
   font-size: 20px;
   line-height: 22px;
 }
 
-.H-1{
+.H-1 {
   @extend h1
 }
 
-.H-2{
+.H-2 {
   @extend h2
 }
 
-.H-3{
+.H-3 {
   @extend h3
 }
 
-.H-4{
-  @extend  h4
+.H-4 {
+  @extend h4
 }
 
-p{
+p {
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;

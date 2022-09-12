@@ -1,43 +1,53 @@
-.our-team{
+.our-team {
   margin: 119px 0 100px 0;
-  .person{
+
+  .person {
     position: relative;
     border: 1px solid rgba($color-white, 0.3);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    p{
+
+    p {
       font-family: 'Romul';
       font-size: 20px;
       line-height: 24px;
     }
-    span{
+
+    span {
       font-size: 14px;
       line-height: 25px;
       color: $color-primary-dark;
     }
-    img{
+
+    img {
       position: absolute;
     }
   }
-  &__top{
+
+  &__top {
     display: flex;
     justify-content: space-between;
-    &_left{
+
+    &_left {
       flex: 0 1 526px;
-      h2{
+
+      h2 {
         margin: 32px 0 0 0;
       }
-      p{
+
+      p {
         line-height: 24px;
         margin: 40px 0 0 0;
       }
     }
-    &_right{
+
+    &_right {
       flex: 0 1 416px;
       height: 304px;
       padding: 34px 40px;
-      img{
+
+      img {
         top: -44px;
         left: 40px;
         height: 225px;
@@ -45,18 +55,21 @@
       }
     }
   }
-  &__bottom{
+
+  &__bottom {
     display: flex;
     flex-wrap: wrap;
     margin: 139px -21px -21px;
     padding: 0 0 83px 0;
     border-bottom: 1px solid rgba($color-grey, 0.3);
-    li{
-      width: calc((100% - (21px * 8))/4);
+
+    li {
+      width: calc((100% - (21px * 8)) / 4);
       height: 240px;
       padding: 30px;
       margin: 21px;
-      img{
+
+      img {
         top: -80px;
         left: 30px;
         height: 160px;
@@ -67,11 +80,12 @@
 }
 
 @media (max-width: 1199px) {
-  .our-team{
-    &__bottom{
+  .our-team {
+    &__bottom {
       margin: 168px -21px -50px;
-      li{
-        width: calc((100% - (21px * 4))/2);
+
+      li {
+        width: calc((100% - (21px * 4)) / 2);
         margin: 50px 21px;
       }
     }
@@ -79,65 +93,79 @@
 }
 
 @media (max-width: 1023px) {
-  .our-team{
-    &__top{
-      &_left{
+  .our-team {
+    &__top {
+      &_left {
         flex: initial;
         margin: 0 0 58px 0;
-        h2{
+
+        h2 {
           margin: 0;
         }
-        p{
+
+        p {
           line-height: 20px;
           margin: 17px 0 0 0;
         }
       }
-      &_right{
+
+      &_right {
         flex: initial;
       }
+
       flex-direction: column;
     }
-    &__bottom{
+
+    &__bottom {
       margin: 64px -21px -50px;
     }
   }
 }
 
 @media (max-width: 767px) {
-  .our-team{
+  .our-team {
     margin: 109px 0 50px 0;
-    .person{
-      p{
+
+    .person {
+      p {
         font-size: 16px;
         line-height: 19px;
       }
     }
-    &__top{
-      &_right{
+
+    &__top {
+      &_right {
         height: 240px;
         padding: 25px 30px;
-        img{
+
+        img {
           height: 184px;
           left: 31px;
         }
       }
     }
-    &__bottom{
+
+    &__bottom {
       margin: 10px -21px -12px;
       padding: 0 0 50px 0;
-      li{
+
+      li {
         width: calc(100% - (21px * 2));
-        img{
+
+        img {
           top: -50px;
         }
-        &:nth-child(2n + 1){
+
+        &:nth-child(2n + 1) {
           margin: 50px 21px 12px 96px;
-          img{
+
+          img {
             left: initial;
             right: 30px;
           }
         }
-        &:nth-child(2n + 2){
+
+        &:nth-child(2n + 2) {
           margin: 50px 96px 12px 21px;
         }
       }

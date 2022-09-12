@@ -1,34 +1,41 @@
-.how-to{
+.how-to {
   margin: 93px 0 183px 0;
-  &__content{
+
+  &__content {
     position: relative;
-    h2{
+
+    h2 {
       max-width: 645px;
       margin: 0 0 60px 0;
     }
   }
-  &__list{
+
+  &__list {
     max-width: 715px;
-    li{
+
+    li {
       cursor: pointer;
       position: relative;
       counter-increment: counting;
       padding: 0 112px 0 112px;
       margin: 0 0 60px 0;
       @media (min-width: 1200px) {
-        &:hover{
-          p{
+        &:hover {
+          p {
             opacity: 1;
           }
-          &:after{
+
+          &:after {
             opacity: 1;
           }
         }
       }
-      &:last-child{
+
+      &:last-child {
         margin: 0;
       }
-      &:before{
+
+      &:before {
         content: counter(counting, decimal-leading-zero);
         position: absolute;
         left: 0;
@@ -39,7 +46,8 @@
         padding: 27px;
         border: 1px solid rgba($color-white, 0.3);
       }
-      &:after{
+
+      &:after {
         content: '';
         position: absolute;
         top: 54px;
@@ -53,30 +61,35 @@
         opacity: 0;
         transition: 300ms;
       }
-      p{
+
+      p {
         opacity: 0.5;
         color: $color-white;
         font-size: 14px;
         line-height: 21px;
         transition: 300ms;
-        strong{
+
+        strong {
           font-family: 'Romul';
           font-size: 36px;
           line-height: 43px;
         }
       }
-      p + p{
+
+      p + p {
         margin: 24px 0 0 0;
       }
     }
   }
-  &__img{
+
+  &__img {
     position: absolute;
     top: 94px;
     right: -405px;
     width: 646px;
     height: 646px;
-    img{
+
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -85,10 +98,10 @@
 }
 
 @media (max-width: 1199px) {
-  .how-to{
-    &__list{
-      li{
-        p{
+  .how-to {
+    &__list {
+      li {
+        p {
           opacity: 1;
         }
       }
@@ -97,37 +110,45 @@
 }
 
 @media (max-width: 767px) {
-  .how-to{
+  .how-to {
     margin: 100px 0;
-    &__content{
-      h2{
+
+    &__content {
+      h2 {
         margin: 0 0 40px 0;
       }
     }
-    &__list{
-      li{
+
+    &__list {
+      li {
         padding: 0 45px 0 56px;
         margin: 0 0 30px 0;
-        &:last-child{
+
+        &:last-child {
           margin: 0;
         }
-        p{
+
+        p {
           font-size: 12px;
           line-height: 18px;
-          strong{
+
+          strong {
             font-size: 24px;
             line-height: 29px;
           }
         }
-        p + p{
+
+        p + p {
           margin: 10px 0 0 0;
         }
-        &:before{
+
+        &:before {
           font-size: 12px;
           line-height: 12px;
           padding: 13px;
         }
-        &:after{
+
+        &:after {
           top: 10px;
           width: 35px;
           height: 8px;
@@ -135,7 +156,8 @@
         }
       }
     }
-    &__img{
+
+    &__img {
       top: 262px;
       right: -206px;
       width: 270px;
@@ -145,11 +167,11 @@
 }
 
 @media (max-width: 424px) {
-  .how-to{
-    &__list{
-      li{
-        p{
-          strong{
+  .how-to {
+    &__list {
+      li {
+        p {
+          strong {
             font-size: 18px;
             line-height: 24px;
           }
