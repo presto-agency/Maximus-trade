@@ -299,6 +299,31 @@ p {
   margin: 112px -16px -16px;
 }
 
+.info-cards.with-button {
+  margin: 34px -16px -16px;
+}
+
+.info-cards.with-button li {
+  padding: 70px 50px 50px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.info-cards.with-button li .button {
+  max-width: 144px;
+  margin: 24px 0 0 0;
+  padding: 17px 0;
+  text-align: center;
+}
+
 .info-cards li {
   width: calc((100% - 96px) / 3);
   margin: 16px;
@@ -1295,31 +1320,6 @@ p {
           flex: 0 1 416px;
 }
 
-.we-learn .info-cards {
-  margin: 34px -16px -16px;
-}
-
-.we-learn .info-cards li {
-  padding: 70px 50px 50px 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.we-learn .info-cards li .button {
-  max-width: 144px;
-  margin: 24px 0 0 0;
-  padding: 17px 0;
-  text-align: center;
-}
-
 .our-history {
   margin: 160px 0 73px;
 }
@@ -1441,14 +1441,20 @@ p {
 }
 
 .our-partners ul li {
-  width: calc((100% - 656px) / 8);
-  height: 64px;
+  width: auto;
+  height: 46px;
   margin: 38px 41px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .our-partners ul li img {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -1585,15 +1591,20 @@ p {
 
 .our-clients__swiper .card-client__top_text {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 50%;
-          flex: 0 1 50%;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
 }
 
 .our-clients__swiper .card-client__top_text p {
   font-family: "Romul";
   font-size: 20px;
   line-height: 24px;
-  margin: 18px 0 0 0;
+  margin: 18px 18px 0 0;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  min-height: 48px;
 }
 
 .our-clients__swiper .card-client__top_text span {
@@ -2970,7 +2981,6 @@ p {
 
   .our-partners ul li {
     margin: 8px 25px;
-    width: calc((100% - 200px) / 4);
   }
 
   .our-team__bottom {
@@ -3869,10 +3879,6 @@ p {
   .footer__links li a {
     width: 36px;
     height: 36px;
-  }
-
-  .our-partners ul li {
-    width: calc((100% - 150px) / 3);
   }
 
   .cabinet__content .subscription-user__link p strong {

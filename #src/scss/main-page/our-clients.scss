@@ -22,13 +22,18 @@
         justify-content: space-between;
 
         &_text {
-          flex: 0 1 50%;
+          flex: 0 1 100%;
 
           p {
             font-family: 'Romul';
             font-size: 20px;
             line-height: 24px;
-            margin: 18px 0 0 0;
+            margin: 18px 18px 0 0;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            min-height: 48px;
           }
 
           span {

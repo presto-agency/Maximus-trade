@@ -133,6 +133,24 @@
   flex-wrap: wrap;
   margin: 112px -16px -16px;
 
+  &.with-button {
+    margin: 34px -16px -16px;
+
+    li {
+      padding: 70px 50px 50px 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .button {
+        max-width: 144px;
+        margin: 24px 0 0 0;
+        padding: 17px 0;
+        text-align: center;
+      }
+    }
+  }
+
   li {
     width: calc((100% - (16px * 6)) / 3);
     margin: 16px;
