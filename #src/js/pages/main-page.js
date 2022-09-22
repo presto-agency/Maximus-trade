@@ -150,16 +150,25 @@ let dropMenu = () => {
 let telegramIn = (currentPopup) => {
   let quickBtn = currentPopup.querySelector('.sign-in__bottom>ul>li.telegram-in');
   if (!!quickBtn) {
-    let innerScript = '<script async src="https://telegram.org/js/telegram-widget.js?19" data-telegram-login="maxtradeLogin_bot" data-size="small" data-userpic="false" data-onauth="onTelegramAuth(user)"></script>';
-    if (!quickBtn.classList.contains('telegram-active')) {
-      quickBtn.classList.add('telegram-active');
-      quickBtn.innerHTML = innerScript;
-      console.log(quickBtn)
-    } else {
-      quickBtn.classList.remove('telegram-active');
-      quickBtn.innerHTML = '';
-      console.log(quickBtn)
+    let innerIframe = currentPopup.querySelector('iframe');
+    if(!innerIframe){
+      let currentIframe = document.getElementById('telegram-login-maxtradeLogin_bot').outerHTML;
+      document.getElementById('telegram-login-maxtradeLogin_bot').remove()
+      quickBtn.innerHTML = currentIframe;
     }
+    // else{
+    //
+    // }
+
+    // if (!quickBtn.classList.contains('telegram-active')) {
+    //   quickBtn.classList.add('telegram-active');
+    //   quickBtn.innerHTML = innerScript;
+    //   console.log(quickBtn)
+    // } else {
+    //   quickBtn.classList.remove('telegram-active');
+    //   quickBtn.innerHTML = '';
+    //   console.log(quickBtn)
+    // }
   }
 }
 
