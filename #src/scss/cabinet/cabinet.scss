@@ -294,7 +294,7 @@
             }
           }
 
-          a {
+          a, button {
             font-size: 14px;
             line-height: 21px;
             font-weight: 500;
@@ -304,6 +304,9 @@
             &:hover {
               color: $color-white;
             }
+          }
+          button{
+            background-color: transparent;
           }
         }
 

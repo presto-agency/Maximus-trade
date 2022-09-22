@@ -2106,7 +2106,8 @@ p {
   font-weight: 500;
 }
 
-.cabinet__content .subscription-super__title a {
+.cabinet__content .subscription-super__title a,
+.cabinet__content .subscription-super__title button {
   font-size: 14px;
   line-height: 21px;
   font-weight: 500;
@@ -2116,8 +2117,13 @@ p {
   transition: 300ms;
 }
 
-.cabinet__content .subscription-super__title a:hover {
+.cabinet__content .subscription-super__title a:hover,
+.cabinet__content .subscription-super__title button:hover {
   color: #fff;
+}
+
+.cabinet__content .subscription-super__title button {
+  background-color: transparent;
 }
 
 .cabinet__content .subscription-super__list {
