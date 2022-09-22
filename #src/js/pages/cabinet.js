@@ -2,9 +2,12 @@ window.addEventListener('DOMContentLoaded', function () {
   inputChange()
   checkPassword()
   editInputs()
-  checkMatching(document.querySelector('input[name = "password-3"]'));
-  let cabinetBlock = document.querySelector(".cabinet");
-  cabinetBlock ? callPopUp_2(cabinetBlock) : null;
+  let inputPassword = document.querySelector('input[name = "password-3"]');
+  if(!!inputPassword){
+    checkMatching(inputPassword);
+    let cabinetBlock = document.querySelector(".cabinet");
+    cabinetBlock ? callPopUp_2(cabinetBlock) : null;
+  }
 })
 
 let inputChange = () => {
