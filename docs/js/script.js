@@ -192,13 +192,15 @@ const getIframeId = () => {
 
 const playIframe = () => {
   const playerWrapper = document.querySelector('.player__iframe_preview');
-  playerWrapper.onclick = () => {
-    if (playerWrapper.classList.contains('active')) {
-      playerWrapper.classList.remove('active')
-      player.pauseVideo()
-    } else {
-      playerWrapper.classList.add('active')
-      player.playVideo()
+  if(!!playerWrapper){
+    playerWrapper.onclick = () => {
+      if (playerWrapper.classList.contains('active')) {
+        playerWrapper.classList.remove('active')
+        player.pauseVideo()
+      } else {
+        playerWrapper.classList.add('active')
+        player.playVideo()
+      }
     }
   }
 }
