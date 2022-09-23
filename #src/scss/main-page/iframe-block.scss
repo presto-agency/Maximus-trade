@@ -97,9 +97,8 @@
     margin: 36px 0 100px 0;
     padding: 0 34px 0 0;
 
-    &__content {
+    &__player{
       padding: 0 0 45% 0;
-
       &:before {
         content: '';
         width: 124px;
@@ -108,13 +107,24 @@
         right: -10px;
         background-size: 124px 115px;
       }
+      .player{
+        &__iframe{
+          &_preview{
+            &:before{
+              width: 55px;
+              height: 55px;
+              background-size: 55px 55px;
+            }
+          }
+        }
+      }
     }
   }
 }
 
 @media (max-width: 474px) {
   .iframe-block {
-    &__content {
+    &__player {
       padding: 0 0 72% 0;
     }
   }

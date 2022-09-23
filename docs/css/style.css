@@ -3108,17 +3108,23 @@ p {
     padding: 0 34px 0 0;
   }
 
-  .iframe-block__content {
+  .iframe-block__player {
     padding: 0 0 45% 0;
   }
 
-  .iframe-block__content:before {
+  .iframe-block__player:before {
     content: "";
     width: 124px;
     height: 115px;
     top: -10px;
     right: -10px;
     background-size: 124px 115px;
+  }
+
+  .iframe-block__player .player__iframe_preview:before {
+    width: 55px;
+    height: 55px;
+    background-size: 55px 55px;
   }
 
   .we-learn__content {
@@ -3848,7 +3854,7 @@ p {
     max-width: 256px;
   }
 
-  .iframe-block__content {
+  .iframe-block__player {
     padding: 0 0 72% 0;
   }
 
