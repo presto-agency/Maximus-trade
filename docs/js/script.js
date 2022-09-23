@@ -213,9 +213,8 @@ function onYouTubeIframeAPIReady() {
       'controls': 0,
       'showinfo': 0,
       'rel': 0,
-      'modestbranding': 1,
-      // 'enablejsapi': 1,
-      // 'origin': 'http://localhost:3000/'
+      'enablejsapi': 1,
+      'origin': 'https://presto-agency.github.io/'
     }
   });
 }
