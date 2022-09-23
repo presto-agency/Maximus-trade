@@ -214,7 +214,7 @@ function onYouTubeIframeAPIReady() {
       'showinfo': 0,
       'rel': 0,
       'enablejsapi': 1,
-      'origin': 'https://presto-agency.github.io/'
+      'origin': 'presto-agency.github.io'
     }
   });
 }
