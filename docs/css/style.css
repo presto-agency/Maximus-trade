@@ -1089,12 +1089,12 @@ p {
   width: 100%;
 }
 
-.iframe-block__content {
+.iframe-block__player {
   position: relative;
   padding: 0 0 40% 0;
 }
 
-.iframe-block__content:before {
+.iframe-block__player:before {
   content: "";
   position: absolute;
   top: -20px;
@@ -1107,7 +1107,7 @@ p {
   background-size: 176px 163px;
 }
 
-.iframe-block__content_wrapper {
+.iframe-block__player .player__iframe {
   cursor: pointer;
   position: absolute;
   width: 100%;
@@ -1117,13 +1117,36 @@ p {
   left: 0;
   border-radius: 0px 0px 121px 0px;
   overflow: hidden;
-  background-image: url("../img/main-page/play.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 144px 144px;
 }
 
-.iframe-block__content_wrapper:before {
+.iframe-block__player .player__iframe_preview {
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0px 0px 121px 0px;
+  -webkit-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms;
+}
+
+.iframe-block__player .player__iframe_preview.active {
+  opacity: 0;
+}
+
+.iframe-block__player .player__iframe_preview img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.iframe-block__player .player__iframe_preview:before {
   content: "";
   position: absolute;
   z-index: 3;
@@ -1144,34 +1167,13 @@ p {
   pointer-events: none;
 }
 
-.iframe-block__content_wrapper img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 0px 0px 121px 0px;
-  -webkit-transition: 300ms;
-  -o-transition: 300ms;
-  transition: 300ms;
-}
-
-.iframe-block__content_wrapper iframe {
+.iframe-block__player .player__iframe iframe {
+  position: relative;
   width: 100%;
   height: 100%;
   border: 1px solid transparent;
   border-radius: 0px 0px 121px 0px;
-}
-
-.iframe-block__content_wrapper.active:before {
-  opacity: 0;
-}
-
-.iframe-block__content_wrapper.active img {
   pointer-events: none;
-  opacity: 0;
 }
 
 .how-to {

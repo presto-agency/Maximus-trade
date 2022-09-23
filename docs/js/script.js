@@ -183,6 +183,47 @@ let dropMenu = () => {
   }
 };
 
+const getIframeId = () => {
+  let reg = /\//g;
+  let video_wrapper = document.querySelector('#player_1');
+  let video_attribute = video_wrapper.getAttribute('data-src').split(reg);
+  return video_attribute[video_attribute.length - 1]
+}
+
+const playIframe = () => {
+  const playerWrapper = document.querySelector('.player__iframe_preview');
+  playerWrapper.onclick = () => {
+    if (playerWrapper.classList.contains('active')) {
+      playerWrapper.classList.remove('active')
+      player.stopVideo()
+    } else {
+      playerWrapper.classList.add('active')
+      player.playVideo()
+    }
+  }
+}
+
+playIframe()
+
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player_1', {
+    videoId: `${getIframeId()}`,
+    playerVars: {
+      'autoplay': 0,
+      'controls': 0,
+      'showinfo': 0,
+      'rel': 0,
+      'modestbranding': 1,
+      // 'enablejsapi': 1,
+      // 'origin': 'http://localhost:3000/'
+    }
+  });
+}
+
+
+
+
+
 
 
 ;
@@ -413,6 +454,7 @@ let grabCursor = () => {
     });
   }
 };
+
 
 
 
