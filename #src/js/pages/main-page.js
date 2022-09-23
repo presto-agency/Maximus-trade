@@ -157,7 +157,7 @@ const playIframe = () => {
   playerWrapper.onclick = () => {
     if (playerWrapper.classList.contains('active')) {
       playerWrapper.classList.remove('active')
-      player.stopVideo()
+      player.pauseVideo()
     } else {
       playerWrapper.classList.add('active')
       player.playVideo()
