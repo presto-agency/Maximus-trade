@@ -3886,6 +3886,12 @@ p {
 }
 
 @media (max-width: 359px) {
+  h1,
+  .H-1 {
+    font-size: 30px;
+    line-height: 34px;
+  }
+
   .header button + button {
     margin: 0 10px 0 4px;
   }
