@@ -216,7 +216,7 @@ function onYouTubeIframeAPIReady() {
       'showinfo': 0,
       'rel': 0,
       'enablejsapi': 1,
-      'origin': 'presto-agency.github.io'
+      'origin': 'https://www.maximustrade.io/'
     }
   });
 }
