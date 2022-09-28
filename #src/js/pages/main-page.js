@@ -1,3 +1,17 @@
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player_1', {
+    videoId: `${getIframeId()}`,
+    playerVars: {
+      'autoplay': 0,
+      'controls': 0,
+      'showinfo': 0,
+      'rel': 0,
+      'enablejsapi': 1,
+      // 'origin': 'https://www.maximustrade.io/'
+    }
+  });
+}
+
 window.addEventListener('DOMContentLoaded', function () {
   sliderClients()
   callPopUp()
@@ -169,19 +183,6 @@ const playIframe = () => {
 
 playIframe()
 
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player('player_1', {
-    videoId: `${getIframeId()}`,
-    playerVars: {
-      'autoplay': 0,
-      'controls': 0,
-      'showinfo': 0,
-      'rel': 0,
-      'enablejsapi': 1,
-      'origin': 'https://www.maximustrade.io/'
-    }
-  });
-}
 
 
 
