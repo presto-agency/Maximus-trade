@@ -952,6 +952,9 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   margin: 14px 0 0 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .sign-in__bottom ul li {
@@ -1455,7 +1458,7 @@ p {
 }
 
 .our-partners ul li img {
-  width: 100%;
+  width: auto;
   height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
