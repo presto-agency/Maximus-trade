@@ -211,6 +211,7 @@ const playIframe = () => {
       if (playerWrapper.classList.contains('active')) {
         playerWrapper.classList.remove('active')
         player.pauseVideo()
+        console.log(player)
       } else {
         playerWrapper.classList.add('active')
         player.playVideo()
