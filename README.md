@@ -48,5 +48,5 @@ deploy to gh-pages automatically after push to branch
 deploy:
 [main](https://presto-agency.github.io/Maximus-trade/),
 [cabinet](https://presto-agency.github.io/Maximus-trade/cabinet.html),
-[investment](https://presto-agency.github.io/Maximus-trade/investment.html),
+[investment](https://presto-agency.github.io/Maximus-trade/investment.html)
 
