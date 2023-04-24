@@ -18,6 +18,7 @@ window.addEventListener('DOMContentLoaded', function () {
   callForgottenPassword()
   scrollToForm()
   dropMenu()
+  playIframe()
 })
 
 let sliderClients = () => {
@@ -182,7 +183,6 @@ const playIframe = () => {
   }
 }
 
-playIframe()
 
 
 
